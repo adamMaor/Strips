@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2130e707-0c94-40d7-a1f9-31362cbd64cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Colors.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Colors.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Directions.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Directions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Sizes.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Sizes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/FurnitureLocation.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/FurnitureLocation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/GuiBoardItem.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/GuiBoardItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Main.class" afterPath="$PROJECT_DIR$/out/production/Strips/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$1.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$2.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$3.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$4.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$5.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$6.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$7.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$10.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$8.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$9.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Resources/Thumbs.db" afterPath="$PROJECT_DIR$/out/production/Strips/Resources/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Resources/Thumbs.db" afterPath="$PROJECT_DIR$/src/Resources/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Constants/Constants.java" afterPath="$PROJECT_DIR$/src/Constants/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/Furniture.java" afterPath="$PROJECT_DIR$/src/Logic/Furniture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/FurnitureLocation.java" afterPath="$PROJECT_DIR$/src/Logic/FurnitureLocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/LogicUtils.java" afterPath="$PROJECT_DIR$/src/Logic/LogicUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainGui.form" afterPath="$PROJECT_DIR$/src/GUI/MainGui.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainGui.java" afterPath="$PROJECT_DIR$/src/GUI/MainGui.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -82,8 +62,8 @@
       <file leaf-file-name="MainGui.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7435065" vertical-offset="1990" max-vertical-offset="6069">
-              <caret line="144" column="53" selection-start-line="144" selection-start-column="53" selection-end-line="144" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.5032467" vertical-offset="3090" max-vertical-offset="6630">
+              <caret line="200" column="9" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1158#2251#0" expanded="true" />
@@ -100,12 +80,14 @@
                 <element signature="e#3422#3423#0" expanded="true" />
                 <element signature="e#3470#3663#0" expanded="true" />
                 <element signature="e#3662#3663#0" expanded="true" />
-                <element signature="e#3727#4369#0" expanded="true" />
-                <element signature="e#4368#4369#0" expanded="true" />
-                <element signature="e#4421#5384#0" expanded="true" />
-                <element signature="e#5383#5384#0" expanded="true" />
-                <element signature="e#5431#6262#0" expanded="true" />
-                <element signature="e#6261#6262#0" expanded="true" />
+                <element signature="e#3771#4413#0" expanded="true" />
+                <element signature="e#4412#4413#0" expanded="true" />
+                <element signature="e#4465#5428#0" expanded="true" />
+                <element signature="e#5427#5428#0" expanded="true" />
+                <element signature="e#5475#6306#0" expanded="true" />
+                <element signature="e#6305#6306#0" expanded="true" />
+                <element signature="e#6353#6602#0" expanded="true" />
+                <element signature="e#6601#6602#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -710,12 +692,12 @@
       <workItem from="1483539405511" duration="18000" />
       <workItem from="1483539926165" duration="872000" />
       <workItem from="1483974749210" duration="16700000" />
-      <workItem from="1484043188858" duration="30638000" />
+      <workItem from="1484043188858" duration="31210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49670000" />
+    <option name="totallyTimeSpent" value="50242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -815,12 +797,14 @@
             <element signature="e#3422#3423#0" expanded="true" />
             <element signature="e#3470#3663#0" expanded="true" />
             <element signature="e#3662#3663#0" expanded="true" />
-            <element signature="e#3727#4369#0" expanded="true" />
-            <element signature="e#4368#4369#0" expanded="true" />
-            <element signature="e#4421#5384#0" expanded="true" />
-            <element signature="e#5383#5384#0" expanded="true" />
-            <element signature="e#5431#6262#0" expanded="true" />
-            <element signature="e#6261#6262#0" expanded="true" />
+            <element signature="e#3771#4413#0" expanded="true" />
+            <element signature="e#4412#4413#0" expanded="true" />
+            <element signature="e#4465#5428#0" expanded="true" />
+            <element signature="e#5427#5428#0" expanded="true" />
+            <element signature="e#5475#6306#0" expanded="true" />
+            <element signature="e#6305#6306#0" expanded="true" />
+            <element signature="e#6353#6602#0" expanded="true" />
+            <element signature="e#6601#6602#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1051,11 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="1343">
@@ -1166,10 +1145,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7435065" vertical-offset="1990" max-vertical-offset="6069">
-          <caret line="144" column="53" selection-start-line="144" selection-start-column="53" selection-end-line="144" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.5032467" vertical-offset="3090" max-vertical-offset="6630">
+          <caret line="200" column="9" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1158#2251#0" expanded="true" />
@@ -1186,12 +1170,14 @@
             <element signature="e#3422#3423#0" expanded="true" />
             <element signature="e#3470#3663#0" expanded="true" />
             <element signature="e#3662#3663#0" expanded="true" />
-            <element signature="e#3727#4369#0" expanded="true" />
-            <element signature="e#4368#4369#0" expanded="true" />
-            <element signature="e#4421#5384#0" expanded="true" />
-            <element signature="e#5383#5384#0" expanded="true" />
-            <element signature="e#5431#6262#0" expanded="true" />
-            <element signature="e#6261#6262#0" expanded="true" />
+            <element signature="e#3771#4413#0" expanded="true" />
+            <element signature="e#4412#4413#0" expanded="true" />
+            <element signature="e#4465#5428#0" expanded="true" />
+            <element signature="e#5427#5428#0" expanded="true" />
+            <element signature="e#5475#6306#0" expanded="true" />
+            <element signature="e#6305#6306#0" expanded="true" />
+            <element signature="e#6353#6602#0" expanded="true" />
+            <element signature="e#6601#6602#0" expanded="true" />
           </folding>
         </state>
       </provider>

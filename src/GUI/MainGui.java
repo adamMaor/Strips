@@ -102,6 +102,7 @@ public class MainGui {
         });
 
         initBoard();
+        setNavigationButtonsEnabled(false);
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -150,6 +151,26 @@ public class MainGui {
                 }
             }
         });
+        furnitureComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int index = furnitureComboBox.getSelectedIndex();
+                setNavigationButtonsEnabled(index != -1);
+            }
+        });
+    }
+
+    private void setNavigationButtonsEnabled(boolean b) {
+        moveUpButton.setEnabled(b);
+        moveLeftButton.setEnabled(b);
+        moveRightButton.setEnabled(b);
+        moveDownButton.setEnabled(b);
+        rotateRightButton.setEnabled(b);
+        rotateLeftButton.setEnabled(b);
+        deleteButton.setEnabled(b);
+        setFinalLocationButton.setEnabled(b);
+        acceptFinalButton.setEnabled(b);
+        furnitureComboBox.setEnabled(b);
     }
 
     private void unMarkLocation(FurnitureLocation furnitureLocation) {
@@ -167,6 +188,18 @@ public class MainGui {
         int x = furnitureLocation.tl.x;
 
         int width = furnitureLocation.br.x - x;
+        int height = furnitureLocation.br.y - y;
+
+        if (width == 0 && height == 0) {
+            MatteBorder upBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    color);
+            boardItems[y][x].setBorder(upBorder);
+            return;
+        }
+
         if (width == 0) {
             MatteBorder upBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
                     Constants.Sizes.ThickBorderWidth,
@@ -191,7 +224,6 @@ public class MainGui {
             return;
         }
 
-        int height = furnitureLocation.br.y - y;
         if (height == 0) {
             MatteBorder leftBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
                     Constants.Sizes.ThickBorderWidth,
@@ -289,6 +321,7 @@ public class MainGui {
         furnitureComboBox.setEnabled(!b);
         acceptFinalButton.setVisible(b);
         deleteButton.setVisible(!b);
+        setFinalLocationButton.setEnabled(!b);
     }
 
     private void rotateCurrentFurniture(byte direction) {
