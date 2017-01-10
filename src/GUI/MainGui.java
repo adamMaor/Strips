@@ -6,6 +6,7 @@ import Logic.FurnitureLocation;
 import Logic.Pos;
 
 import javax.swing.*;
+import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,7 +27,10 @@ public class MainGui {
     private JPanel boardPanel;
     public JPanel mainPanel;
     private JButton deleteButton;
+    private JButton setFinalLocationButton;
+    private JButton acceptFinalButton;
     private int currentFurniture;
+    private FurnitureLocation tempFurnitureLocation;
 
     private GuiUtils utils;
 
@@ -111,6 +115,180 @@ public class MainGui {
                 }
             }
         });
+        setFinalLocationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String fId = (String)furnitureComboBox.getSelectedItem();
+                int dialogResult = JOptionPane.showConfirmDialog (null,
+                        "Are you sure you want to set the final location for item " + fId + "? no other changes to this item will be possible." ,
+                        "Are You Sure?",
+                        JOptionPane.YES_NO_OPTION);
+                if(dialogResult == JOptionPane.YES_OPTION){
+                    setSetFinalLocationMode(true);
+                    Furniture f = utils.getFurniture(fId);
+                    tempFurnitureLocation = new FurnitureLocation(new Pos(f.getLocation().tl.x,f.getLocation().tl.y),
+                            new Pos(f.getLocation().br.x, f.getLocation().br.y));
+                    markLocation(f.getLocation(), f.getColor());
+                }
+            }
+        });
+        acceptFinalButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setSetFinalLocationMode(false);
+                String fId = (String)furnitureComboBox.getSelectedItem();
+                Furniture f = utils.getFurniture(fId);
+                markLocation(f.getLocation(), f.getColor());
+                f.setFinalLocation(new FurnitureLocation(f.getLocation().tl, f.getLocation().br));
+                unPaintFurniture(f);
+                unMarkLocation(tempFurnitureLocation);
+                f.setLocation(tempFurnitureLocation);
+                paintFurniture(f);
+                furnitureComboBox.removeItem(fId);
+                if (furnitureComboBox.getItemCount() > 0) {
+                    furnitureComboBox.setSelectedIndex(0);
+                }
+            }
+        });
+    }
+
+    private void unMarkLocation(FurnitureLocation furnitureLocation) {
+        int y = furnitureLocation.tl.y;
+        int x = furnitureLocation.tl.x;
+        while (y < furnitureLocation.br.y) {
+            while (x < furnitureLocation.br.x) {
+                boardItems[y][x].setBorder(utils.getBoarderForPos(x++,y++));
+            }
+        }
+    }
+
+    private void markLocation(FurnitureLocation furnitureLocation, Color color) {
+        int y = furnitureLocation.tl.y;
+        int x = furnitureLocation.tl.x;
+
+        int width = furnitureLocation.br.x - x;
+        if (width == 0) {
+            MatteBorder upBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.normalBorderWidth,
+                    color);
+            boardItems[y++][x].setBorder(upBorder);
+            MatteBorder middleBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.normalBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    color);
+            while (y < furnitureLocation.br.y) {
+                boardItems[y++][x].setBorder(middleBorder);
+            }
+            MatteBorder downBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    color);
+            boardItems[y][x].setBorder(downBorder);
+            return;
+        }
+
+        int height = furnitureLocation.br.y - y;
+        if (height == 0) {
+            MatteBorder leftBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.normalBorderWidth,
+                    color);
+            boardItems[y][x++].setBorder(leftBorder);
+            MatteBorder middleBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.normalBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.normalBorderWidth,
+                    color);
+            while (x < furnitureLocation.br.x) {
+                boardItems[y][x++].setBorder(middleBorder);
+            }
+            MatteBorder rightBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.normalBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    Constants.Sizes.ThickBorderWidth,
+                    color);
+            boardItems[y][x].setBorder(rightBorder);
+            return;
+        }
+
+
+        //uperLeft Corner Border
+        MatteBorder upLeftBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                color);
+        boardItems[y][x++].setBorder(upLeftBorder);
+        // first set upper border
+        MatteBorder upBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                color);
+        while (x < furnitureLocation.br.x) {
+            boardItems[y][x++].setBorder(upBorder);
+
+        }
+        //uper rightt Corner Border
+        MatteBorder upRightBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                color);
+        boardItems[y++][x].setBorder(upRightBorder);
+        // now set right border
+        MatteBorder rightBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                color);
+        while(y < furnitureLocation.br.y) {
+            boardItems[y++][x].setBorder(rightBorder);
+        }
+
+        //downright Corner Border
+        MatteBorder downRightBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                color);
+        boardItems[y][x--].setBorder(downRightBorder);
+        // downborder
+        MatteBorder downBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                color);
+        while (x > furnitureLocation.tl.x) {
+            boardItems[y][x--].setBorder(downBorder);
+        }
+        //downright Corner Border
+        MatteBorder downLeftBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                color);
+        boardItems[y--][x].setBorder(downLeftBorder);
+        MatteBorder leftBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.ThickBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                color);
+        while(y > furnitureLocation.tl.y) {
+            boardItems[y--][x].setBorder(leftBorder);
+        }
+    }
+
+
+    private void setSetFinalLocationMode(boolean b) {
+        furnitureComboBox.setEnabled(!b);
+        acceptFinalButton.setVisible(b);
+        deleteButton.setVisible(!b);
     }
 
     private void rotateCurrentFurniture(byte direction) {

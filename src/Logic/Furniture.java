@@ -7,13 +7,14 @@ import java.awt.*;
  */
 public class Furniture {
     private String ID;
-    private FurnitureLocation location;
+    private FurnitureLocation location, finalLocation;
     private Color color;
 
 
     public Furniture(String ID, FurnitureLocation location, Color fColor) {
         this.ID = ID;
         this.location = location;
+        this.finalLocation = null;
         this.color = fColor;
     }
 
@@ -61,4 +62,7 @@ public class Furniture {
     }
 
 
+    public void setFinalLocation(FurnitureLocation fl) {
+        this.finalLocation = fl;
+    }
 }

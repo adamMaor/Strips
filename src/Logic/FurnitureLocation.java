@@ -49,4 +49,12 @@ public class FurnitureLocation {
             br.x++;
         }
     }
+
+    @Override
+    public String toString() {
+        return "FurnitureLocation{" +
+                "tl=" + tl +
+                ", br=" + br +
+                '}';
+    }
 }

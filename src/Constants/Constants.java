@@ -13,6 +13,7 @@ public class Constants {
         public static final byte boardWidth = 20;
         public static final int normalBorderWidth = 1;
         public static final int wallBorderWidth = 2;
+        public static final int ThickBorderWidth = 5;
     }
 
     public class Directions {

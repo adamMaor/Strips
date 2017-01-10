@@ -390,7 +390,7 @@ public class LogicUtils {
             if (direction == RIGHT) {
                 newTLX++;
             }
-            if (newHeight % 2 != 0){
+            if (newHeight % 2 == 0){
                 newTLY++;
             }
         }
