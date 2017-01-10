@@ -121,7 +121,7 @@ public class MainGui {
             public void actionPerformed(ActionEvent e) {
                 String fId = (String)furnitureComboBox.getSelectedItem();
                 int dialogResult = JOptionPane.showConfirmDialog (null,
-                        "Are you sure you want to set the final location for item " + fId + "? no other changes to this item will be possible." ,
+                        "Are you sure you want to set the final location for item " + fId + "?\n no other changes to this item will be possible." ,
                         "Are You Sure?",
                         JOptionPane.YES_NO_OPTION);
                 if(dialogResult == JOptionPane.YES_OPTION){
