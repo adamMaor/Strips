@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.MainGui">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="1363" height="604"/>
+      <xy x="20" y="20" width="1678" height="727"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -21,10 +21,10 @@
         <border type="none"/>
         <children/>
       </grid>
-      <grid id="7fd37" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="7fd37" binding="LocationPanel" layout-manager="GridLayoutManager" row-count="9" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="10" left="5" bottom="10" right="5"/>
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="true"/>
         </constraints>
         <properties/>
         <border type="none"/>
@@ -40,7 +40,7 @@
           </component>
           <vspacer id="e0b03">
             <constraints>
-              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="0" row-span="2" col-span="1" vsize-policy="7" hsize-policy="1" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
           </vspacer>
           <component id="eda80" class="javax.swing.JLabel">
@@ -103,6 +103,7 @@
                   <iconTextGap value="0"/>
                   <margin top="2" left="2" bottom="2" right="2"/>
                   <text value=""/>
+                  <toolTipText value="Rotate Right"/>
                 </properties>
               </component>
               <component id="7f182" class="javax.swing.JButton" binding="rotateLeftButton" default-binding="true">
@@ -117,6 +118,7 @@
                   <label value=""/>
                   <margin top="0" left="0" bottom="0" right="0"/>
                   <text value=""/>
+                  <toolTipText value="Rotate Left"/>
                 </properties>
               </component>
               <component id="ca3be" class="javax.swing.JButton" binding="moveUpButton" default-binding="true">
@@ -172,6 +174,7 @@
               <icon value="Resources/rubbish-bin.png"/>
               <margin top="2" left="2" bottom="2" right="2"/>
               <text value=""/>
+              <toolTipText value="Delete Selected Item"/>
             </properties>
           </component>
           <component id="7c9d8" class="javax.swing.JButton" binding="acceptFinalButton">
@@ -183,8 +186,82 @@
               <inheritsPopupMenu value="true"/>
               <label value=""/>
               <text value=""/>
+              <toolTipText value="Accept Final Location"/>
               <visible value="false"/>
             </properties>
+          </component>
+          <component id="69a93" class="javax.swing.JButton" binding="solveButton">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="Resources/solve.png"/>
+              <iconTextGap value="0"/>
+              <margin top="2" left="2" bottom="2" right="2"/>
+              <text value=""/>
+              <toolTipText value="Validate Board and Solve"/>
+              <visible value="false"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="84bb3" binding="solvePanel" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="10" left="5" bottom="10" right="17"/>
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="true"/>
+        </constraints>
+        <properties>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="99667" class="javax.swing.JRadioButton" binding="autoPlayRadioButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="AutoPlay"/>
+            </properties>
+          </component>
+          <component id="7dd11" class="javax.swing.JList" binding="stackList">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="250" height="50"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="a24e5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Plan"/>
+            </properties>
+          </component>
+          <component id="81a32" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Stack:"/>
+            </properties>
+          </component>
+          <component id="83415" class="javax.swing.JButton" binding="nextMoveButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Next Move"/>
+            </properties>
+          </component>
+          <component id="5c7e5" class="javax.swing.JList" binding="planList">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="250" height="50"/>
+              </grid>
+            </constraints>
+            <properties/>
           </component>
         </children>
       </grid>

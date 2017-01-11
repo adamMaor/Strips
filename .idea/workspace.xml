@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2130e707-0c94-40d7-a1f9-31362cbd64cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/CanMovePreCond.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/CanRotatePreCond.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/DiffPreCond.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/MoveOperator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/RotateOperator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/StripsLogic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/StripsObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/StripsOperator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/StripsPreCondition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Strips/StripsStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Colors.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Colors.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Directions.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Directions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Sizes.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Constants$Sizes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Constants.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Globals.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Globals.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/GuiBoardItem.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/GuiBoardItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/CanMovePreCond.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/CanMovePreCond.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/CanRotatePreCond.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/CanRotatePreCond.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/DiffPreCond.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/DiffPreCond.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/DimensionInfo.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/DimensionInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/GridConstraints.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/GridConstraints.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/GridLayoutManager.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/GridLayoutManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/GuiUtils.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/GuiUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$1.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$10.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$11.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$11.class" />
@@ -31,29 +23,22 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$8.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$9.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$1.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$2.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$3.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$4.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/FurnitureLocation.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/FurnitureLocation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/Pos.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/Pos.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/Wall.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/Wall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Main.class" afterPath="$PROJECT_DIR$/out/production/Strips/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/DimensionInfo.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/DimensionInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/GridConstraints.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/GridConstraints.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/GridLayoutManager.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/GridLayoutManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/MoveOperator.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/MoveOperator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/RotateOperator.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/RotateOperator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/StripsLogic.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/StripsLogic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/StripsOperator.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/StripsOperator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/StripsPreCondition.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/StripsPreCondition.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/SupportCode.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/SupportCode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Resources/Thumbs.db" afterPath="$PROJECT_DIR$/out/production/Strips/Resources/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Resources/Thumbs.db" afterPath="$PROJECT_DIR$/src/Resources/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/Util.class" afterPath="$PROJECT_DIR$/out/production/Strips/com/intellij/uiDesigner/core/Util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainGui.java" afterPath="$PROJECT_DIR$/src/GUI/MainGui.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/Furniture.java" afterPath="$PROJECT_DIR$/src/Logic/Furniture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/GuiUtils.java" afterPath="$PROJECT_DIR$/src/GUI/GuiUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/LogicUtils.java" afterPath="$PROJECT_DIR$/src/Logic/LogicUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainGui.form" afterPath="$PROJECT_DIR$/src/GUI/MainGui.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainGui.java" afterPath="$PROJECT_DIR$/src/GUI/MainGui.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Strips.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,43 +55,129 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Strips" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainGui.java" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="MainGui.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="438" column="40" selection-start-line="438" selection-start-column="40" selection-end-line="438" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.2859116" vertical-offset="5267" max-vertical-offset="6103">
+              <caret line="322" column="13" selection-start-line="322" selection-start-column="13" selection-end-line="322" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#markLocation#0;class#MainGui#0" expanded="false" />
+                <element signature="e#1503#2596#0" expanded="true" />
+                <element signature="e#2595#2596#0" expanded="true" />
+                <element signature="e#2638#2826#0" expanded="true" />
+                <element signature="e#2825#2826#0" expanded="true" />
+                <element signature="e#2870#3060#0" expanded="true" />
+                <element signature="e#3059#3060#0" expanded="true" />
+                <element signature="e#3105#3296#0" expanded="true" />
+                <element signature="e#3295#3296#0" expanded="true" />
+                <element signature="e#3340#3530#0" expanded="true" />
+                <element signature="e#3529#3530#0" expanded="true" />
+                <element signature="e#3576#3768#0" expanded="true" />
+                <element signature="e#3767#3768#0" expanded="true" />
+                <element signature="e#3815#4008#0" expanded="true" />
+                <element signature="e#4007#4008#0" expanded="true" />
+                <element signature="e#4050#4691#0" expanded="true" />
+                <element signature="e#4690#4691#0" expanded="true" />
+                <element signature="e#4743#5708#0" expanded="true" />
+                <element signature="e#5707#5708#0" expanded="true" />
+                <element signature="e#5755#6586#0" expanded="true" />
+                <element signature="e#6585#6586#0" expanded="true" />
+                <element signature="e#6633#7005#0" expanded="true" />
+                <element signature="e#7004#7005#0" expanded="true" />
+                <element signature="e#7046#7392#0" expanded="true" />
+                <element signature="e#7391#7392#0" expanded="true" />
+                <element signature="e#7436#7593#0" expanded="true" />
+                <element signature="e#7592#7593#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StripsStack.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GuiUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="619" max-vertical-offset="1411">
+              <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+              <folding>
+                <element signature="method#getBoarderForPos#0;class#GuiUtils#0" expanded="false" />
+                <element signature="e#3765#3766#0" expanded="true" />
+                <element signature="e#3823#3824#0" expanded="true" />
+                <element signature="e#3869#3870#0" expanded="true" />
+                <element signature="e#3926#3927#0" expanded="true" />
+                <element signature="e#4192#4193#0" expanded="true" />
+                <element signature="e#4243#4244#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StripsStack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/StripsStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5151515">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainGui.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="LogicUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/LogicUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="327" column="21" selection-start-line="327" selection-start-column="21" selection-end-line="327" selection-end-column="21" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1214" max-vertical-offset="1938">
+              <caret line="445" column="51" selection-start-line="445" selection-start-column="51" selection-end-line="445" selection-end-column="51" />
+              <folding>
+                <element signature="docComment;class#LogicUtils#0" expanded="false" />
+                <element signature="method#canMove#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#canRotate#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#moveFurniture#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#rotateFurniture#0;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#inBounds#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#inBounds#0;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#hasWall#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#hasWall#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#moveFurniture#1;class#LogicUtils#0" expanded="false" />
+                <element signature="method#checkForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#checkForExistingFurniture#0;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#isPosCovered#0;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#checkForNewFurnitureSpace#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#inBounds#1;class#LogicUtils#0" expanded="false" />
+                <element signature="method#rotateFurniture#1;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
+                <element signature="docComment;method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+                <element signature="e#14964#14965#0" expanded="true" />
+                <element signature="e#15008#15009#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,7 +185,7 @@
       <file leaf-file-name="StripsLogic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/StripsLogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1020">
               <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -128,7 +199,7 @@
       <file leaf-file-name="StripsOperator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/StripsOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289">
               <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
               <folding />
             </state>
@@ -138,7 +209,7 @@
       <file leaf-file-name="StripsPreCondition.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/StripsPreCondition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289">
               <caret line="7" column="56" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="56" />
               <folding />
             </state>
@@ -148,7 +219,7 @@
       <file leaf-file-name="StripsObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/StripsObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
               <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
               <folding />
             </state>
@@ -158,43 +229,13 @@
       <file leaf-file-name="MoveOperator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/MoveOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="544">
               <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding>
                 <element signature="e#360#361#0" expanded="true" />
                 <element signature="e#387#388#0" expanded="true" />
                 <element signature="e#435#436#0" expanded="true" />
                 <element signature="e#459#460#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RotateOperator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Strips/RotateOperator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
-              <folding>
-                <element signature="e#364#365#0" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CanRotatePreCond.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Strips/CanRotatePreCond.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,11 +254,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -228,25 +264,25 @@
         <option value="$PROJECT_DIR$/src/Logic/Wall.java" />
         <option value="$PROJECT_DIR$/src/GUI/NewFurnitureDlg.form" />
         <option value="$PROJECT_DIR$/src/GUI/NewFurnitureDlg.java" />
-        <option value="$PROJECT_DIR$/src/GUI/GuiUtils.java" />
         <option value="$PROJECT_DIR$/src/GUI/GuiBoardItem.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/GUI/MainGui.form" />
         <option value="$PROJECT_DIR$/src/Constants/Constants.java" />
         <option value="$PROJECT_DIR$/src/Logic/FurnitureLocation.java" />
         <option value="$PROJECT_DIR$/src/Logic/Furniture.java" />
         <option value="$PROJECT_DIR$/src/Strips/CanMovePre.java" />
-        <option value="$PROJECT_DIR$/src/GUI/MainGui.java" />
         <option value="$PROJECT_DIR$/src/Strips/DiffPreCond.java" />
         <option value="$PROJECT_DIR$/src/Strips/CanMovePreCond.java" />
         <option value="$PROJECT_DIR$/src/Strips/CanRotatePreCond.java" />
         <option value="$PROJECT_DIR$/src/Strips/RotateOperator.java" />
         <option value="$PROJECT_DIR$/src/Strips/MoveOperator.java" />
-        <option value="$PROJECT_DIR$/src/Logic/LogicUtils.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsLogic.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsPreCondition.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsOperator.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsStack.java" />
+        <option value="$PROJECT_DIR$/src/GUI/MainGui.form" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiUtils.java" />
+        <option value="$PROJECT_DIR$/src/Logic/LogicUtils.java" />
+        <option value="$PROJECT_DIR$/src/GUI/MainGui.java" />
       </list>
     </option>
   </component>
@@ -256,8 +292,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -282,12 +318,9 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -388,35 +421,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MainGui" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Strips" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Strips" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Constants" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,6 +445,8 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="242" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -458,96 +472,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -569,25 +493,34 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -595,9 +528,8 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+    <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -608,31 +540,6 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Strips" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
       <envs />
       <method />
     </configuration>
@@ -664,32 +571,118 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+      <module name="" />
       <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
     <list size="1">
@@ -721,43 +714,44 @@
       <workItem from="1483539926165" duration="872000" />
       <workItem from="1483974749210" duration="16700000" />
       <workItem from="1484043188858" duration="31292000" />
+      <workItem from="1484159587494" duration="7148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50324000" />
+    <option name="totallyTimeSpent" value="57472000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1109375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="898" y="228" width="124" height="584" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35939196" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08552632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1727672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3995657" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1109375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="898" y="228" width="124" height="584" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35939196" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1834962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12135417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3995657" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -771,9 +765,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -782,28 +781,79 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Strips/CanRotatePreCond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="527">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2846#2847#0" expanded="true" />
+            <element signature="method#getBoarderForPos#0;class#GuiUtils#0" expanded="false" />
+            <element signature="e#3765#3766#0" expanded="true" />
+            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3869#3870#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#4192#4193#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/LogicUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;class#LogicUtils#0" expanded="false" />
+            <element signature="method#canMove#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#canRotate#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#moveFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#rotateFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#inBounds#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#inBounds#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#hasWall#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#hasWall#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#moveFurniture#1;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForExistingFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#isPosCovered#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForNewFurnitureSpace#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#inBounds#1;class#LogicUtils#0" expanded="false" />
+            <element signature="method#rotateFurniture#1;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="e#14964#14965#0" expanded="true" />
+            <element signature="e#15008#15009#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
           <folding />
         </state>
@@ -811,7 +861,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/FurnitureLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding />
         </state>
@@ -819,7 +869,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
@@ -827,7 +877,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiBoardItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
             <element signature="e#628#629#0" expanded="true" />
@@ -838,18 +888,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#markLocation#0;class#MainGui#0" expanded="false" />
+            <element signature="e#1503#2596#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2638#2826#0" expanded="true" />
+            <element signature="e#2825#2826#0" expanded="true" />
+            <element signature="e#2870#3060#0" expanded="true" />
+            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#3105#3296#0" expanded="true" />
+            <element signature="e#3295#3296#0" expanded="true" />
+            <element signature="e#3340#3530#0" expanded="true" />
+            <element signature="e#3529#3530#0" expanded="true" />
+            <element signature="e#3576#3768#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3815#4008#0" expanded="true" />
+            <element signature="e#4007#4008#0" expanded="true" />
+            <element signature="e#4050#4691#0" expanded="true" />
+            <element signature="e#4690#4691#0" expanded="true" />
+            <element signature="e#4743#5708#0" expanded="true" />
+            <element signature="e#5707#5708#0" expanded="true" />
+            <element signature="e#5755#6586#0" expanded="true" />
+            <element signature="e#6585#6586#0" expanded="true" />
+            <element signature="e#6633#7005#0" expanded="true" />
+            <element signature="e#7004#7005#0" expanded="true" />
+            <element signature="e#7046#7392#0" expanded="true" />
+            <element signature="e#7391#7392#0" expanded="true" />
+            <element signature="e#7436#7593#0" expanded="true" />
+            <element signature="e#7592#7593#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.form">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -857,7 +932,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
           <folding>
             <element signature="e#251#252#0" expanded="true" />
@@ -869,26 +944,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2846#2847#0" expanded="true" />
+            <element signature="method#getBoarderForPos#0;class#GuiUtils#0" expanded="false" />
+            <element signature="e#3765#3766#0" expanded="true" />
+            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3869#3870#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#4192#4193#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/LogicUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;class#LogicUtils#0" expanded="false" />
+            <element signature="method#canMove#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#canRotate#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#moveFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#rotateFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#inBounds#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#inBounds#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#hasWall#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#hasWall#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#moveFurniture#1;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForExistingFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#isPosCovered#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForNewFurnitureSpace#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#inBounds#1;class#LogicUtils#0" expanded="false" />
+            <element signature="method#rotateFurniture#1;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="e#14964#14965#0" expanded="true" />
+            <element signature="e#15008#15009#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
           <folding />
         </state>
@@ -896,7 +1009,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/FurnitureLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding />
         </state>
@@ -904,7 +1017,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
           <folding />
         </state>
@@ -912,11 +1025,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#markLocation#0;class#MainGui#0" expanded="false" />
+            <element signature="e#1503#2596#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2638#2826#0" expanded="true" />
+            <element signature="e#2825#2826#0" expanded="true" />
+            <element signature="e#2870#3060#0" expanded="true" />
+            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#3105#3296#0" expanded="true" />
+            <element signature="e#3295#3296#0" expanded="true" />
+            <element signature="e#3340#3530#0" expanded="true" />
+            <element signature="e#3529#3530#0" expanded="true" />
+            <element signature="e#3576#3768#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3815#4008#0" expanded="true" />
+            <element signature="e#4007#4008#0" expanded="true" />
+            <element signature="e#4050#4691#0" expanded="true" />
+            <element signature="e#4690#4691#0" expanded="true" />
+            <element signature="e#4743#5708#0" expanded="true" />
+            <element signature="e#5707#5708#0" expanded="true" />
+            <element signature="e#5755#6586#0" expanded="true" />
+            <element signature="e#6585#6586#0" expanded="true" />
+            <element signature="e#6633#7005#0" expanded="true" />
+            <element signature="e#7004#7005#0" expanded="true" />
+            <element signature="e#7046#7392#0" expanded="true" />
+            <element signature="e#7391#7392#0" expanded="true" />
+            <element signature="e#7436#7593#0" expanded="true" />
+            <element signature="e#7592#7593#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -928,7 +1066,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/NewFurnitureDlg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -940,7 +1078,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="e#251#252#0" expanded="true" />
@@ -952,28 +1090,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2846#2847#0" expanded="true" />
+            <element signature="method#getBoarderForPos#0;class#GuiUtils#0" expanded="false" />
+            <element signature="e#3765#3766#0" expanded="true" />
+            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3869#3870#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#4192#4193#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants/Globals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/FurnitureLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding />
         </state>
@@ -981,7 +1121,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
@@ -989,7 +1129,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Pos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding />
         </state>
@@ -997,7 +1137,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1005,7 +1145,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1013,7 +1153,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Pos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
@@ -1026,24 +1166,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/NewFurnitureDlg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants/Globals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
@@ -1051,26 +1188,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/FurnitureLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-          <folding>
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2846#2847#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding>
             <element signature="e#251#252#0" expanded="true" />
@@ -1082,7 +1208,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiBoardItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
             <element signature="e#628#629#0" expanded="true" />
@@ -1093,7 +1219,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
@@ -1101,427 +1227,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="325" column="7" selection-start-line="325" selection-start-column="7" selection-end-line="325" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;class#Container#0" expanded="false" />
-            <element signature="docComment;field#component#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#layoutMgr#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#dispatcher#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#focusTraversalPolicy#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#focusCycleRoot#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#focusTraversalPolicyProvider#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#serialVersionUID#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#INCLUDE_SELF#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#SEARCH_HEAVYWEIGHTS#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#serialPersistentFields#0;class#Container#0" expanded="false" />
-            <element signature="initializer##0;class#Container#0" expanded="false" />
-            <element signature="class#8977:9393" expanded="false" />
-            <element signature="method#findComponentAt#0;class#8977:9393" expanded="false" />
-            <element signature="docComment;method#initIDs#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#Container#0;class#Container#0" expanded="false" />
-            <element signature="method#Container#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getComponentCount#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#countComponents#0;class#Container#0" expanded="false" />
-            <element signature="method#countComponents#0;class#Container#0" expanded="false" />
-            <element signature="e#10517#10572#0" expanded="false" />
-            <element signature="e#11201#11256#0" expanded="false" />
-            <element signature="docComment;method#getComponents#0;class#Container#0" expanded="false" />
-            <element signature="method#getComponents#0;class#Container#0" expanded="false" />
-            <element signature="e#11863#11918#0" expanded="false" />
-            <element signature="method#getComponentsSync#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getInsets#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#insets#0;class#Container#0" expanded="false" />
-            <element signature="method#insets#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#add#0;class#Container#0" expanded="false" />
-            <element signature="method#add#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#add#1;class#Container#0" expanded="false" />
-            <element signature="method#add#1;class#Container#0" expanded="false" />
-            <element signature="docComment;method#add#2;class#Container#0" expanded="false" />
-            <element signature="method#add#2;class#Container#0" expanded="false" />
-            <element signature="docComment;method#checkAddToSelf#0;class#Container#0" expanded="false" />
-            <element signature="method#checkAddToSelf#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#checkNotAWindow#0;class#Container#0" expanded="false" />
-            <element signature="method#checkNotAWindow#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#checkAdding#0;class#Container#0" expanded="false" />
-            <element signature="method#checkAdding#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#removeDelicately#0;class#Container#0" expanded="false" />
-            <element signature="method#removeDelicately#0;class#Container#0" expanded="false" />
-            <element signature="e#19894#19932#0" expanded="false" />
-            <element signature="docComment;method#canContainFocusOwner#0;class#Container#0" expanded="false" />
-            <element signature="method#canContainFocusOwner#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#hasHeavyweightDescendants#0;class#Container#0" expanded="false" />
-            <element signature="method#hasHeavyweightDescendants#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#hasLightweightDescendants#0;class#Container#0" expanded="false" />
-            <element signature="method#hasLightweightDescendants#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getHeavyweightContainer#0;class#Container#0" expanded="false" />
-            <element signature="method#getHeavyweightContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#isRemoveNotifyNeeded#0;class#Container#0" expanded="false" />
-            <element signature="method#isRemoveNotifyNeeded#0;class#Container#0" expanded="false" />
-            <element signature="e#24210#24304#0" expanded="false" />
-            <element signature="e#24624#24720#0" expanded="false" />
-            <element signature="e#25014#25090#0" expanded="false" />
-            <element signature="docComment;method#setComponentZOrder#0;class#Container#0" expanded="false" />
-            <element signature="method#setComponentZOrder#0;class#Container#0" expanded="false" />
-            <element signature="e#28966#29021#0" expanded="false" />
-            <element signature="e#29145#29180#0" expanded="false" />
-            <element signature="docComment;method#reparentTraverse#0;class#Container#0" expanded="false" />
-            <element signature="method#reparentTraverse#0;class#Container#0" expanded="false" />
-            <element signature="e#29949#30005#0" expanded="false" />
-            <element signature="docComment;method#reparentChild#0;class#Container#0" expanded="false" />
-            <element signature="method#reparentChild#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#addDelicately#0;class#Container#0" expanded="false" />
-            <element signature="method#addDelicately#0;class#Container#0" expanded="false" />
-            <element signature="e#32543#32624#0" expanded="false" />
-            <element signature="e#33198#33269#0" expanded="false" />
-            <element signature="e#34532#34626#0" expanded="false" />
-            <element signature="docComment;method#getComponentZOrder#0;class#Container#0" expanded="false" />
-            <element signature="method#getComponentZOrder#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#add#3;class#Container#0" expanded="false" />
-            <element signature="docComment;method#add#4;class#Container#0" expanded="false" />
-            <element signature="docComment;method#addImpl#0;class#Container#0" expanded="false" />
-            <element signature="method#addImpl#0;class#Container#0" expanded="false" />
-            <element signature="method#updateGraphicsData#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#checkGD#0;class#Container#0" expanded="false" />
-            <element signature="method#checkGD#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#remove#0;class#Container#0" expanded="false" />
-            <element signature="method#remove#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#remove#1;class#Container#0" expanded="false" />
-            <element signature="method#remove#1;class#Container#0" expanded="false" />
-            <element signature="docComment;method#removeAll#0;class#Container#0" expanded="false" />
-            <element signature="method#removeAll#0;class#Container#0" expanded="false" />
-            <element signature="method#numListening#0;class#Container#0" expanded="false" />
-            <element signature="method#adjustListeningChildren#0;class#Container#0" expanded="false" />
-            <element signature="method#adjustDescendants#0;class#Container#0" expanded="false" />
-            <element signature="method#adjustDecendantsOnParent#0;class#Container#0" expanded="false" />
-            <element signature="method#countHierarchyMembers#0;class#Container#0" expanded="false" />
-            <element signature="method#getListenersCount#0;class#Container#0" expanded="false" />
-            <element signature="method#createHierarchyEvents#0;class#Container#0" expanded="false" />
-            <element signature="method#createChildHierarchyEvents#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getLayout#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#setLayout#0;class#Container#0" expanded="false" />
-            <element signature="method#setLayout#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#doLayout#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#layout#0;class#Container#0" expanded="false" />
-            <element signature="method#layout#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#isValidateRoot#0;class#Container#0" expanded="false" />
-            <element signature="initializer##1;class#Container#0" expanded="false" />
-            <element signature="docComment;method#invalidateParent#0;class#Container#0" expanded="false" />
-            <element signature="method#invalidateParent#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#invalidate#0;class#Container#0" expanded="false" />
-            <element signature="method#invalidate#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#validate#0;class#Container#0" expanded="false" />
-            <element signature="method#validate#0;class#Container#0" expanded="false" />
-            <element signature="e#63199#63252#0" expanded="false" />
-            <element signature="docComment;field#descendUnconditionallyWhenValidating#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#validateUnconditionally#0;class#Container#0" expanded="false" />
-            <element signature="method#validateUnconditionally#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#validateTree#0;class#Container#0" expanded="false" />
-            <element signature="method#validateTree#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#invalidateTree#0;class#Container#0" expanded="false" />
-            <element signature="method#invalidateTree#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#setFont#0;class#Container#0" expanded="false" />
-            <element signature="method#setFont#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getPreferredSize#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#preferredSize#0;class#Container#0" expanded="false" />
-            <element signature="method#preferredSize#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getMinimumSize#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#minimumSize#0;class#Container#0" expanded="false" />
-            <element signature="method#minimumSize#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getMaximumSize#0;class#Container#0" expanded="false" />
-            <element signature="method#getMaximumSize#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getAlignmentX#0;class#Container#0" expanded="false" />
-            <element signature="method#getAlignmentX#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getAlignmentY#0;class#Container#0" expanded="false" />
-            <element signature="method#getAlignmentY#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#paint#0;class#Container#0" expanded="false" />
-            <element signature="method#paint#0;class#Container#0" expanded="false" />
-            <element signature="e#74966#75007#0" expanded="false" />
-            <element signature="docComment;method#update#0;class#Container#0" expanded="false" />
-            <element signature="method#update#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#print#0;class#Container#0" expanded="false" />
-            <element signature="method#print#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#paintComponents#0;class#Container#0" expanded="false" />
-            <element signature="method#paintComponents#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#lightweightPaint#0;class#Container#0" expanded="false" />
-            <element signature="method#lightweightPaint#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#paintHeavyweightComponents#0;class#Container#0" expanded="false" />
-            <element signature="method#paintHeavyweightComponents#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#printComponents#0;class#Container#0" expanded="false" />
-            <element signature="method#printComponents#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#lightweightPrint#0;class#Container#0" expanded="false" />
-            <element signature="method#lightweightPrint#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#printHeavyweightComponents#0;class#Container#0" expanded="false" />
-            <element signature="method#printHeavyweightComponents#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#addContainerListener#0;class#Container#0" expanded="false" />
-            <element signature="method#addContainerListener#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#removeContainerListener#0;class#Container#0" expanded="false" />
-            <element signature="method#removeContainerListener#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getContainerListeners#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getListeners#0;class#Container#0" expanded="false" />
-            <element signature="method#getListeners#0;class#Container#0" expanded="false" />
-            <element signature="method#eventEnabled#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#processEvent#0;class#Container#0" expanded="false" />
-            <element signature="method#processEvent#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#processContainerEvent#0;class#Container#0" expanded="false" />
-            <element signature="method#processContainerEvent#0;class#Container#0" expanded="false" />
-            <element signature="method#dispatchEventImpl#0;class#Container#0" expanded="false" />
-            <element signature="e#86379#86429#0" expanded="false" />
-            <element signature="docComment;method#getMouseEventTarget#0;class#Container#0" expanded="false" />
-            <element signature="method#getMouseEventTarget#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getDropTargetEventTarget#0;class#Container#0" expanded="false" />
-            <element signature="method#getDropTargetEventTarget#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getMouseEventTarget#1;class#Container#0" expanded="false" />
-            <element signature="method#getMouseEventTarget#1;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getMouseEventTargetImpl#0;class#Container#0" expanded="false" />
-            <element signature="method#getMouseEventTargetImpl#0;class#Container#0" expanded="false" />
-            <element signature="e#92193#92253#0" expanded="false" />
-            <element signature="e#92946#92996#0" expanded="false" />
-            <element signature="e#93357#93417#0" expanded="false" />
-            <element signature="class#EventTargetFilter#0;class#Container#0" expanded="false" />
-            <element signature="class#MouseEventTargetFilter#0;class#Container#0" expanded="false" />
-            <element signature="method#accept#0;class#MouseEventTargetFilter#0;class#Container#0" expanded="false" />
-            <element signature="class#DropTargetEventTargetFilter#0;class#Container#0" expanded="false" />
-            <element signature="method#accept#0;class#DropTargetEventTargetFilter#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#proxyEnableEvents#0;class#Container#0" expanded="false" />
-            <element signature="method#proxyEnableEvents#0;class#Container#0" expanded="false" />
-            <element signature="e#95205#95261#0" expanded="false" />
-            <element signature="e#95412#95462#0" expanded="false" />
-            <element signature="docComment;method#deliverEvent#0;class#Container#0" expanded="false" />
-            <element signature="method#deliverEvent#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getComponentAt#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#locate#0;class#Container#0" expanded="false" />
-            <element signature="method#locate#0;class#Container#0" expanded="false" />
-            <element signature="e#97529#97564#0" expanded="false" />
-            <element signature="docComment;method#getComponentAt#1;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getMousePosition#0;class#Container#0" expanded="false" />
-            <element signature="method#getMousePosition#0;class#Container#0" expanded="false" />
-            <element signature="class#100069:100246" expanded="false" />
-            <element signature="method#isSameOrAncestorOf#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#findComponentAt#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#findComponentAt#1;class#Container#0" expanded="false" />
-            <element signature="method#findComponentAt#1;class#Container#0" expanded="false" />
-            <element signature="method#findComponentAtImpl#0;class#Container#0" expanded="false" />
-            <element signature="e#102892#102927#0" expanded="false" />
-            <element signature="docComment;method#getChildAt#0;class#Container#0" expanded="false" />
-            <element signature="method#getChildAt#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#findComponentAt#2;class#Container#0" expanded="false" />
-            <element signature="docComment;method#addNotify#0;class#Container#0" expanded="false" />
-            <element signature="method#addNotify#0;class#Container#0" expanded="false" />
-            <element signature="e#106184#106245#0" expanded="false" />
-            <element signature="e#106640#106694#0" expanded="false" />
-            <element signature="docComment;method#removeNotify#0;class#Container#0" expanded="false" />
-            <element signature="method#removeNotify#0;class#Container#0" expanded="false" />
-            <element signature="e#107552#107606#0" expanded="false" />
-            <element signature="e#108026#108045#0" expanded="false" />
-            <element signature="e#108596#108667#0" expanded="false" />
-            <element signature="docComment;method#isAncestorOf#0;class#Container#0" expanded="false" />
-            <element signature="method#isAncestorOf#0;class#Container#0" expanded="false" />
-            <element signature="method#startLWModal#0;class#Container#0" expanded="false" />
-            <element signature="e#110462#110526#0" expanded="false" />
-            <element signature="e#110731#110774#0" expanded="false" />
-            <element signature="e#111258#111316#0" expanded="false" />
-            <element signature="class#111925:112439" expanded="false" />
-            <element signature="method#run#0;class#111925:112439" expanded="false" />
-            <element signature="class#112171:112397" expanded="false" />
-            <element signature="method#evaluate#0;class#112171:112397" expanded="false" />
-            <element signature="method#stopLWModal#0;class#Container#0" expanded="false" />
-            <element signature="e#114368#114424#0" expanded="false" />
-            <element signature="class#WakingRunnable#0;class#Container#0" expanded="false" />
-            <element signature="method#run#0;class#WakingRunnable#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#paramString#0;class#Container#0" expanded="false" />
-            <element signature="method#paramString#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#list#0;class#Container#0" expanded="false" />
-            <element signature="method#list#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#list#1;class#Container#0" expanded="false" />
-            <element signature="method#list#1;class#Container#0" expanded="false" />
-            <element signature="docComment;method#setFocusTraversalKeys#0;class#Container#0" expanded="false" />
-            <element signature="method#setFocusTraversalKeys#0;class#Container#0" expanded="false" />
-            <element signature="e#121618#121689#0" expanded="false" />
-            <element signature="docComment;method#getFocusTraversalKeys#0;class#Container#0" expanded="false" />
-            <element signature="method#getFocusTraversalKeys#0;class#Container#0" expanded="false" />
-            <element signature="e#123600#123671#0" expanded="false" />
-            <element signature="docComment;method#areFocusTraversalKeysSet#0;class#Container#0" expanded="false" />
-            <element signature="method#areFocusTraversalKeysSet#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#isFocusCycleRoot#0;class#Container#0" expanded="false" />
-            <element signature="method#isFocusCycleRoot#0;class#Container#0" expanded="false" />
-            <element signature="method#findTraversalRoot#0;class#Container#0" expanded="false" />
-            <element signature="e#126350#126408#0" expanded="false" />
-            <element signature="method#containsFocus#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#isParentOf#0;class#Container#0" expanded="false" />
-            <element signature="method#isParentOf#0;class#Container#0" expanded="false" />
-            <element signature="method#clearMostRecentFocusOwnerOnHide#0;class#Container#0" expanded="false" />
-            <element signature="e#128423#128481#0" expanded="false" />
-            <element signature="method#clearCurrentFocusCycleRootOnHide#0;class#Container#0" expanded="false" />
-            <element signature="method#getTraversalRoot#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#setFocusTraversalPolicy#0;class#Container#0" expanded="false" />
-            <element signature="method#setFocusTraversalPolicy#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getFocusTraversalPolicy#0;class#Container#0" expanded="false" />
-            <element signature="method#getFocusTraversalPolicy#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#isFocusTraversalPolicySet#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#setFocusCycleRoot#0;class#Container#0" expanded="false" />
-            <element signature="method#setFocusCycleRoot#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#isFocusCycleRoot#1;class#Container#0" expanded="false" />
-            <element signature="docComment;method#setFocusTraversalPolicyProvider#0;class#Container#0" expanded="false" />
-            <element signature="method#setFocusTraversalPolicyProvider#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#isFocusTraversalPolicyProvider#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#transferFocusDownCycle#0;class#Container#0" expanded="false" />
-            <element signature="method#transferFocusDownCycle#0;class#Container#0" expanded="false" />
-            <element signature="method#preProcessKeyEvent#0;class#Container#0" expanded="false" />
-            <element signature="method#postProcessKeyEvent#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#applyComponentOrientation#0;class#Container#0" expanded="false" />
-            <element signature="method#applyComponentOrientation#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#addPropertyChangeListener#0;class#Container#0" expanded="false" />
-            <element signature="method#addPropertyChangeListener#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#addPropertyChangeListener#1;class#Container#0" expanded="false" />
-            <element signature="method#addPropertyChangeListener#1;class#Container#0" expanded="false" />
-            <element signature="e#143036#143106#0" expanded="false" />
-            <element signature="docComment;field#containerSerializedDataVersion#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#writeObject#0;class#Container#0" expanded="false" />
-            <element signature="method#writeObject#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#readObject#0;class#Container#0" expanded="false" />
-            <element signature="method#readObject#0;class#Container#0" expanded="false" />
-            <element signature="e#148270#148332#0" expanded="false" />
-            <element signature="docComment;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#serialVersionUID#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getAccessibleChildrenCount#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getAccessibleChild#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getAccessibleAt#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;field#propertyListenersCount#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;class#AccessibleContainerHandler#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="class#AccessibleContainerHandler#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="method#componentAdded#0;class#AccessibleContainerHandler#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="method#componentRemoved#0;class#AccessibleContainerHandler#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#addPropertyChangeListener#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="method#addPropertyChangeListener#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#removePropertyChangeListener#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="method#removePropertyChangeListener#0;class#AccessibleAWTContainer#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getAccessibleAt#0;class#Container#0" expanded="false" />
-            <element signature="method#getAccessibleAt#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getAccessibleChildrenCount#0;class#Container#0" expanded="false" />
-            <element signature="method#getAccessibleChildrenCount#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#getAccessibleChild#0;class#Container#0" expanded="false" />
-            <element signature="method#getAccessibleChild#0;class#Container#0" expanded="false" />
-            <element signature="method#increaseComponentCount#0;class#Container#0" expanded="false" />
-            <element signature="method#decreaseComponentCount#0;class#Container#0" expanded="false" />
-            <element signature="method#getTopmostComponentIndex#0;class#Container#0" expanded="false" />
-            <element signature="method#getBottommostComponentIndex#0;class#Container#0" expanded="false" />
-            <element signature="method#getOpaqueShape#0;class#Container#0" expanded="false" />
-            <element signature="method#recursiveSubtractAndApplyShape#0;class#Container#0" expanded="false" />
-            <element signature="method#recursiveSubtractAndApplyShape#1;class#Container#0" expanded="false" />
-            <element signature="method#recursiveSubtractAndApplyShape#2;class#Container#0" expanded="false" />
-            <element signature="e#161225#161287#0" expanded="false" />
-            <element signature="method#recursiveApplyCurrentShape#0;class#Container#0" expanded="false" />
-            <element signature="method#recursiveApplyCurrentShape#1;class#Container#0" expanded="false" />
-            <element signature="method#recursiveApplyCurrentShape#2;class#Container#0" expanded="false" />
-            <element signature="e#162591#162653#0" expanded="false" />
-            <element signature="method#recursiveShowHeavyweightChildren#0;class#Container#0" expanded="false" />
-            <element signature="method#recursiveHideHeavyweightChildren#0;class#Container#0" expanded="false" />
-            <element signature="method#recursiveRelocateHeavyweightChildren#0;class#Container#0" expanded="false" />
-            <element signature="docComment;method#isRecursivelyVisibleUpToHeavyweightContainer#0;class#Container#0" expanded="false" />
-            <element signature="method#isRecursivelyVisibleUpToHeavyweightContainer#0;class#Container#0" expanded="false" />
-            <element signature="method#mixOnShowing#0;class#Container#0" expanded="false" />
-            <element signature="method#mixOnHiding#0;class#Container#0" expanded="false" />
-            <element signature="method#mixOnReshaping#0;class#Container#0" expanded="false" />
-            <element signature="method#mixOnZOrderChanging#0;class#Container#0" expanded="false" />
-            <element signature="method#mixOnValidating#0;class#Container#0" expanded="false" />
-            <element signature="docComment;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="class#LightweightDispatcher#0" expanded="false" />
-            <element signature="initializer##0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#LightweightDispatcher#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#dispose#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;method#enableEvents#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;method#dispatchEvent#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#dispatchEvent#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#isMouseGrab#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;method#processMouseEvent#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#processMouseEvent#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="e#174147#174208#0" expanded="false" />
-            <element signature="e#175010#175077#0" expanded="false" />
-            <element signature="e#175911#175975#0" expanded="false" />
-            <element signature="method#processDropTargetEvent#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#trackDropTargetEnterExit#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="e#178624#178689#0" expanded="false" />
-            <element signature="method#trackMouseEnterExit#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#retargetMouseEnterExit#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#startListeningForOtherDrags#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="class#182037:182415" expanded="false" />
-            <element signature="method#run#0;class#182037:182415" expanded="false" />
-            <element signature="method#stopListeningForOtherDrags#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="class#182610:182856" expanded="false" />
-            <element signature="method#run#0;class#182610:182856" expanded="false" />
-            <element signature="method#eventDispatched#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="e#183717#183774#0" expanded="false" />
-            <element signature="e#183920#183934#0" expanded="false" />
-            <element signature="e#184282#184284#0" expanded="false" />
-            <element signature="class#185403:186291" expanded="false" />
-            <element signature="method#run#0;class#185403:186291" expanded="false" />
-            <element signature="e#186722#186765#0" expanded="false" />
-            <element signature="docComment;method#retargetMouseEvent#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="method#retargetMouseEvent#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="e#190861#190916#0" expanded="false" />
-            <element signature="docComment;field#nativeContainer#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#focus#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#mouseEventTarget#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#targetLastEntered#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#targetLastEnteredDT#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#isMouseInNativeContainer#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#isMouseDTInNativeContainer#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#nativeCursor#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#eventMask#0;class#LightweightDispatcher#0" expanded="false" />
-            <element signature="docComment;field#PROXY_EVENT_MASK#0;class#LightweightDispatcher#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/DiffPreCond.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/CanMovePreCond.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/CanRotatePreCond.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#353#354#0" expanded="true" />
@@ -1534,7 +1262,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/RotateOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
           <folding>
             <element signature="e#364#365#0" expanded="true" />
@@ -1547,7 +1275,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/MoveOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding>
             <element signature="e#360#361#0" expanded="true" />
@@ -1558,17 +1286,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/LogicUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="327" column="21" selection-start-line="327" selection-start-column="21" selection-end-line="327" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/StripsLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1578,20 +1298,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="438" column="40" selection-start-line="438" selection-start-column="40" selection-end-line="438" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#markLocation#0;class#MainGui#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/StripsObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding />
         </state>
@@ -1599,7 +1308,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/StripsOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
           <folding />
         </state>
@@ -1607,7 +1316,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/StripsPreCondition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="7" column="56" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="56" />
           <folding />
         </state>
@@ -1615,10 +1324,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/StripsStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5151515">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/LogicUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1214" max-vertical-offset="1938">
+          <caret line="445" column="51" selection-start-line="445" selection-start-column="51" selection-end-line="445" selection-end-column="51" />
+          <folding>
+            <element signature="docComment;class#LogicUtils#0" expanded="false" />
+            <element signature="method#canMove#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#canRotate#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#moveFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#rotateFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#inBounds#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#inBounds#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#hasWall#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#hasWall#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#moveFurniture#1;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForExistingFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#isPosCovered#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#checkForNewFurnitureSpace#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#inBounds#1;class#LogicUtils#0" expanded="false" />
+            <element signature="method#rotateFurniture#1;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
+            <element signature="docComment;method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="e#14964#14965#0" expanded="true" />
+            <element signature="e#15008#15009#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="619" max-vertical-offset="1411">
+          <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+          <folding>
+            <element signature="method#getBoarderForPos#0;class#GuiUtils#0" expanded="false" />
+            <element signature="e#3765#3766#0" expanded="true" />
+            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3869#3870#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#4192#4193#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2859116" vertical-offset="5267" max-vertical-offset="6103">
+          <caret line="322" column="13" selection-start-line="322" selection-start-column="13" selection-end-line="322" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1503#2596#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2638#2826#0" expanded="true" />
+            <element signature="e#2825#2826#0" expanded="true" />
+            <element signature="e#2870#3060#0" expanded="true" />
+            <element signature="e#3059#3060#0" expanded="true" />
+            <element signature="e#3105#3296#0" expanded="true" />
+            <element signature="e#3295#3296#0" expanded="true" />
+            <element signature="e#3340#3530#0" expanded="true" />
+            <element signature="e#3529#3530#0" expanded="true" />
+            <element signature="e#3576#3768#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3815#4008#0" expanded="true" />
+            <element signature="e#4007#4008#0" expanded="true" />
+            <element signature="e#4050#4691#0" expanded="true" />
+            <element signature="e#4690#4691#0" expanded="true" />
+            <element signature="e#4743#5708#0" expanded="true" />
+            <element signature="e#5707#5708#0" expanded="true" />
+            <element signature="e#5755#6586#0" expanded="true" />
+            <element signature="e#6585#6586#0" expanded="true" />
+            <element signature="e#6633#7005#0" expanded="true" />
+            <element signature="e#7004#7005#0" expanded="true" />
+            <element signature="e#7046#7392#0" expanded="true" />
+            <element signature="e#7391#7392#0" expanded="true" />
+            <element signature="e#7436#7593#0" expanded="true" />
+            <element signature="e#7592#7593#0" expanded="true" />
           </folding>
         </state>
       </provider>

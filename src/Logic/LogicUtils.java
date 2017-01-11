@@ -1,9 +1,9 @@
 package Logic;
 
 import Constants.*;
+import Strips.StripsLogic;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 import static Constants.Constants.Directions.*;
 
@@ -150,7 +150,6 @@ public class LogicUtils {
     }
 
 
-
     public void addFurniture(Furniture f) {
         furnitureMap.put(f.getID(), f);
     }
@@ -231,7 +230,6 @@ public class LogicUtils {
 
     private boolean isLocationCovered(FurnitureLocation f1, FurnitureLocation f2) {
         return  (isPosCovered(f2.tl, f1) || isPosCovered(f2.br, f1) );
-
     }
 
     private boolean isPosCovered(Pos pos, FurnitureLocation fl) {
@@ -367,8 +365,6 @@ public class LogicUtils {
         rotateFurniture(f, direction);
     }
 
-
-
     /**
      * get all pos in new location that are not in old location
      * @param oldLocation
@@ -426,5 +422,40 @@ public class LogicUtils {
         Pos newTLPos = new Pos(newTLX, newTLY);
         Pos newBRPos = new Pos(newBRX, newBRY);
         return new FurnitureLocation(newTLPos, newBRPos);
+    }
+
+    public boolean validateStateForSolve() {
+        return (noMissingFinalLocations() &&
+                noOverLapingFinals());
+    }
+
+    private boolean noOverLapingFinals() {
+        for (Furniture fOuter : furnitureMap.values()) {
+            for (Furniture fInner : furnitureMap.values()) {
+                if (fInner != fOuter) {
+                    if (isLocationCovered(fInner.getLocation(), fOuter.getLocation())) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    private boolean noMissingFinalLocations() {
+        for (Furniture f : furnitureMap.values()) {
+            if (f.getFinalLocation() == null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public Collection<Furniture> getAllFurniture() {
+        return furnitureMap.values();
+    }
+
+    public void makeMove() {
+        // use Strips for next move
     }
 }
