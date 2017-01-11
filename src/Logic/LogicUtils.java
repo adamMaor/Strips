@@ -15,6 +15,75 @@ public class LogicUtils {
     private Globals globals;
     private HashMap<String, Furniture> furnitureMap;
 
+    /**** Strips Logic API ****/
+
+    public boolean canMove(Furniture f, byte direction) {
+        FurnitureLocation fLocation = f.getLocation();
+        return checkForWalls(fLocation, direction) && checkForOtherFurniture(fLocation, direction);
+    }
+
+    public boolean canRotate(Furniture f, byte direction) {
+        boolean bRes = true;
+        FurnitureLocation fLocation = f.getLocation();
+        FurnitureLocation newLocation = getRotatedLocation(fLocation, direction);
+        // check location inBounds
+        if (inBounds(newLocation) == false) {
+            // throw exception - can't rotate - out of bounds
+            bRes = false;
+        }
+        // check for wall
+        if (checkForWalls(newLocation, NONE) == false) {
+            // throw exception - can't rotate - Walls in new location
+            bRes = false;
+        }
+        // check for other furniture
+        deleteFurniture(f); // remove the furniture so to not check for other furniture with it - found other furniture but its the same one
+        if(checkForOtherFurniture(newLocation, NONE) == false) {
+            // throw exception - can't rotate - other furniture in new location
+            bRes = false;
+        }
+        addFurniture(f);
+        return bRes;
+    }
+
+    public boolean moveFurniture(Furniture f, byte direction) {
+        boolean bRes = true;
+        if (f != null) {
+            if (canMove(f, direction)) {
+                switch (direction) {
+                    case NONE:
+                        break;
+                    case UP:
+                        f.moveUp();
+                        break;
+                    case DOWN:
+                        f.moveDown();
+                        break;
+                    case LEFT:
+                        f.moveLeft();
+                        break;
+                    case RIGHT:
+                        f.moveRight();
+                        break;
+                }
+            }
+        }
+        else {
+            bRes = false;
+        }
+        return bRes;
+    }
+
+    public void rotateFurniture(Furniture f, byte direction) {
+        if (canRotate(f, direction)) {
+            FurnitureLocation fLocation = f.getLocation();
+            FurnitureLocation newLocation = getRotatedLocation(fLocation, direction);
+            f.setLocation(newLocation);
+        }
+    }
+
+    /***************************************************************/
+
     public LogicUtils(Globals globals) {
         this.globals = globals;
         furnitureMap = new HashMap<String, Furniture>();
@@ -80,37 +149,15 @@ public class LogicUtils {
         return bRes;
     }
 
+
+
     public void addFurniture(Furniture f) {
         furnitureMap.put(f.getID(), f);
     }
 
     public boolean moveFurniture(String fId, byte direction) {
-        boolean bRes = true;
         Furniture f = furnitureMap.get(fId);
-        if (f != null) {
-            if (checkForWalls(f.getLocation(), direction) && checkForOtherFurniture(f.getLocation(), direction)) {
-                switch (direction) {
-                    case NONE:
-                        break;
-                    case UP:
-                        f.moveUp();
-                        break;
-                    case DOWN:
-                        f.moveDown();
-                        break;
-                    case LEFT:
-                        f.moveLeft();
-                        break;
-                    case RIGHT:
-                        f.moveRight();
-                        break;
-                }
-            }
-        }
-        else {
-            bRes = false;
-        }
-        return bRes;
+        return moveFurniture(f, direction);
     }
 
     private boolean checkForOtherFurniture(FurnitureLocation f, byte direction) {
@@ -279,7 +326,6 @@ public class LogicUtils {
      * Checks for inner walls (between the position list - used for corner case
      * where the furniture is above a wall (spiked on a wall)
      * @param posList
-     * @param direction
      * @return true if wall exists, false otherwise
      */
     private boolean checkInnerWalls(ArrayList<Pos> posList, byte originalDirection, byte checkDirection) {
@@ -318,30 +364,10 @@ public class LogicUtils {
 
     public void rotateFurniture(String fId, byte direction) {
         Furniture f = getFurniture(fId);
-        // calc new location
-        FurnitureLocation newLocation = getRotatedLocation(f.getLocation(), direction);
-        // check location inBounds
-        if (inBounds(newLocation) == false) {
-            // throw exception - can't rotate - out of bounds
-            return;
-        }
-        // check for wall
-        if (checkForWalls(newLocation, NONE) == false) {
-            // throw exception - can't rotate - Walls in new location
-            return;
-        }
-        // check for other furniture
-        deleteFurniture(f); // remove the furniture so to not check for other furniture with it - found other furniture but its the same one
-        if(checkForOtherFurniture(newLocation, NONE) == false) {
-            // bring it back
-            addFurniture(f);
-            // throw exception - can't rotate - other furniture in new location
-            return;
-        }
-        addFurniture(f);
-        // rotate
-        f.setLocation(newLocation);
+        rotateFurniture(f, direction);
     }
+
+
 
     /**
      * get all pos in new location that are not in old location
@@ -374,7 +400,6 @@ public class LogicUtils {
         int newHeight = currLocation.br.x - currLocation.tl.x + 1;
         int oldXCenter = (currLocation.tl.x + currLocation.br.x)/2;
         int oldYCenter = (currLocation.tl.y + currLocation.br.y)/2;
-
 
         int newTLX = oldXCenter - newWidth/2;
         int newTLY = oldYCenter - newHeight/2;

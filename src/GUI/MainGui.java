@@ -6,6 +6,7 @@ import Logic.FurnitureLocation;
 import Logic.Pos;
 
 import javax.swing.*;
+import javax.swing.border.CompoundBorder;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -175,11 +176,13 @@ public class MainGui {
 
     private void unMarkLocation(FurnitureLocation furnitureLocation) {
         int y = furnitureLocation.tl.y;
-        int x = furnitureLocation.tl.x;
-        while (y < furnitureLocation.br.y) {
-            while (x < furnitureLocation.br.x) {
-                boardItems[y][x].setBorder(utils.getBoarderForPos(x++,y++));
+        while (y <= furnitureLocation.br.y) {
+            int x = furnitureLocation.tl.x;
+            while (x <= furnitureLocation.br.x) {
+                boardItems[y][x].setBorder(utils.getBoarderForPos(x,y));
+                x++;
             }
+            y++;
         }
     }
 
@@ -203,24 +206,39 @@ public class MainGui {
         if (width == 0) {
             MatteBorder upBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
                     Constants.Sizes.ThickBorderWidth,
-                    Constants.Sizes.ThickBorderWidth,
-                    Constants.Sizes.normalBorderWidth,
-                    color);
-            boardItems[y++][x].setBorder(upBorder);
-            MatteBorder middleBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
-                    Constants.Sizes.ThickBorderWidth,
-                    Constants.Sizes.normalBorderWidth,
+                    0,
                     Constants.Sizes.ThickBorderWidth,
                     color);
+            MatteBorder upBorder2 = BorderFactory.createMatteBorder(0,
+                    0,
+                    Constants.Sizes.normalBorderWidth,
+                    0,
+                    Constants.Colors.StandardBorderColor);
+            boardItems[y++][x].setBorder(new CompoundBorder(upBorder, upBorder2));
+            MatteBorder middleBorder = BorderFactory.createMatteBorder(0,
+                    Constants.Sizes.ThickBorderWidth,
+                    0,
+                    Constants.Sizes.ThickBorderWidth,
+                    color);
+            MatteBorder middleBorder2 = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                    0,
+                    Constants.Sizes.normalBorderWidth,
+                    0,
+                    Constants.Colors.StandardBorderColor);
             while (y < furnitureLocation.br.y) {
-                boardItems[y++][x].setBorder(middleBorder);
+                boardItems[y++][x].setBorder(new CompoundBorder(middleBorder, middleBorder2));
             }
-            MatteBorder downBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+            MatteBorder downBorder = BorderFactory.createMatteBorder(0,
                     Constants.Sizes.ThickBorderWidth,
                     Constants.Sizes.ThickBorderWidth,
                     Constants.Sizes.ThickBorderWidth,
                     color);
-            boardItems[y][x].setBorder(downBorder);
+            MatteBorder downBorder2 = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                    0,
+                    0,
+                    0,
+                    Constants.Colors.StandardBorderColor);
+            boardItems[y][x].setBorder(new CompoundBorder(downBorder, downBorder2));
             return;
         }
 
@@ -228,23 +246,31 @@ public class MainGui {
             MatteBorder leftBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
                     Constants.Sizes.ThickBorderWidth,
                     Constants.Sizes.ThickBorderWidth,
-                    Constants.Sizes.normalBorderWidth,
+                    0,
                     color);
-            boardItems[y][x++].setBorder(leftBorder);
+            MatteBorder leftBorder2 = BorderFactory.createMatteBorder(0,0,0,
+                    Constants.Sizes.normalBorderWidth,
+                    Constants.Colors.StandardBorderColor);
+            boardItems[y][x++].setBorder(new CompoundBorder(leftBorder, leftBorder2));
             MatteBorder middleBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
-                    Constants.Sizes.normalBorderWidth,
-                    Constants.Sizes.ThickBorderWidth,
-                    Constants.Sizes.normalBorderWidth,
-                    color);
+                    0, Constants.Sizes.ThickBorderWidth, 0, color);
+            MatteBorder middleBorder2 = BorderFactory.createMatteBorder(0, Constants.Sizes.normalBorderWidth,
+                    0, Constants.Sizes.normalBorderWidth,
+                    Constants.Colors.StandardBorderColor);
             while (x < furnitureLocation.br.x) {
-                boardItems[y][x++].setBorder(middleBorder);
+                boardItems[y][x++].setBorder(new CompoundBorder(middleBorder, middleBorder2));
             }
             MatteBorder rightBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
-                    Constants.Sizes.normalBorderWidth,
+                    0,
                     Constants.Sizes.ThickBorderWidth,
                     Constants.Sizes.ThickBorderWidth,
                     color);
-            boardItems[y][x].setBorder(rightBorder);
+            MatteBorder rightBorder2 = BorderFactory.createMatteBorder(0,
+                    Constants.Sizes.normalBorderWidth,
+                    0,
+                    0,
+                    Constants.Colors.StandardBorderColor);
+            boardItems[y][x].setBorder(new CompoundBorder(rightBorder,rightBorder2));
             return;
         }
 
@@ -252,67 +278,105 @@ public class MainGui {
         //uperLeft Corner Border
         MatteBorder upLeftBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
                 Constants.Sizes.ThickBorderWidth,
-                Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+                0,
+                0,
                 color);
-        boardItems[y][x++].setBorder(upLeftBorder);
+        MatteBorder upLeftBorder2 = BorderFactory.createMatteBorder(0,
+                0,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Colors.StandardBorderColor);
+        boardItems[y][x++].setBorder(new CompoundBorder(upLeftBorder, upLeftBorder2));
         // first set upper border
         MatteBorder upBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
-                Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+                0,
+                0,
+                0,
                 color);
+        MatteBorder upBorder2 = BorderFactory.createMatteBorder(0,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Colors.StandardBorderColor);
         while (x < furnitureLocation.br.x) {
-            boardItems[y][x++].setBorder(upBorder);
+            boardItems[y][x++].setBorder(new CompoundBorder(upBorder, upBorder2));
 
         }
         //uper rightt Corner Border
         MatteBorder upRightBorder = BorderFactory.createMatteBorder(Constants.Sizes.ThickBorderWidth,
-                Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+                0,
+                0,
                 Constants.Sizes.ThickBorderWidth,
                 color);
-        boardItems[y++][x].setBorder(upRightBorder);
+        MatteBorder upRightBorder2 = BorderFactory.createMatteBorder(0,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                0,
+                Constants.Colors.StandardBorderColor);
+        boardItems[y++][x].setBorder(new CompoundBorder(upRightBorder, upRightBorder2));
         // now set right border
-        MatteBorder rightBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+        MatteBorder rightBorder = BorderFactory.createMatteBorder(0,
+                0,
+                0,
                 Constants.Sizes.ThickBorderWidth,
                 color);
+        MatteBorder rightBorder2 = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                0,
+                Constants.Colors.StandardBorderColor);
         while(y < furnitureLocation.br.y) {
-            boardItems[y++][x].setBorder(rightBorder);
+            boardItems[y++][x].setBorder(new CompoundBorder(rightBorder, rightBorder2));
         }
 
         //downright Corner Border
-        MatteBorder downRightBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+        MatteBorder downRightBorder = BorderFactory.createMatteBorder(0,
+                0,
                 Constants.Sizes.ThickBorderWidth,
                 Constants.Sizes.ThickBorderWidth,
                 color);
-        boardItems[y][x--].setBorder(downRightBorder);
+        MatteBorder downRightBorder2 = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                0,0,
+                Constants.Colors.StandardBorderColor);
+        boardItems[y][x--].setBorder(new CompoundBorder(downRightBorder, downRightBorder2));
         // downborder
-        MatteBorder downBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+        MatteBorder downBorder = BorderFactory.createMatteBorder(0,
+                0,
                 Constants.Sizes.ThickBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+                0,
                 color);
+        MatteBorder downBorder2 = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                0,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Colors.StandardBorderColor);
         while (x > furnitureLocation.tl.x) {
-            boardItems[y][x--].setBorder(downBorder);
+            boardItems[y][x--].setBorder(new CompoundBorder(downBorder, downBorder2));
         }
         //downright Corner Border
-        MatteBorder downLeftBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+        MatteBorder downLeftBorder = BorderFactory.createMatteBorder(0,
                 Constants.Sizes.ThickBorderWidth,
                 Constants.Sizes.ThickBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+                0,
                 color);
-        boardItems[y--][x].setBorder(downLeftBorder);
-        MatteBorder leftBorder = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+        MatteBorder downLeftBorder2 = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                0,0,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Colors.StandardBorderColor);
+        boardItems[y--][x].setBorder(new CompoundBorder(downLeftBorder, downLeftBorder2));
+        MatteBorder leftBorder = BorderFactory.createMatteBorder(0,
                 Constants.Sizes.ThickBorderWidth,
-                Constants.Sizes.normalBorderWidth,
-                Constants.Sizes.normalBorderWidth,
+                0,
+                0,
                 color);
+        MatteBorder leftBorder2 = BorderFactory.createMatteBorder(Constants.Sizes.normalBorderWidth,
+                0,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Sizes.normalBorderWidth,
+                Constants.Colors.StandardBorderColor);
         while(y > furnitureLocation.tl.y) {
-            boardItems[y--][x].setBorder(leftBorder);
+            boardItems[y--][x].setBorder(new CompoundBorder(leftBorder, leftBorder2));
         }
     }
 

@@ -7,7 +7,13 @@ import java.awt.*;
  */
 public class Furniture {
     private String ID;
-    private FurnitureLocation location, finalLocation;
+    private FurnitureLocation location;
+
+    public FurnitureLocation getFinalLocation() {
+        return finalLocation;
+    }
+
+    private FurnitureLocation finalLocation;
     private Color color;
 
 
