@@ -5,6 +5,9 @@ import Logic.FurnitureLocation;
 import Logic.LogicUtils;
 import Logic.Pos;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 /**
  * Created by Laptop on 01/11/17.
  */
@@ -50,5 +53,34 @@ public class StripsLogic {
             bRes = utils.canRotate(c.getFurniture(),c.getDirection());
         }
         return bRes;
+    }
+
+    public ArrayList<String> getCurrentStack() {
+        ArrayList<String> res = new ArrayList<String>();
+        res.add("Hey");
+        res.add("I'm");
+        res.add("The");
+        res.add("Stack");
+        return res;
+    }
+
+    public ArrayList<String> getCurrentPlan() {
+        // TODO - make sure stack is reverse and plan is in order
+        ArrayList<String> res = new ArrayList<String>();
+        res.add("Hello");
+        res.add("I'm");
+        res.add("The");
+        res.add("Plan");
+        return res;
+    }
+
+    public boolean makeMove() {
+        // use Strips for next move
+        Random rand = new Random();
+        for (Furniture f : utils.getAllFurniture()) {
+            byte direction = (byte)rand.nextInt(5);
+            utils.moveFurniture(f, direction);
+        }
+        return true;
     }
 }

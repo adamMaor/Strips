@@ -37,12 +37,16 @@ public class MainGui {
     private JRadioButton autoPlayRadioButton;
     private JList stackList;
     private JList planList;
+    private DefaultListModel<String> stackModel;
+    private DefaultListModel<String> planModel;
     private JPanel solvePanel;
     private FurnitureLocation tempFurnitureLocation;
 
     private GuiUtils utils;
-
     private GuiBoardItem[][] boardItems;
+    private int currentFurniture;
+    private boolean bIsAutoRun;
+
 
     public MainGui(final GuiUtils utils) {
         this.utils = utils;
@@ -197,13 +201,6 @@ public class MainGui {
         });
     }
 
-    private int currentFurniture;
-    private boolean bIsAutoRun;
-    private DefaultListModel<String> stackModel;
-    private DefaultListModel<String> planModel;
-
-
-
     private void generateMove() {
         if (utils.makeMove() == true) {
             stackModel.clear();
@@ -221,6 +218,11 @@ public class MainGui {
             Thread repaint = new Thread(new Runnable() {
                 @Override
                 public void run() {
+                    try {
+                        Thread.sleep(40);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     repaintBoard();
                 }
             });

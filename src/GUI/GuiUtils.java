@@ -6,6 +6,7 @@ import Logic.Furniture;
 import Logic.FurnitureLocation;
 import Logic.LogicUtils;
 import Logic.Pos;
+import Strips.StripsLogic;
 
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
@@ -21,13 +22,13 @@ import java.util.HashMap;
 public class GuiUtils {
     private Globals globals;
     private LogicUtils logicUtils;
+    private StripsLogic stripsLogic;
 
 
-    public GuiUtils(Globals globals, LogicUtils logicUtils) {
+    public GuiUtils(Globals globals, LogicUtils logicUtils, StripsLogic stripsLogic) {
         this.globals = globals;
         this.logicUtils = logicUtils;
-
-
+        this.stripsLogic = stripsLogic;
     }
 
     public CompoundBorder getBoarderForPos(int x, int y) {
@@ -105,7 +106,7 @@ public class GuiUtils {
      * @return true if move made - false if finished all moves
      */
     public boolean makeMove() {
-        return logicUtils.makeMove();
+        return stripsLogic.makeMove();
     }
 
     public Collection<Furniture> getAllFurniture() {
@@ -113,10 +114,10 @@ public class GuiUtils {
     }
 
     public ArrayList<String> getCurrentStack() {
-        return logicUtils.getCurrentStack();
+        return stripsLogic.getCurrentStack();
     }
 
     public ArrayList<String> getCurrentPlan() {
-        return logicUtils.getCurrentPlan();
+        return stripsLogic.getCurrentPlan();
     }
 }
