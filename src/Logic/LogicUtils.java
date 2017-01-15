@@ -455,7 +455,35 @@ public class LogicUtils {
         return furnitureMap.values();
     }
 
-    public void makeMove() {
+    public boolean makeMove() {
         // use Strips for next move
+        Random rand = new Random();
+        for (Furniture f : furnitureMap.values()) {
+            byte direction = (byte)rand.nextInt(5);
+            moveFurniture(f, direction);
+        }
+
+        return true;
+    }
+
+    public ArrayList<String> getCurrentStack() {
+        ArrayList<String> res = new ArrayList<String>();
+        res.add("Hey");
+        res.add("I'm");
+        res.add("The");
+        res.add("Stack");
+        return res;
+
+    }
+
+    public ArrayList<String> getCurrentPlan() {
+        // TODO - make sure stack is reverse and plan is in order
+        ArrayList<String> res = new ArrayList<String>();
+        res.add("Hello");
+        res.add("I'm");
+        res.add("The");
+        res.add("Plan");
+        return res;
+
     }
 }

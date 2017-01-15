@@ -11,6 +11,7 @@ import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -37,7 +38,6 @@ public class MainGui {
     private JList stackList;
     private JList planList;
     private JPanel solvePanel;
-    private int currentFurniture;
     private FurnitureLocation tempFurnitureLocation;
 
     private GuiUtils utils;
@@ -182,18 +182,67 @@ public class MainGui {
         nextMoveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                nextMoveButton.setEnabled(!bIsAutoRun);
                 generateMove();
+            }
+        });
+        autoPlayRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bIsAutoRun = autoPlayRadioButton.isSelected();
+                if (!bIsAutoRun) {
+                    nextMoveButton.setEnabled(true);
+                }
             }
         });
     }
 
+    private int currentFurniture;
+    private boolean bIsAutoRun;
+    private DefaultListModel<String> stackModel;
+    private DefaultListModel<String> planModel;
+
+
+
     private void generateMove() {
-        System.out.println("Get Next move from utils->Stripslogic");
         if (utils.makeMove() == true) {
-            repaintBoard();
+            stackModel.clear();
+            ArrayList<String> stack = utils.getCurrentStack();
+            for (int i = 0 ; i < stack.size(); i++) {
+                stackModel.addElement(stack.get(i));
+            }
+
+            planModel.clear();
+            ArrayList<String> plan = utils.getCurrentPlan();
+            for (int i = 0 ; i < plan.size(); i++) {
+                planModel.addElement(plan.get(i));
+            }
+
+            Thread repaint = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    repaintBoard();
+                }
+            });
+            repaint.start();
         }
         else {
             // Done
+        }
+
+        if (bIsAutoRun) {
+            Thread setNextAvail = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(250);
+                        generateMove();
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            });
+            setNextAvail.start();
         }
     }
 
@@ -349,5 +398,18 @@ public class MainGui {
 
     private void createUIComponents() {
         boardPanel = new JPanel(new GridLayout(Constants.Sizes.boardHeight,Constants.Sizes.boardWidth));
+        stackModel = new DefaultListModel<>();
+        stackList = new JList<>(stackModel);
+        ArrayList<String> stack = utils.getCurrentStack();
+        for (int i = 0 ; i < stack.size(); i++) {
+            stackModel.addElement(stack.get(i));
+        }
+
+        planModel = new DefaultListModel<>();
+        planList = new JList<>(planModel);
+        ArrayList<String> plan = utils.getCurrentStack();
+        for (int i = 0 ; i < plan.size(); i++) {
+            planModel.addElement(plan.get(i));
+        }
     }
 }

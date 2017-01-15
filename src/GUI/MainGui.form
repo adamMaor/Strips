@@ -223,7 +223,7 @@
               <text value="AutoPlay"/>
             </properties>
           </component>
-          <component id="7dd11" class="javax.swing.JList" binding="stackList">
+          <component id="7dd11" class="javax.swing.JList" binding="stackList" custom-create="true">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="250" height="50"/>
@@ -255,7 +255,7 @@
               <text value="Next Move"/>
             </properties>
           </component>
-          <component id="5c7e5" class="javax.swing.JList" binding="planList">
+          <component id="5c7e5" class="javax.swing.JList" binding="planList" custom-create="true">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="250" height="50"/>

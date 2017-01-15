@@ -11,6 +11,7 @@ import javax.swing.*;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
@@ -104,11 +105,18 @@ public class GuiUtils {
      * @return true if move made - false if finished all moves
      */
     public boolean makeMove() {
-        logicUtils.makeMove();
-        return true;
+        return logicUtils.makeMove();
     }
 
     public Collection<Furniture> getAllFurniture() {
         return logicUtils.getAllFurniture();
+    }
+
+    public ArrayList<String> getCurrentStack() {
+        return logicUtils.getCurrentStack();
+    }
+
+    public ArrayList<String> getCurrentPlan() {
+        return logicUtils.getCurrentPlan();
     }
 }
