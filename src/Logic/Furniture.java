@@ -71,4 +71,8 @@ public class Furniture {
     public void setFinalLocation(FurnitureLocation fl) {
         this.finalLocation = fl;
     }
+
+    public Diff getCurrentDiff() {
+        return new Diff(this.getFinalLocation(), this.getLocation());
+    }
 }

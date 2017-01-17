@@ -17,6 +17,14 @@ public class LogicUtils {
 
     /**** Strips Logic API ****/
 
+    public boolean noWalls(Furniture f, byte direction){
+        return checkForWalls(f.getLocation(), direction);
+    }
+
+    public boolean noOtherFurniture(Furniture f, byte direction){
+        return checkForOtherFurniture(f.getLocation(), direction);
+    }
+
     public boolean canMove(Furniture f, byte direction) {
         FurnitureLocation fLocation = f.getLocation();
         return checkForWalls(fLocation, direction) && checkForOtherFurniture(fLocation, direction);

@@ -1,21 +1,22 @@
 package Strips;
 
-import Logic.Furniture;
-import Logic.FurnitureLocation;
-import Logic.LogicUtils;
-import Logic.Pos;
+import Logic.*;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Stack;
 
 /**
  * Created by Laptop on 01/11/17.
  */
 public class StripsLogic {
     private LogicUtils utils;
+    private StripsHeuristics heuristics;
+    private Stack<StripsObject> stack;
 
     public StripsLogic(LogicUtils utils) {
         this.utils = utils;
+        heuristics = new StripsHeuristics();
     }
 
     private void operate(StripsOperator operator) {
@@ -26,27 +27,36 @@ public class StripsLogic {
             utils.canRotate(operator.getFurniture(), operator.getDirection());
         }
     }
+
+    private boolean isSatisfied(ArrayList<StripsPreCondition> conditions) {
+        for (StripsPreCondition c : conditions) {
+            if (isSatisfied(c) == false) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     private boolean isSatisfied(StripsPreCondition condition) {
         Furniture f = condition.getFurniture();
         boolean bRes = false;
         if (condition instanceof DiffPreCond) {
             DiffPreCond c = (DiffPreCond)condition;
-            FurnitureLocation cfl = f.getLocation();
-            Pos ctl = cfl.tl;
-            Pos cbr = cfl.br;
-
-            FurnitureLocation ffl = f.getFinalLocation();
-            Pos ftl = ffl.tl;
-            Pos fbr = ffl.br;
-            bRes = ( (ctl.x + c.tlx == ftl.x)
-                    && (ctl.y + c.tly == ftl.y)
-                    && (cbr.x + c.brx == fbr.x)
-                    && (cbr.y + c.bry == fbr.y)
-            );
+            Diff pcDiff = c.getDiff();
+            Diff fDiff = f.getCurrentDiff();
+            Diff deltaDiff = new Diff(pcDiff, fDiff);
+            bRes =  (   deltaDiff.getBry() == 0
+                    && deltaDiff.getBrx() == 0
+                    && deltaDiff.getTlx() == 0
+                    && deltaDiff.getTly() == 0);
         }
-        else if (condition instanceof CanMovePreCond) {
-            CanMovePreCond c = (CanMovePreCond)condition;
-            bRes = utils.canMove(c.getFurniture(), c.getDirection());
+        else if (condition instanceof NoFurniturePreCond) {
+            NoFurniturePreCond c = (NoFurniturePreCond)condition;
+            bRes = utils.noWalls(f, c.getDirection());
+        }
+        else if (condition instanceof NoWallsPreCond) {
+            NoWallsPreCond c = (NoWallsPreCond)condition;
+            bRes = utils.noOtherFurniture(f, c.getDirection());
         }
         else if (condition instanceof CanRotatePreCond) {
             CanRotatePreCond c = (CanRotatePreCond)condition;

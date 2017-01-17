@@ -1,24 +1,24 @@
 package Strips;
 
+import Logic.Diff;
 import Logic.Furniture;
-import Logic.FurnitureLocation;
-import Logic.Pos;
+
 
 /**
  * Created by Laptop on 01/11/17.
  */
 public class DiffPreCond implements StripsPreCondition{
-    public int tlx, tly, brx, bry;
+    
+    private Diff diff;
     private Furniture f;
 
-    public DiffPreCond(int tlx, int tly, int brx, int bry, Furniture f) {
-        this.tlx = tlx;
-        this.tly = tly;
-        this.brx = brx;
-        this.bry = bry;
+    public DiffPreCond(Diff diff, Furniture f) {
+        this.diff = diff;
         this.f = f;
     }
-
+    public Diff getDiff() {
+        return diff;
+    }
     @Override
     public Furniture getFurniture() {
         return f;
