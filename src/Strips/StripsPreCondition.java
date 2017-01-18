@@ -7,5 +7,4 @@ import Logic.Furniture;
  */
 public interface StripsPreCondition extends StripsObject{
     Furniture getFurniture();
-
 }

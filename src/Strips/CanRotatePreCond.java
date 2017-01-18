@@ -1,5 +1,6 @@
 package Strips;
 
+import Constants.Constants;
 import Logic.Furniture;
 
 /**
@@ -20,6 +21,15 @@ public class CanRotatePreCond implements StripsPreCondition {
 
     @Override
     public Furniture getFurniture() {
-        return null;
+        return f;
+    }
+
+    @Override
+    public String toString() {
+        String dirString = "Right";
+        if (direction == Constants.Directions.LEFT) {
+            dirString = "Left";
+        }
+        return "CanRotate(" + f.getID() + ", " + dirString + ")";
     }
 }

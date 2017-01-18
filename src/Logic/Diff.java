@@ -7,6 +7,7 @@ public class Diff {
     int tlx;
     int tly;
     int brx;
+    int bry;
 
     public int getTlx() {
         return tlx;
@@ -40,7 +41,7 @@ public class Diff {
         this.bry = bry;
     }
 
-    int bry;
+
 
     public Diff(int tlx, int tly, int brx, int bry) {
         this.tlx = tlx;
@@ -61,5 +62,15 @@ public class Diff {
         this.tly = desired.getTly() - current.getTly();
         this.brx = desired.getBrx() - current.getBrx();
         this.bry = desired.getBry() - current.getBry();
+    }
+
+    @Override
+    public String toString() {
+        return "Diff{" +
+                "tlx=" + tlx +
+                ", tly=" + tly +
+                ", brx=" + brx +
+                ", bry=" + bry +
+                '}';
     }
 }

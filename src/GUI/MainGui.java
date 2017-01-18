@@ -169,14 +169,16 @@ public class MainGui {
                 int index = furnitureComboBox.getSelectedIndex();
                 boolean bValid = index != -1;
                 setNavigationButtonsEnabled(bValid);
-                solveButton.setVisible(!bValid && utils.validateStateForSolve());
+                solveButton.setVisible(!bValid);
             }
         });
         solveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (utils.validateStateForSolve()) {
-                    switchToSolveMode();
+                    switchToSolveMode(true);
+                    repaintBoard();
+                    repaintStacks();
                 }
                 else {
                     System.out.println("Error - illegal board!!!");
@@ -203,18 +205,6 @@ public class MainGui {
 
     private void generateMove() {
         if (utils.makeMove() == true) {
-            stackModel.clear();
-            ArrayList<String> stack = utils.getCurrentStack();
-            for (int i = 0 ; i < stack.size(); i++) {
-                stackModel.addElement(stack.get(i));
-            }
-
-            planModel.clear();
-            ArrayList<String> plan = utils.getCurrentPlan();
-            for (int i = 0 ; i < plan.size(); i++) {
-                planModel.addElement(plan.get(i));
-            }
-
             Thread repaint = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -224,12 +214,22 @@ public class MainGui {
                         e.printStackTrace();
                     }
                     repaintBoard();
+                    repaintStacks();
                 }
             });
             repaint.start();
         }
         else {
             // Done
+            int input;
+            System.out.println("bug");
+            input = JOptionPane.showOptionDialog(null, "Success!!!", "Success!!!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+
+            if(input == JOptionPane.OK_OPTION)
+            {
+                // do something
+                resetBoard();
+            }
         }
 
         if (bIsAutoRun) {
@@ -237,7 +237,7 @@ public class MainGui {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(250);
+                        Thread.sleep(100);
                         generateMove();
                     } catch (InterruptedException e1) {
                         e1.printStackTrace();
@@ -245,6 +245,31 @@ public class MainGui {
                 }
             });
             setNextAvail.start();
+        }
+    }
+
+    private void resetBoard() {
+        utils.resetAll();
+        repaintBoard();
+        repaintStacks();
+        autoPlayRadioButton.setSelected(false);
+        nextMoveButton.setEnabled(true);
+        bIsAutoRun = false;
+        switchToSolveMode(false);
+    }
+
+    private void repaintStacks() {
+        stackModel.clear();
+        ArrayList<String> stack = utils.getCurrentStack();
+        for (int i = 0 ; i < stack.size(); i++) {
+//            System.out.println("1" + stack.get(i));
+            stackModel.addElement(stack.get(i));
+        }
+
+        planModel.clear();
+        ArrayList<String> plan = utils.getCurrentPlan();
+        for (int i = 0 ; i < plan.size(); i++) {
+            planModel.addElement(plan.get(i));
         }
     }
 
@@ -256,11 +281,11 @@ public class MainGui {
         }
     }
 
-    private void switchToSolveMode() {
+    private void switchToSolveMode(boolean b) {
         // hide positioning control
-        LocationPanel.setVisible(false);
+        LocationPanel.setVisible(!b);
         // show moves control , stack and plan
-        solvePanel.setVisible(true);
+        solvePanel.setVisible(b);
     }
 
     private void setNavigationButtonsEnabled(boolean b) {
@@ -402,16 +427,7 @@ public class MainGui {
         boardPanel = new JPanel(new GridLayout(Constants.Sizes.boardHeight,Constants.Sizes.boardWidth));
         stackModel = new DefaultListModel<>();
         stackList = new JList<>(stackModel);
-        ArrayList<String> stack = utils.getCurrentStack();
-        for (int i = 0 ; i < stack.size(); i++) {
-            stackModel.addElement(stack.get(i));
-        }
-
         planModel = new DefaultListModel<>();
         planList = new JList<>(planModel);
-        ArrayList<String> plan = utils.getCurrentStack();
-        for (int i = 0 ; i < plan.size(); i++) {
-            planModel.addElement(plan.get(i));
-        }
     }
 }

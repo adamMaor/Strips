@@ -98,7 +98,11 @@ public class GuiUtils {
     }
 
     public boolean validateStateForSolve() {
-        return logicUtils.validateStateForSolve();
+        if (logicUtils.validateStateForSolve()) {
+            stripsLogic.init();
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -119,5 +123,10 @@ public class GuiUtils {
 
     public ArrayList<String> getCurrentPlan() {
         return stripsLogic.getCurrentPlan();
+    }
+
+    public void resetAll() {
+        logicUtils.resetAll();
+        stripsLogic.resetAll();
     }
 }

@@ -17,24 +17,34 @@ public class LogicUtils {
 
     /**** Strips Logic API ****/
 
+    public boolean isLocationLegal(Furniture f, Diff diff) {
+        f.pushDiff(diff);
+        boolean bRes = checkForLegalLocation(f,f.getVirtualLocation());
+        return bRes;
+    }
+
     public boolean noWalls(Furniture f, byte direction){
-        return checkForWalls(f.getLocation(), direction);
+        return checkForWalls(f.getVirtualLocation(), direction);
     }
 
     public boolean noOtherFurniture(Furniture f, byte direction){
-        return checkForOtherFurniture(f.getLocation(), direction);
+        return checkForOtherFurniture(f.getVirtualLocation(), direction);
     }
 
     public boolean canMove(Furniture f, byte direction) {
-        FurnitureLocation fLocation = f.getLocation();
+        FurnitureLocation fLocation = f.getVirtualLocation();
         return checkForWalls(fLocation, direction) && checkForOtherFurniture(fLocation, direction);
     }
 
     public boolean canRotate(Furniture f, byte direction) {
-        boolean bRes = true;
-        FurnitureLocation fLocation = f.getLocation();
+        FurnitureLocation fLocation = f.getVirtualLocation();
         FurnitureLocation newLocation = getRotatedLocation(fLocation, direction);
-        // check location inBounds
+        return checkForLegalLocation(f, newLocation);
+    }
+
+    /** given a furniture and location , checks if legal **/
+    private boolean checkForLegalLocation(Furniture f, FurnitureLocation newLocation) {
+        boolean bRes = true;
         if (inBounds(newLocation) == false) {
             // throw exception - can't rotate - out of bounds
             bRes = false;
@@ -212,7 +222,7 @@ public class LogicUtils {
     private boolean checkForExistingFurniture(ArrayList<Pos> posList) {
         for (Pos pos : posList) {
             for (Furniture furniture : furnitureMap.values()) {
-                if (isPosCovered(pos, furniture.getLocation())) {
+                if (isPosCovered(pos, furniture.getVirtualLocation())) {
                     return false;
                 }
             }
@@ -398,7 +408,7 @@ public class LogicUtils {
      * @param direction - which direction to rotate
      * @return the new location
      */
-    private FurnitureLocation getRotatedLocation(FurnitureLocation currLocation, byte direction) {
+    public FurnitureLocation getRotatedLocation(FurnitureLocation currLocation, byte direction) {
         //new width = old height and the opposite
         int newWidth = currLocation.br.y - currLocation.tl.y + 1;
         int newHeight = currLocation.br.x - currLocation.tl.x + 1;
@@ -464,5 +474,7 @@ public class LogicUtils {
     }
 
 
-
+    public void resetAll() {
+        furnitureMap.clear();
+    }
 }

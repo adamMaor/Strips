@@ -6,18 +6,28 @@ import java.util.ArrayList;
  * Created by Laptop on 01/17/17.
  */
 public class PreConditionAnd implements StripsObject {
-    public ArrayList<StripsPreCondition> getList() {
-        return list;
+    private ArrayList<StripsPreCondition> pcList;
+
+    public ArrayList<StripsPreCondition> getPcList() {
+        return pcList;
     }
 
-    public void setList(ArrayList<StripsPreCondition> list) {
-        this.list = list;
+    public void setPcList(ArrayList<StripsPreCondition> pcList) {
+        this.pcList = pcList;
     }
 
-    private ArrayList<StripsPreCondition> list;
+    public PreConditionAnd(ArrayList<StripsPreCondition> pcList) {
+        this.pcList = pcList;
+    }
 
-
-    public PreConditionAnd(ArrayList<StripsPreCondition> list) {
-        this.list = list;
+    @Override
+    public String toString() {
+        String strRes = "";
+        int i = 0;
+        for (; i < pcList.size() - 1; i++) {
+            strRes += pcList.get(i).toString() + " & ";
+        }
+        strRes += pcList.get(i).toString();
+        return strRes;
     }
 }
