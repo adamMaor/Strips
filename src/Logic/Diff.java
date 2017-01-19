@@ -73,4 +73,19 @@ public class Diff {
                 ", bry=" + bry +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Diff diff = (Diff) o;
+
+        if (brx != diff.brx) return false;
+        if (bry != diff.bry) return false;
+        if (tlx != diff.tlx) return false;
+        if (tly != diff.tly) return false;
+
+        return true;
+    }
 }

@@ -17,7 +17,7 @@ public class Main {
         MainGui mainGui = new MainGui(guiUtils);
         JFrame mainFrame = new JFrame();
         mainFrame.setContentPane(mainGui.mainPanel);
-        mainFrame.setSize(new Dimension(1270, 650));
+        mainFrame.setSize(new Dimension(1270, 675));
         mainFrame.setResizable(false);
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setVisible(true);

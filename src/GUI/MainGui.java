@@ -7,7 +7,6 @@ import Logic.Pos;
 
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
-import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,6 +39,7 @@ public class MainGui {
     private DefaultListModel<String> stackModel;
     private DefaultListModel<String> planModel;
     private JPanel solvePanel;
+    private JButton clearBoardAndRestartButton;
     private FurnitureLocation tempFurnitureLocation;
 
     private GuiUtils utils;
@@ -53,7 +53,7 @@ public class MainGui {
         currentFurniture = 1;
         initBoard();
         setNavigationButtonsEnabled(false);
-
+        switchToSolveMode(false);
         addNewFurnitureItemButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -66,10 +66,10 @@ public class MainGui {
                 if (fl != null) {
                     currentFurniture++;
                     Random rand = new Random();
-                    int r = rand.nextInt(255);
-                    int g = rand.nextInt(255);
-                    int b = rand.nextInt(255);
-                    Color fColor = new Color(r,g,b);
+                    int r = rand.nextInt(122);
+                    int g = rand.nextInt(122);
+                    int b = rand.nextInt(122);
+                    Color fColor = new Color(r,g ,b);
                     Furniture f = new Furniture(fId, fl, fColor);
                     // Check legality for new furniture
                     utils.addFurniture(f);
@@ -201,6 +201,12 @@ public class MainGui {
                 }
             }
         });
+        clearBoardAndRestartButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetBoard();
+            }
+        });
     }
 
     private void generateMove() {
@@ -208,27 +214,29 @@ public class MainGui {
             Thread repaint = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    try {
-                        Thread.sleep(40);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                    if (utils.repaintBoardNeeded()) {
+                        repaintBoard();
                     }
-                    repaintBoard();
                     repaintStacks();
                 }
             });
-            repaint.start();
+            EventQueue.invokeLater(repaint);
         }
         else {
             // Done
+            Object[] options1 = { "Reset Board", "Move back To Initial State", "Quit" };
             int input;
-            System.out.println("bug");
-            input = JOptionPane.showOptionDialog(null, "Success!!!", "Success!!!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+            input = JOptionPane.showOptionDialog(null, "Success!!!", "Success!!!", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options1, null);
 
-            if(input == JOptionPane.OK_OPTION)
+            if(input == JOptionPane.YES_OPTION)
             {
-                // do something
                 resetBoard();
+            }
+            else if (input == JOptionPane.NO_OPTION) {
+                restoreInitialState();
+            }
+            else if (input == JOptionPane.CANCEL_OPTION){
+                System.exit(0);
             }
         }
 
@@ -237,7 +245,7 @@ public class MainGui {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(25);
                         generateMove();
                     } catch (InterruptedException e1) {
                         e1.printStackTrace();
@@ -248,7 +256,31 @@ public class MainGui {
         }
     }
 
+    private void restoreInitialState() {
+        for (Furniture f : utils.getAllFurniture()) {
+            unPaintFurniture(f);
+            unMarkLocation(f.getFinalLocation());
+        }
+        initBoard();
+        utils.restoreInitialState();
+        repaintBoard();
+        repaintStacks();
+        autoPlayRadioButton.setSelected(false);
+        nextMoveButton.setEnabled(true);
+        bIsAutoRun = false;
+        switchToSolveMode(false);
+    }
+
+
     private void resetBoard() {
+        for (Furniture f : utils.getAllFurniture()) {
+            unPaintFurniture(f);
+            unMarkLocation(f.getFinalLocation());
+        }
+        currentFurniture = 1;
+        furnitureComboBox.removeAllItems();
+//        furnitureComboBox.setSelectedIndex(-1);
+        solveButton.setVisible(false);
         utils.resetAll();
         repaintBoard();
         repaintStacks();
@@ -302,62 +334,63 @@ public class MainGui {
     }
 
     private void unMarkLocation(FurnitureLocation furnitureLocation) {
-        int y = furnitureLocation.tl.y;
-        while (y <= furnitureLocation.br.y) {
-            int x = furnitureLocation.tl.x;
-            while (x <= furnitureLocation.br.x) {
-                boardItems[y][x].setBorder(utils.getBoarderForPos(x,y));
-                x++;
+        if (furnitureLocation != null) {
+            int y = furnitureLocation.tl.y;
+            while (y <= furnitureLocation.br.y) {
+                int x = furnitureLocation.tl.x;
+                while (x <= furnitureLocation.br.x) {
+                    boardItems[y][x].setBorder(utils.getBoarderForPos(x,y));
+                    x++;
+                }
+                y++;
             }
-            y++;
         }
     }
 
     private void markLocation(FurnitureLocation furnitureLocation, Color color) {
-        int y = furnitureLocation.tl.y;
-        int x = furnitureLocation.tl.x;
-        int width = furnitureLocation.br.x - x;
-        int height = furnitureLocation.br.y - y;
+        if (furnitureLocation != null) {
+            int y = furnitureLocation.tl.y;
+            int x = furnitureLocation.tl.x;
+            int width = furnitureLocation.br.x - x;
+            int height = furnitureLocation.br.y - y;
 
-        if (width == 0 && height == 0) {
-            boardItems[y][x].setBorder(utils.getMarkBorder(true, true, true, true, color));
-        }
-        else if (width == 0) {
-            boardItems[y++][x].setBorder(utils.getMarkBorder(true, true, false, true, color));
-            CompoundBorder midBorder = utils.getMarkBorder(false, true, false, true, color);
-            while (y < furnitureLocation.br.y) {
-                boardItems[y++][x].setBorder(midBorder);
-            }
-            boardItems[y][x].setBorder(utils.getMarkBorder(false, true, true, true, color));
-        }
-        else if (height == 0) {
-            boardItems[y][x++].setBorder(utils.getMarkBorder(true, true, true, false, color));
-            CompoundBorder midBorder = utils.getMarkBorder(true, false, true, false, color);
-            while (x < furnitureLocation.br.x) {
-                boardItems[y][x++].setBorder(midBorder);
-            }
-            boardItems[y][x].setBorder(utils.getMarkBorder(true, false, true, true, color));
-        }
-        else {
-            boardItems[y][x++].setBorder(utils.getMarkBorder(true, true, false, false, color));
-            CompoundBorder midUpperBorder = utils.getMarkBorder(true, false, false, false, color);
-            while (x < furnitureLocation.br.x) {
-                boardItems[y][x++].setBorder(midUpperBorder);
-            }
-            boardItems[y++][x].setBorder(utils.getMarkBorder(true, false, false, true, color));
-            CompoundBorder midRightBorder = utils.getMarkBorder(false, false, false, true, color);
-            while (y < furnitureLocation.br.y) {
-                boardItems[y++][x].setBorder(midRightBorder);
-            }
-            boardItems[y][x--].setBorder(utils.getMarkBorder(false, false, true, true, color));
-            CompoundBorder midDownBorder = utils.getMarkBorder(false, false, true, false, color);
-            while (x > furnitureLocation.tl.x) {
-                boardItems[y][x--].setBorder(midDownBorder);
-            }
-            boardItems[y--][x].setBorder(utils.getMarkBorder(false, true, true, false, color));
-            CompoundBorder midLeftBorder = utils.getMarkBorder(false, true, false, false, color);
-            while (y > furnitureLocation.tl.y) {
-                boardItems[y--][x].setBorder(midLeftBorder);
+            if (width == 0 && height == 0) {
+                boardItems[y][x].setBorder(utils.getMarkBorder(true, true, true, true, color));
+            } else if (width == 0) {
+                boardItems[y++][x].setBorder(utils.getMarkBorder(true, true, false, true, color));
+                CompoundBorder midBorder = utils.getMarkBorder(false, true, false, true, color);
+                while (y < furnitureLocation.br.y) {
+                    boardItems[y++][x].setBorder(midBorder);
+                }
+                boardItems[y][x].setBorder(utils.getMarkBorder(false, true, true, true, color));
+            } else if (height == 0) {
+                boardItems[y][x++].setBorder(utils.getMarkBorder(true, true, true, false, color));
+                CompoundBorder midBorder = utils.getMarkBorder(true, false, true, false, color);
+                while (x < furnitureLocation.br.x) {
+                    boardItems[y][x++].setBorder(midBorder);
+                }
+                boardItems[y][x].setBorder(utils.getMarkBorder(true, false, true, true, color));
+            } else {
+                boardItems[y][x++].setBorder(utils.getMarkBorder(true, true, false, false, color));
+                CompoundBorder midUpperBorder = utils.getMarkBorder(true, false, false, false, color);
+                while (x < furnitureLocation.br.x) {
+                    boardItems[y][x++].setBorder(midUpperBorder);
+                }
+                boardItems[y++][x].setBorder(utils.getMarkBorder(true, false, false, true, color));
+                CompoundBorder midRightBorder = utils.getMarkBorder(false, false, false, true, color);
+                while (y < furnitureLocation.br.y) {
+                    boardItems[y++][x].setBorder(midRightBorder);
+                }
+                boardItems[y][x--].setBorder(utils.getMarkBorder(false, false, true, true, color));
+                CompoundBorder midDownBorder = utils.getMarkBorder(false, false, true, false, color);
+                while (x > furnitureLocation.tl.x) {
+                    boardItems[y][x--].setBorder(midDownBorder);
+                }
+                boardItems[y--][x].setBorder(utils.getMarkBorder(false, true, true, false, color));
+                CompoundBorder midLeftBorder = utils.getMarkBorder(false, true, false, false, color);
+                while (y > furnitureLocation.tl.y) {
+                    boardItems[y--][x].setBorder(midLeftBorder);
+                }
             }
         }
     }
@@ -390,30 +423,55 @@ public class MainGui {
     }
 
     private void paintFurniture(Furniture f) {
+        FurnitureLocation vfl = f.getVirtualLocation();
+        Color fColor = f.getColor();
+        if (vfl != f.getLocation()) {
+            Color virtualColor = new Color (fColor.getRed() + 50, fColor.getGreen() + 50,fColor.getBlue() + 50);
+            Pos pos21 = vfl.tl;
+            Pos pos22 = vfl.br;
+            for (int x = pos21.x; x <= pos22.x; x++) {
+                for (int y = pos21.y; y <= pos22.y; y++) {
+                    boardItems[y][x].setBackground(virtualColor);
+                    boardItems[y][x].setText("v_" + f.getID(), Color.black);
+                }
+            }
+        }
         Pos pos1 = f.getLocation().tl;
         Pos pos2 = f.getLocation().br;
         for (int x = pos1.x; x <= pos2.x; x++) {
             for (int y = pos1.y; y <= pos2.y; y++) {
                 boardItems[y][x].setBackground(f.getColor());
-                boardItems[y][x].setText(f.getID());
+                boardItems[y][x].setText(f.getID(), Color.white);
             }
         }
+
     }
 
     private void unPaintFurniture(Furniture f) {
+        FurnitureLocation vfl = f.getVirtualLocation();
+        if (vfl != f.getLocation()) {
+            Pos pos21 = vfl.tl;
+            Pos pos22 = vfl.br;
+            for (int x = pos21.x; x <= pos22.x; x++) {
+                for (int y = pos21.y; y <= pos22.y; y++) {
+                    boardItems[y][x].setBackground(Constants.Colors.MainBoardItemColor);
+                    boardItems[y][x].setText("", Color.white);
+                }
+            }
+        }
         Pos pos1 = f.getLocation().tl;
         Pos pos2 = f.getLocation().br;
         for (int x = pos1.x; x <= pos2.x; x++) {
             for (int y = pos1.y; y <= pos2.y; y++) {
                 boardItems[y][x].setBackground(Constants.Colors.MainBoardItemColor);
-                boardItems[y][x].setText("");
+                boardItems[y][x].setText("", Color.white);
             }
         }
     }
 
     private void initBoard() {
-        boardItems = new GuiBoardItem[Constants.Sizes.boardHeight][Constants.Sizes.boardWidth];
         boardPanel.removeAll();
+        boardItems = new GuiBoardItem[Constants.Sizes.boardHeight][Constants.Sizes.boardWidth];
         for (int y = 0; y < Constants.Sizes.boardHeight; y++) {
             for (int x = 0; x < Constants.Sizes.boardWidth; x++) {
                 GuiBoardItem guiItem = new GuiBoardItem(Constants.Colors.MainBoardItemColor, utils.getBoarderForPos(x,y));

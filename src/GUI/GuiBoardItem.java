@@ -23,8 +23,9 @@ public class GuiBoardItem extends JPanel {
         this.setBorder(border);
     }
 
-    public void setText(String text) {
+    public void setText(String text, Color color) {
         label.setText(text);
+        label.setForeground(color);
     }
 
     @Override

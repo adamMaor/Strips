@@ -29,23 +29,31 @@ public class DiffPreCond implements StripsPreCondition{
         return f;
     }
 
-    public StripsOperator getNextMove(){
-
+    public StripsOperator getNextMove(StripsHeuristics heuristics, byte lastMoveDirection){
+        if (nextMoveList == null ){
+            System.out.println("requesting moves for operator: " + this.toString() + ", last Direction was: " + lastMoveDirection);
+            nextMoveList = heuristics.getMovesList(this, lastMoveDirection);
+            System.out.println("list is: " + nextMoveList);
+        }
         if (nextMoveList.size() > currentMoveIndex) {
             return nextMoveList.get(currentMoveIndex++);
         }
         return null;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        DiffPreCond other = (DiffPreCond)obj;
+        return (this.getFurniture().getID().equals(other.getFurniture().getID())
+                && this.getDiff().equals(other.getDiff()));
+
+    }
 
     @Override
     public String toString() {
         return "Diff(" + f.getID() + ", " + diff.getTlx() + ", " + diff.getTly() + ", " + diff.getBrx() + ", " + diff.getBry() + ")";
     }
 
-    public void setMoves(StripsHeuristics heuristics) {
-        if (nextMoveList == null ){
-            nextMoveList = heuristics.getMovesList(this);
-        }
-    }
 }

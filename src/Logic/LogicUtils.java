@@ -1,7 +1,6 @@
 package Logic;
 
 import Constants.*;
-import Strips.StripsLogic;
 
 import java.util.*;
 
@@ -14,11 +13,11 @@ public class LogicUtils {
 
     private Globals globals;
     private HashMap<String, Furniture> furnitureMap;
+    private HashMap<String, Furniture> initialFurnitureMap;
 
     /**** Strips Logic API ****/
 
     public boolean isLocationLegal(Furniture f, Diff diff) {
-        f.pushDiff(diff);
         boolean bRes = checkForLegalLocation(f,f.getVirtualLocation());
         return bRes;
     }
@@ -67,6 +66,7 @@ public class LogicUtils {
     public boolean moveFurniture(Furniture f, byte direction) {
         boolean bRes = true;
         if (f != null) {
+            System.out.println("can Move? " + canMove(f, direction));
             if (canMove(f, direction)) {
                 switch (direction) {
                     case NONE:
@@ -443,8 +443,33 @@ public class LogicUtils {
     }
 
     public boolean validateStateForSolve() {
-        return (noMissingFinalLocations() &&
-                noOverLapingFinals());
+        boolean bRes = (noMissingFinalLocations() &&  noOverLapingFinals());
+        if (bRes) {
+            saveInitialState();
+        }
+        return bRes;
+    }
+
+    private void saveInitialState() {
+        initialFurnitureMap = new HashMap<>();
+        for (Furniture f : furnitureMap.values()) {
+            FurnitureLocation fl = new FurnitureLocation(new Pos(f.getLocation().tl.x, f.getLocation().tl.y), new Pos(f.getLocation().br.x, f.getLocation().br.y) );
+            Furniture copy = new Furniture(f.getID(), fl, f.getColor());
+            copy.setFinalLocation(f.getFinalLocation());
+            initialFurnitureMap.put(f.getID(), copy);
+        }
+    }
+
+    public void restoreInitialState() {
+        furnitureMap.clear();
+        furnitureMap = null;
+        furnitureMap = new HashMap<>();
+        for (Furniture f : initialFurnitureMap.values()) {
+            FurnitureLocation fl = new FurnitureLocation(new Pos(f.getLocation().tl.x, f.getLocation().tl.y), new Pos(f.getLocation().br.x, f.getLocation().br.y) );
+            Furniture copy = new Furniture(f.getID(), fl, f.getColor());
+            copy.setFinalLocation(f.getFinalLocation());
+            furnitureMap.put(f.getID(), copy);
+        }
     }
 
     private boolean noOverLapingFinals() {
@@ -477,4 +502,5 @@ public class LogicUtils {
     public void resetAll() {
         furnitureMap.clear();
     }
+
 }

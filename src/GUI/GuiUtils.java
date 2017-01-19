@@ -113,6 +113,10 @@ public class GuiUtils {
         return stripsLogic.makeMove();
     }
 
+    public boolean repaintBoardNeeded() {
+        return stripsLogic.isRepaintBoardNeeded();
+    }
+
     public Collection<Furniture> getAllFurniture() {
         return logicUtils.getAllFurniture();
     }
@@ -127,6 +131,11 @@ public class GuiUtils {
 
     public void resetAll() {
         logicUtils.resetAll();
+        stripsLogic.resetAll();
+    }
+
+    public void restoreInitialState() {
+        logicUtils.restoreInitialState();
         stripsLogic.resetAll();
     }
 }

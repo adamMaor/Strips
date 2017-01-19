@@ -83,13 +83,13 @@ public class Furniture {
     }
 
     public void pushDiff(Diff diff) {
-//        System.out.println("Pushing Diff: " + diff);
+        System.out.println("Pushing Diff: " + diff);
         diffStack.push(diff);
     }
 
     public void popDiff() {
-//        System.out.println("POPING Diff: " + diffStack.pop());
-        diffStack.pop();
+        System.out.println("POPING Diff: " + diffStack.pop());
+//        diffStack.pop();
     }
 
     /** Gets the furniture virtual location in regards to the current diff fron the final location **/
@@ -100,10 +100,20 @@ public class Furniture {
         }
         // other wise get calculated new location from final location with diff
         Diff currentDiff = diffStack.peek();
-//        System.out.println("peeking Diff: " + currentDiff);
         Pos vTl = new Pos(finalLocation.tl.x - currentDiff.getTlx(), finalLocation.tl.y - currentDiff.getTly());
         Pos vBr = new Pos(finalLocation.br.x - currentDiff.getBrx(), finalLocation.br.y - currentDiff.getBry());
         return new FurnitureLocation(vTl, vBr);
 
+    }
+
+    @Override
+    public String toString() {
+        return "Furniture{" +
+                "ID='" + ID + '\'' +
+                ", location=" + location +
+                ", finalLocation=" + finalLocation +
+                ", color=" + color +
+                ", diffStack=" + diffStack +
+                '}';
     }
 }
