@@ -66,7 +66,7 @@ public class LogicUtils {
     public boolean moveFurniture(Furniture f, byte direction) {
         boolean bRes = true;
         if (f != null) {
-            System.out.println("can Move? " + canMove(f, direction));
+//            System.out.println("can Move? " + canMove(f, direction));
             if (canMove(f, direction)) {
                 switch (direction) {
                     case NONE:

@@ -31,9 +31,9 @@ public class DiffPreCond implements StripsPreCondition{
 
     public StripsOperator getNextMove(StripsHeuristics heuristics, byte lastMoveDirection){
         if (nextMoveList == null ){
-            System.out.println("requesting moves for operator: " + this.toString() + ", last Direction was: " + lastMoveDirection);
+//            System.out.println("requesting moves for operator: " + this.toString() + ", last Direction was: " + lastMoveDirection);
             nextMoveList = heuristics.getMovesList(this, lastMoveDirection);
-            System.out.println("list is: " + nextMoveList);
+//            System.out.println("list is: " + nextMoveList);
         }
         if (nextMoveList.size() > currentMoveIndex) {
             return nextMoveList.get(currentMoveIndex++);

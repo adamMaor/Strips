@@ -154,6 +154,7 @@ public class StripsLogic {
             else {
                 for (int i = 0; i < pcList.size(); i++) {
                     StripsPreCondition pc = pcList.get(i);
+
                     pushStack(pc);
                 }
             }
@@ -272,7 +273,6 @@ public class StripsLogic {
 
                 }
                 if (dpc != null && notInLoop(dpc)) {
-                    dlpc.getFurniture().pushDiff(dlpc.getDiff());
                     pushStack(new PreConditionAnd(pcList));
                 }
             }
@@ -287,7 +287,11 @@ public class StripsLogic {
             // and then till the previous operator is poped
             // in order to choose another operator
             while (numToPop-- > 0) {
-                popStack();
+                StripsObject obj = popStack();
+                if (obj instanceof DiffPreCond) {
+                    DiffPreCond dPc = (DiffPreCond)obj;
+                    dPc.getFurniture().popDiff();
+                }
             } // this is my problem~~~~ need to pop from furniture!!!!
             popTillLastOp();
             return false;
@@ -299,8 +303,11 @@ public class StripsLogic {
     private void popTillLastOp() {
         StripsObject obj = stack.peek();
         while (stack.isEmpty() == false && (obj instanceof StripsOperator) == false) {
-
             obj = popStack();
+            if (obj instanceof DiffPreCond) {
+                DiffPreCond dPc = (DiffPreCond)obj;
+                dPc.getFurniture().popDiff();
+            }
         }
     }
 
@@ -308,16 +315,17 @@ public class StripsLogic {
         bIsPoping = false;
         stack.push(obj);
         guiStack.add(0,obj.toString());
+        if (obj instanceof DiffLegalPreCond) {
+            DiffLegalPreCond dlpc = (DiffLegalPreCond) obj;
+            dlpc.getFurniture().pushDiff(dlpc.getDiff());
+        }
     }
 
     private StripsObject popStack() {
         bIsPoping = true;
         guiStack.remove(0);
         StripsObject obj = stack.pop();
-        if (obj instanceof DiffPreCond) {
-            DiffPreCond dPc = (DiffPreCond)obj;
-            dPc.getFurniture().popDiff();
-        }
+
         return obj;
     }
 
