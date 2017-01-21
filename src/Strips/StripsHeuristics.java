@@ -13,6 +13,8 @@ import java.util.Random;
 import static Constants.Constants.Directions.*;
 
 /**
+ * This Class Holds all special calculations and assumptions.
+ *
  * Created by Laptop on 01/17/17.
  */
 public class StripsHeuristics {
@@ -22,6 +24,11 @@ public class StripsHeuristics {
         this.utils = utils;
     }
 
+    /**
+     * Orders Precondition held in an 'And' precondition in a specific order
+     * @param pcAnd
+     * @return a list of pre conditions in the they should be inserted to the stack.
+     */
     public ArrayList<StripsPreCondition> getSortedPreConditions(PreConditionAnd pcAnd) {
         if (pcAnd.isbIsListOrderSet()) {
             return pcAnd.getPcList();
@@ -46,6 +53,12 @@ public class StripsHeuristics {
         return resList;
     }
 
+    /**
+     * Returns an ordered list of moves - the best is first an the worst is last
+     * @param pc the precondition to which list is needed
+     * @param lastMoveDirection - in order to prevent chains like - Up Down Up Down etc...
+     * @return the ordered list
+     */
     public ArrayList<StripsOperator> getMovesList(StripsPreCondition pc, byte lastMoveDirection) {
         ArrayList<StripsOperator> resList = new ArrayList<StripsOperator>();
         if (pc instanceof DiffPreCond) {
@@ -83,18 +96,9 @@ public class StripsHeuristics {
                 }
             }
             // if the furniture is square there is no point in rotates
-            if (f.isSquare() == false) { // is it even worth checking for rotation
-                boolean bNeedRotate = dX != dY;
-                boolean bIsCloseEnough = tlx < f.getWidth() && tly <f.getHeight();
-                if (bNeedRotate && bIsCloseEnough) {
-                    resList.add(0, new RotateOperator(f, LEFT));
-                    resList.add(1, new RotateOperator(f, RIGHT));
-                }
-                else {
-                    resList.add(2, new RotateOperator(f, LEFT));
-                    resList.add(5, new RotateOperator(f, RIGHT));
-                }
-
+            if (f.isSquare() == false) {
+                resList.add(2, new RotateOperator(f, LEFT));
+                resList.add(5, new RotateOperator(f, RIGHT));
             }
         }
         // prevent situation of moves like up - down - up - down .....
@@ -128,6 +132,15 @@ public class StripsHeuristics {
         return resList;
     }
 
+    /**
+     * utility - save code lines
+     * @param resList
+     * @param f
+     * @param d1
+     * @param d2
+     * @param d3
+     * @param d4
+     */
     private void setOrder(ArrayList<StripsOperator> resList, Furniture f, byte d1, byte d2, byte d3, byte d4) {
         resList.add(new MoveOperator(f, d1));
         resList.add(new MoveOperator(f, d2));
@@ -135,6 +148,12 @@ public class StripsHeuristics {
         resList.add(new MoveOperator(f, d4));
     }
 
+    /**
+     * Encounter heuristics - mentioned in the Documentation file
+     * moves a blocking furniture from the path
+     * @param nfpc
+     * @return
+     */
     public DiffPreCond activateEncounterHeuristic(NoFurniturePreCond nfpc) {
         Furniture furniture = nfpc.getFurniture();
         Furniture encFurniture = nfpc.getEncounteredFurniture();
@@ -150,18 +169,20 @@ public class StripsHeuristics {
             switch (direction) {
                 case Constants.Directions.UP:
                 case Constants.Directions.DOWN:
-                    numOfSteps = Math.min((furniture.getWidth() + encFurniture.getWidth() / 2), 3);
+                    numOfSteps = Math.min((furniture.getWidth() + encFurniture.getWidth() / 2), 5);
                     break;
                 case Constants.Directions.RIGHT:
                 case Constants.Directions.LEFT:
-                    numOfSteps = Math.min((furniture.getHeight() + encFurniture.getHeight() / 2), 3);
+                    numOfSteps = Math.min((furniture.getHeight() + encFurniture.getHeight() / 2), 5);
                     break;
             }
             Diff diff = getRandomDiversionDiff(encFurniture, numOfSteps);
             if (diff != null) {
                 if (utils.isLocationLegal(encFurniture, diff)) {
                     // if found diversion - reset original furniture moves list
-                    return new DiffPreCond(diff, encFurniture, this);
+                    DiffPreCond dpc =new DiffPreCond(diff, encFurniture, this);
+                    System.out.println("returning this difreepc: " + dpc);
+                    return dpc;
                 } else {
                     encFurniture.popDiff();
                 }
@@ -172,7 +193,6 @@ public class StripsHeuristics {
 
     /**
      * get the direction from which f1 is 'attacking' f2
-     *
      * @param nfpc
      * @return
      */
@@ -208,6 +228,12 @@ public class StripsHeuristics {
         }
     }
 
+    /**
+     * Get a random direction of a diff to move the blocking furniture
+     * @param encFurniture
+     * @param numOfSteps
+     * @return
+     */
     private Diff getRandomDiversionDiff(Furniture encFurniture, int numOfSteps) {
         Diff diff = null;
         Diff currDiff = encFurniture.getCurrentDiff();

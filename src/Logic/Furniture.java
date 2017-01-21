@@ -77,13 +77,13 @@ public class Furniture {
     }
 
     public void pushDiff(Diff diff) {
-//        System.out.println(this.getID() + ".->Pushing Diff: " + diff);
+        System.out.println(this.getID() + ".->Pushing Diff: " + diff);
         diffStack.push(diff);
     }
 
     public void popDiff() {
-//        System.out.println(this.getID() + ".<-POPING Diff: " + diffStack.pop());
-         diffStack.pop();
+        System.out.println(this.getID() + ".<-POPING Diff: " + diffStack.pop());
+//         diffStack.pop();
     }
 
     /** Gets the furniture virtual location in regards to the current diff fron the final location **/
@@ -145,14 +145,12 @@ public class Furniture {
     public boolean getIsDiversionMode() {
         boolean bRes = bIsDiversionMode;
         if (bRes) {
-            System.out.println("unseting diversion");
             bIsDiversionMode = false;
         }
         return bRes;
     }
 
     public void setDiversionMode(boolean bIsDiversionMode) {
-        System.out.println("diversion: " + bIsDiversionMode);
         this.bIsDiversionMode = bIsDiversionMode;
     }
 

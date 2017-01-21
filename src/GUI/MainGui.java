@@ -9,15 +9,14 @@ import com.sun.javaws.Globals;
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Random;
 
 /**
  * Created by Adam on 09/01/2017.
  */
-public class MainGui {
+public class MainGui{
     private JButton addNewFurnitureItemButton;
     private JButton moveUpButton;
     private JButton moveLeftButton;
@@ -237,7 +236,7 @@ public class MainGui {
             int input;
             if (utils.checkForSuccess()) {
                 int planSize = utils.getCurrentPlan().size();
-                input = JOptionPane.showOptionDialog(null, "Success!!!\nA solution was found :)\nNumber of moves for solution: " + planSize + "\nOverAll Working time: " + utils.getTotalWorkTime(), "Success!!!", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options1, null);
+                input = JOptionPane.showOptionDialog(null, "Success!!!\nA solution was found :)\nNumber of moves for solution: " + planSize + "\nOverAll Net Working time: " + utils.getTotalWorkTime() + " MS", "Success!!!", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options1, null);
             }
             else {
                 input = JOptionPane.showOptionDialog(null, "Failed!!!\nSomething went wrong and a solution was NOT found :)", "Failed...", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE, null, options1, null);
@@ -260,7 +259,9 @@ public class MainGui {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(utils.getDelayTime());
+                        if (utils.repaintBoardNeeded()) {
+                            Thread.sleep(utils.getDelayTime());
+                        }
                         generateMove();
                     } catch (InterruptedException e1) {
                         e1.printStackTrace();

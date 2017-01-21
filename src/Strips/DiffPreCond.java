@@ -15,11 +15,13 @@ public class DiffPreCond implements StripsPreCondition{
     private Furniture f;
     private ArrayList<StripsOperator> nextMoveList;
     int currentMoveIndex = 0;
+    private volatile boolean bIsDeversionFirst;
 
     public DiffPreCond(Diff diff, Furniture f, StripsHeuristics h) {
         this.diff = diff;
         this.f = f;
         nextMoveList = null;
+        bIsDeversionFirst = false;
     }
     public Diff getDiff() {
         return diff;
@@ -55,5 +57,18 @@ public class DiffPreCond implements StripsPreCondition{
     public String toString() {
         return "Diff(" + f.getID() + ", " + diff.getTlx() + ", " + diff.getTly() + ", " + diff.getBrx() + ", " + diff.getBry() + ")";
     }
+
+    synchronized public boolean shouldPopDiff() {
+        if (bIsDeversionFirst) {
+            System.out.println("i'm special");
+        }
+        return bIsDeversionFirst;
+
+    }
+    synchronized public void setbIsDeversionFirst(boolean bIsDeversionFirst) {
+        System.out.println("setting special: " + bIsDeversionFirst);
+        this.bIsDeversionFirst = bIsDeversionFirst;
+    }
+
 
 }

@@ -17,10 +17,6 @@ public class PreConditionAnd implements StripsObject {
         return pcList;
     }
 
-    public void setPcList(ArrayList<StripsPreCondition> pcList) {
-        this.pcList = pcList;
-    }
-
     public PreConditionAnd(ArrayList<StripsPreCondition> pcList, boolean bListOrderPreSet) {
         this.pcList = pcList;
         this.bIsListOrderSet = bListOrderPreSet;

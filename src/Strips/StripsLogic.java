@@ -7,6 +7,8 @@ import com.sun.javaws.Globals;
 import java.util.*;
 
 /**
+ * This class holds all the logic side of the algorithm
+ * holds and manges the stack as well and creates moves and progresses the algorithm
  * Created by Laptop on 01/11/17.
  */
 public class StripsLogic {
@@ -44,7 +46,6 @@ public class StripsLogic {
         currentMoveCount = 1;
 
     }
-
 
     public void init() {
         // Create Initial stack and condition:
@@ -108,7 +109,7 @@ public class StripsLogic {
                 return false;
             }
             currentMoveCount++;
-            long startTime = System.currentTimeMillis();
+            long startTime = System.nanoTime();
             repaintBoardNeeded = false;
             StripsObject obj = peekStack();
             if (obj instanceof PreConditionAnd) {
@@ -135,6 +136,13 @@ public class StripsLogic {
                     if (pc instanceof DiffLegalPreCond) {
                         repaintBoardNeeded = true;
                     }
+                    else if (pc instanceof DiffPreCond) {
+                        DiffPreCond dpc = (DiffPreCond) pc;
+                        if (dpc.shouldPopDiff()) {
+                            System.out.println("popind from special case");
+                            dpc.getFurniture().popDiff();
+                        }
+                    }
                     popStack();
                 }
                 else {
@@ -144,6 +152,7 @@ public class StripsLogic {
                     if (pc instanceof DiffPreCond){
                         repaintBoardNeeded = true;
                         DiffPreCond dPc = (DiffPreCond) pc;
+
                         StripsOperator o = dPc.getNextMove(heuristics, lastMoveDirection);
                         if (o != null) { // a new move is available
                             // set the current diff to furniture for utils calculations - creates a virtual location
@@ -157,6 +166,10 @@ public class StripsLogic {
                             pushStack(o);
                         }
                         else {          // no more move available - pop
+                            if (dPc.shouldPopDiff()) {
+                                System.out.println("popind from special case");
+                                dPc.getFurniture().popDiff();
+                            }
                             popTillLastOp();
                         }
 
@@ -165,10 +178,13 @@ public class StripsLogic {
                         popTillLastOp();
                     }
                     else if (pc instanceof NoFurniturePreCond) {
-                        popTillLastOp();
                         DiffPreCond dpc = heuristics.activateEncounterHeuristic((NoFurniturePreCond) pc);
                         if (dpc != null) {
+                            dpc.setbIsDeversionFirst(true);
                             pushStack(dpc);
+                        }
+                        else {
+                            popTillLastOp();
                         }
                     }
                     else if (pc instanceof NoWallsPreCond) { //can't move because of walls - will never change
@@ -212,7 +228,6 @@ public class StripsLogic {
                         int brx = mo.getFurniture().getVirtualLocation().br.x;
                         int bry = mo.getFurniture().getVirtualLocation().br.y;
                         byte direction = mo.getDirection();
-//                    System.out.println("mo: " + mo.toString());
                         switch (direction) {
                             case Constants.Directions.UP:
                                 tly++;
@@ -241,7 +256,6 @@ public class StripsLogic {
                         pcList.add(new NoFurniturePreCond(f, direction));
                         pcList.add(new NoWallsPreCond(f, direction));
                         pcList.add(dlpc);
-
                     }
                     if (dpc != null && notInLoop(dpc)) {
                         dlpc.getFurniture().pushDiff(dlpc.getDiff());
@@ -249,11 +263,10 @@ public class StripsLogic {
                     }
                 }
             }
-            long endTime   = System.currentTimeMillis();
-            totalWorkTime += endTime - startTime;
+            long addedTime = System.nanoTime() - startTime;
+            totalWorkTime += addedTime;
             return true;
         }
-
     }
 
     private void operate(StripsOperator operator) {
@@ -412,6 +425,11 @@ public class StripsLogic {
 //        }
     }
 
+
+    /*************************
+     *** UTILITY FUNCTIONS ***
+     *************************/
+
     public void resetAll(boolean bIsFullReset) {
         stack.clear();
         guiStack.clear();
@@ -444,8 +462,7 @@ public class StripsLogic {
         return bSuccess;
     }
 
-
     public long getTotalWorkTime() {
-        return totalWorkTime;
+        return totalWorkTime / 1000000 ;
     }
 }

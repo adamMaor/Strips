@@ -23,6 +23,7 @@ public class NewFurnitureDlg extends JDialog {
 
     public NewFurnitureDlg(GuiUtils utils, String fId) {
         this.utils = utils;
+        this.setTitle("Add a furniture");
         IDLabel.setText("Adding Furniture Item: " + fId);
         setContentPane(contentPane);
         setModal(true);
@@ -88,7 +89,10 @@ public class NewFurnitureDlg extends JDialog {
 
         fLocation = new FurnitureLocation(pos1, pos2);
         if (utils.checkForNewFurnitureSpace(fLocation) == false) {
-            System.out.println("Can't Set Furniture There");
+            JOptionPane.showMessageDialog(null,
+                    "You cannot place a furniture there.",
+                    "Location error",
+                    JOptionPane.ERROR_MESSAGE);
             fLocation = null;
             return;
         }
