@@ -7,42 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2130e707-0c94-40d7-a1f9-31362cbd64cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Strips_jar.xml" />
-      <change type="DELETED" beforePath="C:\Users\Adam\Documents\GitHub\Strips\src\Strips\StripsStack.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Main.class" afterPath="$PROJECT_DIR$/out/production/Strips/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$1.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$10.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$11.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$2.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$3.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$4.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$5.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$6.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$7.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$8.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$9.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$1.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$2.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$3.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$4.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/NewFurnitureDlg.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/StripsLogic.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/StripsLogic.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/DiffPreCond.java" afterPath="$PROJECT_DIR$/src/Strips/DiffPreCond.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/Furniture.java" afterPath="$PROJECT_DIR$/src/Logic/Furniture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainGui.java" afterPath="$PROJECT_DIR$/src/GUI/MainGui.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/NewFurnitureDlg.java" afterPath="$PROJECT_DIR$/src/GUI/NewFurnitureDlg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/PreConditionAnd.java" afterPath="$PROJECT_DIR$/src/Strips/PreConditionAnd.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/StripsHeuristics.java" afterPath="$PROJECT_DIR$/src/Strips/StripsHeuristics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/StripsLogic.java" afterPath="$PROJECT_DIR$/src/Strips/StripsLogic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/StripsObject.java" afterPath="$PROJECT_DIR$/src/Strips/StripsObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/StripsOperator.java" afterPath="$PROJECT_DIR$/src/Strips/StripsOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/StripsPreCondition.java" afterPath="$PROJECT_DIR$/src/Strips/StripsPreCondition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Strips.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,38 +36,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StripsLogic.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StripsLogic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/StripsLogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89705884" vertical-offset="1474" max-vertical-offset="5746">
-              <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="5712">
+              <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#StripsLogic#0" expanded="false" />
                 <element signature="method#StripsLogic#0;class#StripsLogic#0" expanded="false" />
-                <element signature="e#5804#5830#0" expanded="false" />
+                <element signature="e#5728#5754#0" expanded="false" />
                 <element signature="method#operate#0;class#StripsLogic#0" expanded="false" />
                 <element signature="method#isSatisfied#0;class#StripsLogic#0" expanded="false" />
                 <element signature="method#isSatisfied#1;class#StripsLogic#0" expanded="false" />
                 <element signature="method#checkForSuccees#0;class#StripsLogic#0" expanded="false" />
-                <element signature="e#14646#14713#0" expanded="false" />
-                <element signature="e#16004#16085#0" expanded="false" />
+                <element signature="e#14490#14557#0" expanded="false" />
+                <element signature="e#15848#15929#0" expanded="false" />
                 <element signature="method#pushStack#0;class#StripsLogic#0" expanded="false" />
                 <element signature="method#popStack#0;class#StripsLogic#0" expanded="false" />
-                <element signature="e#17276#17317#0" expanded="false" />
+                <element signature="e#17120#17161#0" expanded="false" />
                 <element signature="method#resetAll#0;class#StripsLogic#0" expanded="false" />
-                <element signature="e#18069#18070#0" expanded="true" />
-                <element signature="e#18100#18101#0" expanded="true" />
+                <element signature="e#17913#17914#0" expanded="true" />
+                <element signature="e#17944#17945#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiffPreCond.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DiffPreCond.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Strips/DiffPreCond.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="716" max-vertical-offset="1241">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.39732888" vertical-offset="0" max-vertical-offset="1156">
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+              <folding>
+                <element signature="e#1820#1821#0" expanded="true" />
+                <element signature="e#1860#1861#0" expanded="true" />
+                <element signature="e#1926#1927#0" expanded="true" />
+                <element signature="e#1984#1985#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,8 +150,8 @@
       <file leaf-file-name="StripsHeuristics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/StripsHeuristics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1848" max-vertical-offset="3400">
-              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1848" max-vertical-offset="3383">
+              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#StripsHeuristics#0" expanded="false" />
                 <element signature="docComment;method#getSortedPreConditions#0;class#StripsHeuristics#0" expanded="false" />
@@ -223,8 +196,8 @@
       <file leaf-file-name="Furniture.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="1734">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1734">
+              <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
               <folding>
                 <element signature="docComment;class#Furniture#0" expanded="false" />
                 <element signature="method#Furniture#0;class#Furniture#0" expanded="false" />
@@ -233,8 +206,8 @@
                 <element signature="method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
                 <element signature="method#toString#0;class#Furniture#0" expanded="false" />
                 <element signature="method#addEncounter#0;class#Furniture#0" expanded="false" />
-                <element signature="e#4162#4163#0" expanded="true" />
-                <element signature="e#4218#4219#0" expanded="true" />
+                <element signature="e#4164#4165#0" expanded="true" />
+                <element signature="e#4220#4221#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -286,10 +259,10 @@
         <option value="$PROJECT_DIR$/src/Strips/StripsOperator.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsPreCondition.java" />
         <option value="$PROJECT_DIR$/src/GUI/MainGui.java" />
+        <option value="$PROJECT_DIR$/src/Strips/StripsLogic.java" />
         <option value="$PROJECT_DIR$/src/Logic/Furniture.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsHeuristics.java" />
         <option value="$PROJECT_DIR$/src/Strips/DiffPreCond.java" />
-        <option value="$PROJECT_DIR$/src/Strips/StripsLogic.java" />
       </list>
     </option>
   </component>
@@ -769,12 +742,12 @@
       <workItem from="1484905550738" duration="46671000" />
       <workItem from="1484958380147" duration="2741000" />
       <workItem from="1484996262602" duration="16509000" />
-      <workItem from="1485014903263" duration="14225000" />
+      <workItem from="1485014903263" duration="14419000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186441000" />
+    <option name="totallyTimeSpent" value="186635000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -853,18 +826,6 @@
           <line>488</line>
           <properties />
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Strips/DiffPreCond.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Strips/DiffPreCond.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="26" />
@@ -987,8 +948,8 @@
             <element signature="method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
             <element signature="method#toString#0;class#Furniture#0" expanded="false" />
             <element signature="method#addEncounter#0;class#Furniture#0" expanded="false" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4218#4219#0" expanded="true" />
+            <element signature="e#4164#4165#0" expanded="true" />
+            <element signature="e#4220#4221#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1338,14 +1299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="867">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/NoFurniturePreCond.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="901">
@@ -1395,47 +1348,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/StripsHeuristics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1848" max-vertical-offset="3400">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#StripsHeuristics#0" expanded="false" />
-            <element signature="docComment;method#getSortedPreConditions#0;class#StripsHeuristics#0" expanded="false" />
-            <element signature="docComment;method#getMovesList#0;class#StripsHeuristics#0" expanded="false" />
-            <element signature="docComment;method#setOrder#0;class#StripsHeuristics#0" expanded="false" />
-            <element signature="docComment;method#activateEncounterHeuristic#0;class#StripsHeuristics#0" expanded="false" />
-            <element signature="docComment;method#getEncounterDirection#0;class#StripsHeuristics#0" expanded="false" />
-            <element signature="method#getEncounterDirection#0;class#StripsHeuristics#0" expanded="false" />
-            <element signature="docComment;method#getRandomDiversionDiff#0;class#StripsHeuristics#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1321" max-vertical-offset="2057">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
             <element signature="e#4342#4343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1734">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Furniture#0" expanded="false" />
-            <element signature="method#Furniture#0;class#Furniture#0" expanded="false" />
-            <element signature="method#isSquare#0;class#Furniture#0" expanded="false" />
-            <element signature="docComment;method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
-            <element signature="method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
-            <element signature="method#toString#0;class#Furniture#0" expanded="false" />
-            <element signature="method#addEncounter#0;class#Furniture#0" expanded="false" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4218#4219#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1450,34 +1368,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/DiffPreCond.java">
+    <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="716" max-vertical-offset="1241">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1734">
+          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+          <folding>
+            <element signature="docComment;class#Furniture#0" expanded="false" />
+            <element signature="method#Furniture#0;class#Furniture#0" expanded="false" />
+            <element signature="method#isSquare#0;class#Furniture#0" expanded="false" />
+            <element signature="docComment;method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
+            <element signature="method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
+            <element signature="method#toString#0;class#Furniture#0" expanded="false" />
+            <element signature="method#addEncounter#0;class#Furniture#0" expanded="false" />
+            <element signature="e#4164#4165#0" expanded="true" />
+            <element signature="e#4220#4221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="867">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/StripsHeuristics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2256" max-vertical-offset="3383">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#StripsHeuristics#0" expanded="false" />
+            <element signature="docComment;method#getSortedPreConditions#0;class#StripsHeuristics#0" expanded="false" />
+            <element signature="docComment;method#getMovesList#0;class#StripsHeuristics#0" expanded="false" />
+            <element signature="docComment;method#setOrder#0;class#StripsHeuristics#0" expanded="false" />
+            <element signature="docComment;method#activateEncounterHeuristic#0;class#StripsHeuristics#0" expanded="false" />
+            <element signature="docComment;method#getEncounterDirection#0;class#StripsHeuristics#0" expanded="false" />
+            <element signature="method#getEncounterDirection#0;class#StripsHeuristics#0" expanded="false" />
+            <element signature="docComment;method#getRandomDiversionDiff#0;class#StripsHeuristics#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/StripsLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89705884" vertical-offset="1474" max-vertical-offset="5746">
-          <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="5712">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#StripsLogic#0" expanded="false" />
             <element signature="method#StripsLogic#0;class#StripsLogic#0" expanded="false" />
-            <element signature="e#5804#5830#0" expanded="false" />
+            <element signature="e#5728#5754#0" expanded="false" />
             <element signature="method#operate#0;class#StripsLogic#0" expanded="false" />
             <element signature="method#isSatisfied#0;class#StripsLogic#0" expanded="false" />
             <element signature="method#isSatisfied#1;class#StripsLogic#0" expanded="false" />
             <element signature="method#checkForSuccees#0;class#StripsLogic#0" expanded="false" />
-            <element signature="e#14646#14713#0" expanded="false" />
-            <element signature="e#16004#16085#0" expanded="false" />
+            <element signature="e#14490#14557#0" expanded="false" />
+            <element signature="e#15848#15929#0" expanded="false" />
             <element signature="method#pushStack#0;class#StripsLogic#0" expanded="false" />
             <element signature="method#popStack#0;class#StripsLogic#0" expanded="false" />
-            <element signature="e#17276#17317#0" expanded="false" />
+            <element signature="e#17120#17161#0" expanded="false" />
             <element signature="method#resetAll#0;class#StripsLogic#0" expanded="false" />
-            <element signature="e#18069#18070#0" expanded="true" />
-            <element signature="e#18100#18101#0" expanded="true" />
+            <element signature="e#17913#17914#0" expanded="true" />
+            <element signature="e#17944#17945#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/DiffPreCond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39732888" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#1926#1927#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
           </folding>
         </state>
       </provider>

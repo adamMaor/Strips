@@ -181,7 +181,6 @@ public class StripsHeuristics {
                 if (utils.isLocationLegal(encFurniture, diff)) {
                     // if found diversion - reset original furniture moves list
                     DiffPreCond dpc =new DiffPreCond(diff, encFurniture, this);
-                    System.out.println("returning this difreepc: " + dpc);
                     return dpc;
                 } else {
                     encFurniture.popDiff();

@@ -139,7 +139,6 @@ public class StripsLogic {
                     else if (pc instanceof DiffPreCond) {
                         DiffPreCond dpc = (DiffPreCond) pc;
                         if (dpc.shouldPopDiff()) {
-                            System.out.println("popind from special case");
                             dpc.getFurniture().popDiff();
                         }
                     }
@@ -167,7 +166,6 @@ public class StripsLogic {
                         }
                         else {          // no more move available - pop
                             if (dPc.shouldPopDiff()) {
-                                System.out.println("popind from special case");
                                 dPc.getFurniture().popDiff();
                             }
                             popTillLastOp();
