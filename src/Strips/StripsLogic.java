@@ -89,22 +89,23 @@ public class StripsLogic {
         }
         // normal mode - calculating the plan using the stack
         else {
-            if (stack.isEmpty()){
-                //Done!!! - check if successful
-                bSuccess = checkForSuccees();
-                return false;
-            }
             if (currentTry > Constants.Numbers.MAX_TRIES) {
                 bSuccess = false;
                 return false;
             }
             else if (currentMoveCount > Constants.Numbers.MAX_MOVES_PER_TRY) {
                 currentTry++;
+                currentMoveCount = 0;
                 bSuccess = false;
                 utils.resetAll();
+                System.out.println("Resetting and Trying again !");
                 resetAll(true);
-                System.out.println("failed - trying again");
                 return true;
+            }
+            if (stack.isEmpty()){
+                //Done!!! - check if successful
+                bSuccess = checkForSuccees();
+                return false;
             }
             currentMoveCount++;
             long startTime = System.currentTimeMillis();
@@ -138,11 +139,9 @@ public class StripsLogic {
                 }
                 else {
                     if (pc instanceof DiffLegalPreCond) {
-//                        System.out.println("DiffLegalPreCond failed");
                         popTillLastOp();
                     }
                     if (pc instanceof DiffPreCond){
-//                        System.out.println("DiffPreCond failed");
                         repaintBoardNeeded = true;
                         DiffPreCond dPc = (DiffPreCond) pc;
                         StripsOperator o = dPc.getNextMove(heuristics, lastMoveDirection);
@@ -158,19 +157,14 @@ public class StripsLogic {
                             pushStack(o);
                         }
                         else {          // no more move available - pop
-//                        dPc.getFurniture().popDiff(); // resume to previous diff for virtual location of furniture
                             popTillLastOp();
                         }
 
                     }
                     else if (pc instanceof CanRotatePreCond) {
-                        // Currently will not handle this - later can try to move other furniture
-//                        System.out.println("Can Rotate failed");
                         popTillLastOp();
                     }
                     else if (pc instanceof NoFurniturePreCond) {
-                        // Currently will not handle this - later can try to move other furniture
-//                        System.out.println("No Furniture failed");
                         popTillLastOp();
                         DiffPreCond dpc = heuristics.activateEncounterHeuristic((NoFurniturePreCond) pc);
                         if (dpc != null) {
@@ -178,7 +172,6 @@ public class StripsLogic {
                         }
                     }
                     else if (pc instanceof NoWallsPreCond) { //can't move because of walls - will never change
-//                        System.out.println("No Walls failed");
                         popTillLastOp();
                     }
                 }
@@ -312,7 +305,7 @@ public class StripsLogic {
         }
         else if (condition instanceof CanRotatePreCond) {
             CanRotatePreCond c = (CanRotatePreCond)condition;
-            bRes = utils.canVirtualRotate(c.getFurniture(),c.getDirection());
+            bRes = utils.canVirtualRotate(c.getFurniture(), c.getDirection());
         }
         else if (condition instanceof DiffLegalPreCond) {
             DiffLegalPreCond c = (DiffLegalPreCond) condition;

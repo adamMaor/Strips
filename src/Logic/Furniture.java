@@ -152,7 +152,7 @@ public class Furniture {
     }
 
     public void setDiversionMode(boolean bIsDiversionMode) {
-        System.out.println("unseting diversion: " + bIsDiversionMode);
+        System.out.println("diversion: " + bIsDiversionMode);
         this.bIsDiversionMode = bIsDiversionMode;
     }
 

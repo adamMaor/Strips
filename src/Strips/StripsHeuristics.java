@@ -22,7 +22,7 @@ public class StripsHeuristics {
         this.utils = utils;
     }
 
-    public ArrayList<StripsPreCondition> getSortedPreConditions(PreConditionAnd pcAnd){
+    public ArrayList<StripsPreCondition> getSortedPreConditions(PreConditionAnd pcAnd) {
         if (pcAnd.isbIsListOrderSet()) {
             return pcAnd.getPcList();
         }
@@ -32,11 +32,9 @@ public class StripsHeuristics {
         for (StripsPreCondition pc : pcAnd.getPcList()) {
             if (pc instanceof DiffPreCond) {
                 diffList.add(pc);
-            }
-            else if (pc instanceof NoWallsPreCond) {
+            } else if (pc instanceof NoWallsPreCond) {
                 wallsList.add(pc);
-            }
-            else {
+            } else {
                 otherList.add(pc);
             }
         }
@@ -51,7 +49,6 @@ public class StripsHeuristics {
     public ArrayList<StripsOperator> getMovesList(StripsPreCondition pc, byte lastMoveDirection) {
         ArrayList<StripsOperator> resList = new ArrayList<StripsOperator>();
         if (pc instanceof DiffPreCond) {
-//            DiffPreCond dpc = (DiffPreCond)pc;
             Furniture f = pc.getFurniture();
             Diff diff = new Diff(f.getVirtualLocation(), f.getLocation());
             int tlx = diff.getTlx();
@@ -59,50 +56,44 @@ public class StripsHeuristics {
             int dX = tlx - diff.getBrx();
             int dY = tly - diff.getBry();
 
-//            System.out.println("rotate? " + bNeedRotate);
-
-            if (tlx >= 0  && tly >= 0) { // mean that the original position is to the left and above
+            if (tlx >= 0 && tly >= 0) { // mean that the original position is to the left and above
                 if (tlx > tly) { // need more right
                     setOrder(resList, f, RIGHT, DOWN, UP, LEFT);
-                }
-                else {             // need more down
+                } else {             // need more down
                     setOrder(resList, f, DOWN, RIGHT, LEFT, UP);
                 }
-            }
-            else if (tlx >= 0) { // mean that the original position is to the left and below
+            } else if (tlx >= 0) { // mean that the original position is to the left and below
                 if (tlx + tly > 0) {   // need more right
                     setOrder(resList, f, RIGHT, UP, DOWN, LEFT);
-                }
-                else {                  // need more up
+                } else {                  // need more up
                     setOrder(resList, f, UP, RIGHT, LEFT, DOWN);
                 }
-            }
-            else if (tly >= 0) {  // mean that the original position is to the right and above
+            } else if (tly >= 0) {  // mean that the original position is to the right and above
                 if (tlx + tly > 0) {   // need more down
                     setOrder(resList, f, DOWN, LEFT, RIGHT, UP);
-                }
-                else {                  // need more left
+                } else {                  // need more left
                     setOrder(resList, f, LEFT, DOWN, UP, RIGHT);
                 }
-            }
-            else {      // mean that the original position is to the right and below
+            } else {      // mean that the original position is to the right and below
                 if (tlx > tly) { // need more up
                     setOrder(resList, f, UP, LEFT, RIGHT, DOWN);
 
-                }
-                else {             // need more left
+                } else {             // need more left
                     setOrder(resList, f, LEFT, UP, DOWN, RIGHT);
                 }
             }
             // if the furniture is square there is no point in rotates
             if (f.isSquare() == false) { // is it even worth checking for rotation
-                resList.add(2, new RotateOperator(f, LEFT));
-                resList.add(5, new RotateOperator(f, RIGHT));
-//                boolean bNeedRotate = dX != dY;
-//                if (bNeedRotate) {
-//                    resList.add(2, new RotateOperator(f, LEFT));
-//                    resList.add(5, new RotateOperator(f, RIGHT));
-//                }
+                boolean bNeedRotate = dX != dY;
+                boolean bIsCloseEnough = tlx < f.getWidth() && tly <f.getHeight();
+                if (bNeedRotate && bIsCloseEnough) {
+                    resList.add(0, new RotateOperator(f, LEFT));
+                    resList.add(1, new RotateOperator(f, RIGHT));
+                }
+                else {
+                    resList.add(2, new RotateOperator(f, LEFT));
+                    resList.add(5, new RotateOperator(f, RIGHT));
+                }
 
             }
         }
@@ -125,7 +116,7 @@ public class StripsHeuristics {
         int indexToRemove = -1;
         for (int i = 0; i < resList.size(); i++) {
             if (resList.get(i) instanceof MoveOperator) {
-                MoveOperator mo = (MoveOperator)resList.get(i);
+                MoveOperator mo = (MoveOperator) resList.get(i);
                 if (mo.getDirection() == preventLoopingdirection) {
                     indexToRemove = i;
                 }
@@ -134,7 +125,6 @@ public class StripsHeuristics {
         if (indexToRemove != -1) {
             resList.remove(indexToRemove);
         }
-//        System.out.println("list: " + resList);
         return resList;
     }
 
@@ -146,40 +136,33 @@ public class StripsHeuristics {
     }
 
     public DiffPreCond activateEncounterHeuristic(NoFurniturePreCond nfpc) {
-        int numberOfEncounters = nfpc.getFurniture().addEncounter(nfpc.getEncounteredFurniture());
+        Furniture furniture = nfpc.getFurniture();
+        Furniture encFurniture = nfpc.getEncounteredFurniture();
+        int numberOfEncounters = furniture.addEncounter(nfpc.getEncounteredFurniture());
         if (numberOfEncounters >= Constants.Numbers.ENCSIZE) {
-            nfpc.getFurniture().clearEncounter(nfpc.getEncounteredFurniture());
-            Furniture encFurniture = nfpc.getEncounteredFurniture();
-            Diff diff = null;
+            furniture.clearEncounter(nfpc.getEncounteredFurniture());
             if (encFurniture.isAtFinalLocation()) {
                 encFurniture.setDiversionMode(true);
             }
             byte direction = getEncounterDirection(nfpc);
+
+            int numOfSteps = 0;
             switch (direction) {
                 case Constants.Directions.UP:
-                    diff = getDiversionDiff(nfpc.getFurniture(), encFurniture, Constants.Directions.RIGHT, Constants.Directions.UP);
-                    break;
                 case Constants.Directions.DOWN:
-                    diff = getDiversionDiff(nfpc.getFurniture(), encFurniture, Constants.Directions.RIGHT,  Constants.Directions.DOWN);
-                    break;
-                case Constants.Directions.LEFT:
-                    diff = getDiversionDiff(nfpc.getFurniture(), encFurniture, Constants.Directions.UP,  Constants.Directions.LEFT);
+                    numOfSteps = Math.min((furniture.getWidth() + encFurniture.getWidth() / 2), 3);
                     break;
                 case Constants.Directions.RIGHT:
-                    diff = getDiversionDiff(nfpc.getFurniture(), encFurniture, Constants.Directions.UP,  Constants.Directions.RIGHT);
-                    break;
-                case NONE:
+                case Constants.Directions.LEFT:
+                    numOfSteps = Math.min((furniture.getHeight() + encFurniture.getHeight() / 2), 3);
                     break;
             }
-
-            if (diff != null ) {
+            Diff diff = getRandomDiversionDiff(encFurniture, numOfSteps);
+            if (diff != null) {
                 if (utils.isLocationLegal(encFurniture, diff)) {
-//                    System.out.println("diff is legal: " + encFurniture.getID() + diff);
                     // if found diversion - reset original furniture moves list
                     return new DiffPreCond(diff, encFurniture, this);
-                }
-                else{
-//                System.out.println("popinh diff from heuristics");
+                } else {
                     encFurniture.popDiff();
                 }
             }
@@ -189,6 +172,7 @@ public class StripsHeuristics {
 
     /**
      * get the direction from which f1 is 'attacking' f2
+     *
      * @param nfpc
      * @return
      */
@@ -201,49 +185,30 @@ public class StripsHeuristics {
         Logic.Pos f2tl = nfpc.getEncounteredFurniture().getLocation().tl;
         Logic.Pos f2br = nfpc.getEncounteredFurniture().getLocation().br;
 
-
-        /*
-        f1.tlx > f2.tlx && f1.tly > f2.tly && f1.brx > f2.brx && f1.bry > f2.bry (f1 is left)
-
-        f1.tlx > f2.tlx && f1.tly < f2.tly && f1.brx < f2.brx && f1.bry < f2.bry (f1 down)
-
-        f1.tlx > f2.tlx && f1.tly > f2.tly && f1.brx < f2.brx && f1.bry > f2.bry (f1 up)
-
-        f1.tlx < f2.tlx && f1.tly > f2.tly && f1.brx < f2.brx && f1.bry < f2.bry (f1 right)
-         */
-
-
         if (f1tl.x > f2tl.x) {
             if (f1tl.x > f2br.x) {
                 return LEFT;
-            }
-            else {
+            } else {
                 if (f1tl.y > f2tl.y) {
                     return UP;
-                }
-                else {
+                } else {
                     return DOWN;
                 }
             }
-        }
-        else {
+        } else {
             if (f2tl.x >= f1br.x) {
                 return RIGHT;
-            }
-            else {
+            } else {
                 if (f1tl.y > f2tl.y) {
                     return UP;
-                }
-                else {
+                } else {
                     return DOWN;
                 }
             }
         }
-
     }
 
-    private Diff getDiversionDiff(Furniture furniture, Furniture encFurniture, byte d1, byte d2) {
-        int numOfSteps = 1;
+    private Diff getRandomDiversionDiff(Furniture encFurniture, int numOfSteps) {
         Diff diff = null;
         Diff currDiff = encFurniture.getCurrentDiff();
         int tlx = currDiff.getTlx();
@@ -251,57 +216,31 @@ public class StripsHeuristics {
         int brx = currDiff.getBrx();
         int bry = currDiff.getBry();
         Random rand = new Random();
-        int choise = rand.nextInt(2);
-        int multiplyer = choise == 1 ? 1 : -1 ;
-        switch (d1) {
-            case Constants.Directions.UP:
-                numOfSteps = (furniture.getHeight() + encFurniture.getHeight()/2)  * multiplyer;
-                diff = new Diff(tlx, tly - numOfSteps, brx, bry - numOfSteps);
-                encFurniture.pushDiff(diff);
-                if (utils.isLocationLegal(encFurniture, diff) == false) {
-                    encFurniture.popDiff();
+        int choice = rand.nextInt(4);
+        int retries = 0;
+        while (retries < 4) {
+            switch (choice) {
+                case 0:
+                    diff = new Diff(tlx, tly - numOfSteps, brx, bry - numOfSteps);
+                    break;
+                case 1:
                     diff = new Diff(tlx, tly + numOfSteps, brx, bry + numOfSteps);
-                    encFurniture.pushDiff(diff);
-                    if (utils.isLocationLegal(encFurniture, diff) == false) {
-                        encFurniture.popDiff();
-                        switch (d2) {
-                            case Constants.Directions.RIGHT:
-                                diff = new Diff(tlx + numOfSteps, tly, brx + numOfSteps, bry);
-                                encFurniture.pushDiff(diff);
-                                break;
-                            case Constants.Directions.LEFT:
-                                diff = new Diff(tlx - numOfSteps, tly, brx - numOfSteps, bry);
-                                encFurniture.pushDiff(diff);
-                                break;
-                        }
-                    }
-                }
-                break;
-            case Constants.Directions.RIGHT:
-                numOfSteps = (furniture.getWidth() + encFurniture.getWidth()/2) * multiplyer;
-                diff = new Diff(tlx + numOfSteps, tly, brx + numOfSteps, bry);
-                encFurniture.pushDiff(diff);
-                if (utils.isLocationLegal(encFurniture, diff) == false) {
-                    encFurniture.popDiff();
+                    break;
+                case 2:
+                    diff = new Diff(tlx + numOfSteps, tly, brx + numOfSteps, bry);
+                    break;
+                case 3:
                     diff = new Diff(tlx - numOfSteps, tly, brx - numOfSteps, bry);
-                    encFurniture.pushDiff(diff);
-                    if (utils.isLocationLegal(encFurniture, diff) == false) {
-                        encFurniture.popDiff();
-                        switch (d2) {
-                            case Constants.Directions.UP:
-                                diff = new Diff(tlx, tly - numOfSteps, brx, bry - numOfSteps);
-                                encFurniture.pushDiff(diff);
-                                break;
-                            case Constants.Directions.DOWN:
-                                diff = new Diff(tlx, tly + numOfSteps, brx, bry + numOfSteps);
-                                encFurniture.pushDiff(diff);
-                                break;
-                        }
-                    }
-                }
-                break;
+                    break;
+            }
+            encFurniture.pushDiff(diff);
+            if (utils.isLocationLegal(encFurniture, diff)) {
+                return diff;
+            }
+            encFurniture.popDiff();
+            choice = rand.nextInt(4);
+            retries++;
         }
-
-        return diff;
+        return null;
     }
 }

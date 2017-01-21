@@ -35,9 +35,9 @@ public class Constants {
     }
 
     public static class Numbers {
-        public static final int ENCSIZE = 19;
+        public static final int ENCSIZE = 10;
         public static final int MAX_MOVES_PER_TRY = 10000;
-        public static final int MAX_TRIES = 5;
+        public static final int MAX_TRIES = 3;
 
     }
 

@@ -18,7 +18,7 @@ public class LogicUtils {
     /**** Strips Logic API ****/
 
     public boolean isLocationLegal(Furniture f, Diff diff) {
-        boolean bRes = checkForLegalLocation(f,f.getVirtualLocation(), true);
+        boolean bRes = checkForLegalLocation(f,f.getVirtualLocation(), false);
         return bRes;
     }
 
@@ -186,7 +186,7 @@ public class LogicUtils {
     }
 
     private Furniture checkForOtherFurniture(Furniture f, FurnitureLocation fl, byte direction) {
-        ArrayList<Pos> posList = new ArrayList<Pos>(); // a list of points to check
+        ArrayList<Pos> posList = new ArrayList<>(); // a list of points to check
         Pos tlPos = fl.tl;
         Pos brPos = fl.br;
         switch (direction) {
@@ -272,7 +272,7 @@ public class LogicUtils {
     }
 
     private boolean isLocationCovered(FurnitureLocation f1, FurnitureLocation f2) {
-        return  (isPosCovered(f2.tl, f1) || isPosCovered(f2.br, f1) );
+        return  (isPosCovered(f2.tl, f1) || isPosCovered(f2.br, f1) ||  isPosCovered(f1.tl, f2) || isPosCovered(f1.br, f2));
     }
 
     private boolean isPosCovered(Pos pos, FurnitureLocation fl) {
