@@ -18,7 +18,7 @@ public class LogicUtils {
     /**** Strips Logic API ****/
 
     public boolean isLocationLegal(Furniture f, Diff diff) {
-        boolean bRes = checkForLegalLocation(f,f.getVirtualLocation(), false);
+        boolean bRes = checkForLegalLocation(f,f.getVirtualLocation(), true);
         return bRes;
     }
 
@@ -31,11 +31,18 @@ public class LogicUtils {
     }
 
     public boolean canMove(Furniture f, byte direction) {
-        FurnitureLocation fLocation = f.getVirtualLocation();
-        return checkForWalls(fLocation, direction) && checkForOtherFurniture(f, fLocation, direction) == null;
+        FurnitureLocation fLocation = f.getLocation();
+        boolean bWalls = checkForWalls(fLocation, direction);
+        return  bWalls && checkForOtherFurniture(f, fLocation, direction) == null;
     }
 
     public boolean canRotate(Furniture f, byte direction) {
+        FurnitureLocation fLocation = f.getLocation();
+        FurnitureLocation newLocation = getRotatedLocation(fLocation, direction);
+        return checkForLegalLocation(f, newLocation, true);
+    }
+
+    public boolean canVirtualRotate(Furniture f, byte direction) {
         FurnitureLocation fLocation = f.getVirtualLocation();
         FurnitureLocation newLocation = getRotatedLocation(fLocation, direction);
         return checkForLegalLocation(f, newLocation, true);
@@ -73,7 +80,6 @@ public class LogicUtils {
     public boolean moveFurniture(Furniture f, byte direction) {
         boolean bRes = true;
         if (f != null) {
-//            System.out.println("can Move? " + canMove(f, direction));
             if (canMove(f, direction)) {
                 switch (direction) {
                     case NONE:
@@ -521,5 +527,6 @@ public class LogicUtils {
     public void resetAll() {
         furnitureMap.clear();
     }
+
 
 }

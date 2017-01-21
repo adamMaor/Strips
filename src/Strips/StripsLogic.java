@@ -113,7 +113,12 @@ public class StripsLogic {
             if (obj instanceof PreConditionAnd) {
                 PreConditionAnd pcAnd = (PreConditionAnd) peekStack();
                 ArrayList<StripsPreCondition> pcList = heuristics.getSortedPreConditions(pcAnd);
-                if (isSatisfied(pcList)) {
+                if (bIsPoping && isSatisfied(pcList)) {
+                    for (StripsPreCondition spc : pcList) {
+                        if (spc instanceof DiffPreCond) {
+                            spc.getFurniture().popDiff();
+                        }
+                    }
                     popStack();
                 }
                 else {
@@ -166,14 +171,11 @@ public class StripsLogic {
                     else if (pc instanceof NoFurniturePreCond) {
                         // Currently will not handle this - later can try to move other furniture
 //                        System.out.println("No Furniture failed");
+                        popTillLastOp();
                         DiffPreCond dpc = heuristics.activateEncounterHeuristic((NoFurniturePreCond) pc);
                         if (dpc != null) {
                             pushStack(dpc);
                         }
-                        else {
-                            popTillLastOp();
-                        }
-
                     }
                     else if (pc instanceof NoWallsPreCond) { //can't move because of walls - will never change
 //                        System.out.println("No Walls failed");
@@ -310,7 +312,7 @@ public class StripsLogic {
         }
         else if (condition instanceof CanRotatePreCond) {
             CanRotatePreCond c = (CanRotatePreCond)condition;
-            bRes = utils.canRotate(c.getFurniture(),c.getDirection());
+            bRes = utils.canVirtualRotate(c.getFurniture(),c.getDirection());
         }
         else if (condition instanceof DiffLegalPreCond) {
             DiffLegalPreCond c = (DiffLegalPreCond) condition;
@@ -345,13 +347,16 @@ public class StripsLogic {
                 StripsObject obj = popStack();
                 if (obj instanceof DiffPreCond) {
                     DiffPreCond dPc = (DiffPreCond)obj;
-//                    System.out.println("poping diff from NotInLop");
                     dPc.getFurniture().popDiff();
                 }
             }
             if (dpc.getDiff().getTly() != 0 ||  dpc.getDiff().getTlx() != 0
                     || dpc.getDiff().getBry() != 0 || dpc.getDiff().getBrx() != 0) {
                 popTillLastOp(); // if diff is 0,0,0,0 -> no new operator exists
+            }
+            // Corner Case - can't kill a furniture virtual location this way - only organically
+            else if (dpc.getFurniture().isPopStackEmpty()) {
+                dpc.getFurniture().pushDiff(new Diff(0,0,0,0));
             }
             return false;
         }
@@ -365,9 +370,13 @@ public class StripsLogic {
             obj = popStack();
             if (obj instanceof DiffPreCond) {
                 DiffPreCond dPc = (DiffPreCond)obj;
-                if (dPc.getDiff().getTly() != 0 ||  dPc.getDiff().getTlx() != 0
-                        || dPc.getDiff().getBry() != 0 || dPc.getDiff().getBrx() != 0) {
-                    dPc.getFurniture().popDiff();
+//                if (dPc.getDiff().getTly() != 0 ||  dPc.getDiff().getTlx() != 0
+//                        || dPc.getDiff().getBry() != 0 || dPc.getDiff().getBrx() != 0) {
+//                }
+                dPc.getFurniture().popDiff();
+                // Corner Case - can't kill a furniture virtual location this way - only organically
+                if (dPc.getFurniture().isPopStackEmpty()) {
+                    dPc.getFurniture().pushDiff(new Diff(0,0,0,0));
                 }
             }
         }
@@ -386,6 +395,12 @@ public class StripsLogic {
         bIsPoping = true;
         guiStack.remove(0);
         StripsObject obj = stack.pop();
+        // Corner case
+        if (stack.size() == 0) {
+            if (obj instanceof DiffPreCond) {
+                ((DiffPreCond) obj).getFurniture().popDiff();
+            }
+        }
         return obj;
     }
 
@@ -397,11 +412,11 @@ public class StripsLogic {
         plan.add(0,o);
         guiPlan.add(o.toString());
         operate(o);
-        Furniture f = o.getFurniture();
-        if (f.getLocation().equals(f.getVirtualLocation()) == false) {
-//            System.out.println("poping diff from pushPlan");
-            f.popDiff();
-        }
+//        Furniture f = o.getFurniture();
+//        if (f.getLocation().equals(f.getVirtualLocation()) == false) {
+////            System.out.println("poping diff from pushPlan");
+////            f.popDiff();
+//        }
     }
 
     public void resetAll(boolean bIsFullReset) {
@@ -410,6 +425,8 @@ public class StripsLogic {
         bIsReplayMode = !bIsFullReset;
         bIsPoping = false;
         replayMoveCount = plan.size() - 1;
+        currentMoveCount = 0;
+        currentTry = 0;
         if (bIsFullReset) {
             totalWorkTime = 0;
             plan.clear();

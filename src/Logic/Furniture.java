@@ -77,13 +77,13 @@ public class Furniture {
     }
 
     public void pushDiff(Diff diff) {
-        System.out.println(this.getID() + ".->Pushing Diff: " + diff);
+//        System.out.println(this.getID() + ".->Pushing Diff: " + diff);
         diffStack.push(diff);
     }
 
     public void popDiff() {
-        System.out.println(this.getID() + ".<-POPING Diff: " + diffStack.pop());
-//         diffStack.pop();
+//        System.out.println(this.getID() + ".<-POPING Diff: " + diffStack.pop());
+         diffStack.pop();
     }
 
     /** Gets the furniture virtual location in regards to the current diff fron the final location **/
@@ -126,7 +126,6 @@ public class Furniture {
         return encNum;
     }
 
-
     public void clearEncounter(Furniture encounteredFurniture) {
         encounterMap.remove(encounteredFurniture.getID());
     }
@@ -157,4 +156,17 @@ public class Furniture {
         this.bIsDiversionMode = bIsDiversionMode;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Furniture furniture = (Furniture) o;
+        if (ID != null ? !ID.equals(furniture.ID) : furniture.ID != null) return false;
+        if (location != null ? !location.equals(furniture.location) : furniture.location != null) return false;
+        return true;
+    }
+
+    public boolean isPopStackEmpty() {
+        return diffStack.size() < 1;
+    }
 }

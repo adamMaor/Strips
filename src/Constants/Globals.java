@@ -16,7 +16,7 @@ public final class Globals {
 
     public Globals() {
 
-        delayTime = 25;
+        delayTime = 50;
         nextFurnitureIndex = 1;
 
         wallList = new ArrayList<Wall>();
