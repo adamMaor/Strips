@@ -7,6 +7,11 @@ import java.util.ArrayList;
  */
 public class PreConditionAnd implements StripsObject {
     private ArrayList<StripsPreCondition> pcList;
+    private boolean bIsListOrderSet;
+
+    public boolean isbIsListOrderSet() {
+        return bIsListOrderSet;
+    }
 
     public ArrayList<StripsPreCondition> getPcList() {
         return pcList;
@@ -16,8 +21,9 @@ public class PreConditionAnd implements StripsObject {
         this.pcList = pcList;
     }
 
-    public PreConditionAnd(ArrayList<StripsPreCondition> pcList) {
+    public PreConditionAnd(ArrayList<StripsPreCondition> pcList, boolean bListOrderPreSet) {
         this.pcList = pcList;
+        this.bIsListOrderSet = bListOrderPreSet;
     }
 
     @Override

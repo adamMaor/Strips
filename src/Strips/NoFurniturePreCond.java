@@ -9,11 +9,13 @@ import Logic.Furniture;
 public class NoFurniturePreCond implements StripsPreCondition {
 
     private Furniture f;
+    private Furniture encounteredFurniture;
     private byte direction;
 
     public NoFurniturePreCond(Furniture f, byte direction) {
         this.f = f;
         this.direction = direction;
+        this.encounteredFurniture = null;
     }
 
     public byte getDirection() {
@@ -46,4 +48,13 @@ public class NoFurniturePreCond implements StripsPreCondition {
         }
         return "HasNoFurniture(" + f.getID() + ", " + dirString + ")";
     }
+
+    public void setFurnitureEncounterd(Furniture resFurniture) {
+        this.encounteredFurniture = resFurniture;
+    }
+
+    public Furniture getEncounteredFurniture() {
+        return encounteredFurniture;
+    }
+
 }

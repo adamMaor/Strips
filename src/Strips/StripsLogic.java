@@ -2,6 +2,7 @@ package Strips;
 
 import Constants.Constants;
 import Logic.*;
+import com.sun.javaws.Globals;
 
 import java.util.*;
 
@@ -15,29 +16,35 @@ public class StripsLogic {
     private ArrayList<String> guiStack;
     private ArrayList<StripsObject> plan;
     private ArrayList<String> guiPlan;
-    private boolean bIsFinished;
     private boolean bIsPoping;
     private boolean bSuccess;
     private byte lastMoveDirection;
     private boolean repaintBoardNeeded;
-
-    public boolean isbIsFinished() {
-        return bIsFinished;
-    }
+    private boolean bIsReplayMode;
+    private int replayMoveCount;
+    private long totalWorkTime;
+    private int currentTry;
+    private int currentMoveCount;
 
     public StripsLogic(LogicUtils utils) {
         this.utils = utils;
-        heuristics = new StripsHeuristics();
+        heuristics = new StripsHeuristics(utils);
         stack = new Stack<>();
         guiStack = new ArrayList<>();
         plan = new ArrayList<>();
         guiPlan = new ArrayList<>();
-        bIsFinished = false;
         // this boolean is kept in order to know if I'm currently poping the stack or pushing
         bIsPoping = false;
         // this will indicate if success was found
         bSuccess = false;
+        bIsReplayMode = false;
+        replayMoveCount = 0;
+        totalWorkTime = 0;
+        currentTry = 1;
+        currentMoveCount = 1;
+
     }
+
 
     public void init() {
         // Create Initial stack and condition:
@@ -50,7 +57,7 @@ public class StripsLogic {
                 f.pushDiff(diff);
                 list.add(new DiffPreCond(diff, f, heuristics));
             }
-            pushStack(new PreConditionAnd(list));
+            pushStack(new PreConditionAnd(list, false));
         }
         else if (fList.size() == 1){
             for (Furniture f : fList) {
@@ -61,24 +68,214 @@ public class StripsLogic {
         }
     }
 
+    /**
+     * This is the main method of the Strip Algorithm
+     * @return true if a move was made, false otherwise
+     */
+    public boolean makeMove() {
+        // Playback Mode - solution was found - only displaying the plan now
+        if (bIsReplayMode) {
+            repaintBoardNeeded = true;
+            if (replayMoveCount >= 0) {
+                StripsObject obj = plan.get(replayMoveCount);
+                if (obj instanceof StripsOperator) {
+                    replayMoveCount--;
+                    StripsOperator so = (StripsOperator)obj;
+                    operate(so);
+                    return true;
+                }
+            }
+            return false;
+        }
+        // normal mode - calculating the plan using the stack
+        else {
+            if (stack.isEmpty()){
+                //Done!!! - check if successful
+                bSuccess = checkForSuccees();
+                return false;
+            }
+            if (currentTry > Constants.Numbers.MAX_TRIES) {
+                bSuccess = false;
+                return false;
+            }
+            else if (currentMoveCount > Constants.Numbers.MAX_MOVES_PER_TRY) {
+                currentTry++;
+                bSuccess = false;
+                utils.resetAll();
+                resetAll(true);
+                System.out.println("failed - trying again");
+                return true;
+            }
+            currentMoveCount++;
+            long startTime = System.currentTimeMillis();
+            repaintBoardNeeded = false;
+            StripsObject obj = peekStack();
+            if (obj instanceof PreConditionAnd) {
+                PreConditionAnd pcAnd = (PreConditionAnd) peekStack();
+                ArrayList<StripsPreCondition> pcList = heuristics.getSortedPreConditions(pcAnd);
+                if (isSatisfied(pcList)) {
+                    popStack();
+                }
+                else {
+                    for (int i = 0; i < pcList.size(); i++) {
+                        StripsPreCondition pc = pcList.get(i);
+                        pushStack(pc);
+                    }
+                }
+            }
+            else if (obj instanceof StripsPreCondition) {
+                StripsPreCondition pc = (StripsPreCondition) obj;
+                if (isSatisfied(pc)) {
+                    if (pc instanceof DiffLegalPreCond) {
+                        repaintBoardNeeded = true;
+                    }
+                    popStack();
+                }
+                else {
+                    if (pc instanceof DiffLegalPreCond) {
+//                        System.out.println("DiffLegalPreCond failed");
+                        popTillLastOp();
+                    }
+                    if (pc instanceof DiffPreCond){
+//                        System.out.println("DiffPreCond failed");
+                        repaintBoardNeeded = true;
+                        DiffPreCond dPc = (DiffPreCond) pc;
+                        StripsOperator o = dPc.getNextMove(heuristics, lastMoveDirection);
+                        if (o != null) { // a new move is available
+                            // set the current diff to furniture for utils calculations - creates a virtual location
+//                        dPc.getFurniture().pushDiff(dPc.getDiff());
+                            if (o instanceof MoveOperator) {
+                                lastMoveDirection = o.getDirection();
+                            }
+                            else {
+                                lastMoveDirection = Constants.Directions.NONE;
+                            }
+                            pushStack(o);
+                        }
+                        else {          // no more move available - pop
+//                        dPc.getFurniture().popDiff(); // resume to previous diff for virtual location of furniture
+                            popTillLastOp();
+                        }
+
+                    }
+                    else if (pc instanceof CanRotatePreCond) {
+                        // Currently will not handle this - later can try to move other furniture
+//                        System.out.println("Can Rotate failed");
+                        popTillLastOp();
+                    }
+                    else if (pc instanceof NoFurniturePreCond) {
+                        // Currently will not handle this - later can try to move other furniture
+//                        System.out.println("No Furniture failed");
+                        DiffPreCond dpc = heuristics.activateEncounterHeuristic((NoFurniturePreCond) pc);
+                        if (dpc != null) {
+                            pushStack(dpc);
+                        }
+                        else {
+                            popTillLastOp();
+                        }
+
+                    }
+                    else if (pc instanceof NoWallsPreCond) { //can't move because of walls - will never change
+//                        System.out.println("No Walls failed");
+                        popTillLastOp();
+                    }
+                }
+            }
+            else if (obj instanceof StripsOperator) {
+                StripsOperator o = (StripsOperator)obj;
+                if (bIsPoping) { // this means If got here after check all preconditions - and we know it can be executed
+                    pushPlan(o);
+                    popStack();
+                    repaintBoardNeeded = true;
+                }
+                else {
+                    ArrayList<StripsPreCondition> pcList = new ArrayList<StripsPreCondition>();
+                    Furniture f = o.getFurniture();
+                    DiffPreCond dpc = null;
+                    DiffLegalPreCond dlpc = null;
+                    if (o instanceof RotateOperator) {
+                        RotateOperator ro = (RotateOperator) o;
+                        FurnitureLocation newLocation = null;
+                        if (ro.getDirection() == Constants.Directions.LEFT){
+                            newLocation = utils.getRotatedLocation(f.getVirtualLocation(), Constants.Directions.RIGHT);
+                        }
+                        else if (ro.getDirection() == Constants.Directions.RIGHT){
+                            newLocation = utils.getRotatedLocation(f.getVirtualLocation(), Constants.Directions.LEFT);
+                        }
+                        // new diff is relative to final location
+                        Diff diff = new Diff(f.getFinalLocation(), newLocation);
+                        dpc = new DiffPreCond(diff, f, heuristics);
+                        dlpc = new DiffLegalPreCond(ro.getFurniture(), diff);
+                        pcList.add(dpc);
+                        pcList.add(new CanRotatePreCond(f, ro.getDirection()));
+                        pcList.add(dlpc);
+                    }
+                    else if (o instanceof MoveOperator) {
+                        MoveOperator mo = (MoveOperator) o;
+                        int tlx = mo.getFurniture().getVirtualLocation().tl.x;
+                        int tly = mo.getFurniture().getVirtualLocation().tl.y;
+                        int brx = mo.getFurniture().getVirtualLocation().br.x;
+                        int bry = mo.getFurniture().getVirtualLocation().br.y;
+                        byte direction = mo.getDirection();
+//                    System.out.println("mo: " + mo.toString());
+                        switch (direction) {
+                            case Constants.Directions.UP:
+                                tly++;
+                                bry++;
+                                break;
+                            case Constants.Directions.LEFT:
+                                tlx++;
+                                brx++;
+                                break;
+                            case Constants.Directions.DOWN:
+                                tly--;
+                                bry--;
+                                break;
+                            case Constants.Directions.RIGHT:
+                                tlx--;
+                                brx--;
+                                break;
+                            default:
+                                break;
+                        }
+                        FurnitureLocation newLocation = new FurnitureLocation(new Pos(tlx, tly), new Pos(brx, bry));
+                        Diff diff = new Diff(f.getFinalLocation(), newLocation);
+                        dpc = new DiffPreCond(diff, f, heuristics);
+                        dlpc = new DiffLegalPreCond(mo.getFurniture(), diff);
+                        pcList.add(dpc);
+                        pcList.add(new NoFurniturePreCond(f, direction));
+                        pcList.add(new NoWallsPreCond(f, direction));
+                        pcList.add(dlpc);
+
+                    }
+                    if (dpc != null && notInLoop(dpc)) {
+                        dlpc.getFurniture().pushDiff(dlpc.getDiff());
+                        pushStack(new PreConditionAnd(pcList, true));
+                    }
+                }
+            }
+            long endTime   = System.currentTimeMillis();
+            totalWorkTime += endTime - startTime;
+            return true;
+        }
+
+    }
+
     private void operate(StripsOperator operator) {
         if (operator instanceof MoveOperator) {
-            utils.moveFurniture(operator.getFurniture(), operator.getDirection());
+            utils.moveFurniture(operator.getFurniture().getID(), operator.getDirection());
         }
         else if (operator instanceof RotateOperator) {
-            utils.rotateFurniture(operator.getFurniture(), operator.getDirection());
+            utils.rotateFurniture(operator.getFurniture().getID(), operator.getDirection());
         }
-        operator.getFurniture().popDiff();
     }
 
     private boolean isSatisfied(ArrayList<StripsPreCondition> conditions) {
         for (StripsPreCondition c : conditions) {
             if (isSatisfied(c) == false) {
-//                System.out.println("And NOT Satisfied");
                 return false;
             }
         }
-//        System.out.println("And Satisfied");
         return true;
     }
 
@@ -97,11 +294,19 @@ public class StripsLogic {
         }
         else if (condition instanceof NoFurniturePreCond) {
             NoFurniturePreCond c = (NoFurniturePreCond)condition;
-            bRes = utils.noWalls(f, c.getDirection());
+            Furniture resFurniture = utils.noOtherFurniture(f, c.getDirection());
+            if (resFurniture != null) {
+                // Assign the furniture of conflict to the preCondition - for encounterHeuristics
+                c.setFurnitureEncounterd(resFurniture);
+                bRes = false;
+            }
+            else {
+                bRes = true;
+            }
         }
         else if (condition instanceof NoWallsPreCond) {
             NoWallsPreCond c = (NoWallsPreCond)condition;
-            bRes = utils.noOtherFurniture(f, c.getDirection());
+            bRes = utils.noWalls(f, c.getDirection());
         }
         else if (condition instanceof CanRotatePreCond) {
             CanRotatePreCond c = (CanRotatePreCond)condition;
@@ -111,176 +316,26 @@ public class StripsLogic {
             DiffLegalPreCond c = (DiffLegalPreCond) condition;
             bRes = utils.isLocationLegal(c.getFurniture(), c.getDiff());
         }
-//        System.out.println("normal Satisfied? " + bRes);
         return bRes;
     }
 
-    public ArrayList<String> getCurrentStack() {
-//        ArrayList<String> res = new ArrayList<String>();
-//        res.add("Hey");
-//        res.add("I'm");
-//        res.add("The");
-//        res.add("Stack");
-//        return res;
-//        System.out.println(guiStack);
-        return guiStack;
-    }
-
-    public ArrayList<String> getCurrentPlan() {
-        // TODO - make sure stack is reverse and plan is in order
-
-        return guiPlan;
-    }
-
-    public boolean isRepaintBoardNeeded() {
-        return repaintBoardNeeded;
-    }
-
-    public boolean makeMove() {
-        if (stack.isEmpty()){
-            //Done!!! - set boolean to done
-            bIsFinished = true;
-            return false;
-        }
-        repaintBoardNeeded = false;
-
-        StripsObject obj = peekStack();
-        if (obj instanceof PreConditionAnd) {
-            PreConditionAnd pcAnd = (PreConditionAnd) peekStack();
-            ArrayList<StripsPreCondition> pcList = pcAnd.getPcList();
-            if (isSatisfied(pcList)) {
-                popStack();
-            }
-            else {
-                for (int i = 0; i < pcList.size(); i++) {
-                    StripsPreCondition pc = pcList.get(i);
-
-                    pushStack(pc);
-                }
+    private boolean checkForSuccees() {
+        boolean bRes = true;
+        for (Furniture f: utils.getAllFurniture()) {
+            if (f.getLocation().equals(f.getFinalLocation()) == false) {
+                bRes = false;
+                break;
             }
         }
-        else if (obj instanceof StripsPreCondition) {
-            StripsPreCondition pc = (StripsPreCondition) obj;
-            if (isSatisfied(pc)) {
-                if (pc instanceof DiffLegalPreCond) {
-                    repaintBoardNeeded = true;
-                }
-                popStack();
-            }
-            else {
-                if (pc instanceof DiffLegalPreCond) {
-                    popTillLastOp();
-                }
-                if (pc instanceof DiffPreCond){
-                    repaintBoardNeeded = true;
-                    DiffPreCond dPc = (DiffPreCond) pc;
-                    StripsOperator o = dPc.getNextMove(heuristics, lastMoveDirection);
-                    if (o != null) { // a new move is available
-                        // set the current diff to furniture for utils calculations - creates a virtual location
-//                        dPc.getFurniture().pushDiff(dPc.getDiff());
-                        if (o instanceof MoveOperator) {
-                            lastMoveDirection = o.getDirection();
-                        }
-                        else {
-                            lastMoveDirection = Constants.Directions.NONE;
-                        }
-                        pushStack(o);
-                    }
-                    else {          // no more move available - pop
-//                        dPc.getFurniture().popDiff(); // resume to previous diff for virtual location of furniture
-                        popTillLastOp();
-                    }
-
-                }
-                else if (pc instanceof CanRotatePreCond) {
-                    // Currently will not handle this - later can try to move other furniture
-                    popTillLastOp();
-                }
-                else if (pc instanceof NoFurniturePreCond) {
-                    // Currently will not handle this - later can try to move other furniture
-                    popTillLastOp();
-                }
-                else if (pc instanceof NoWallsPreCond) { //can't move because of walls - will never change
-                    popTillLastOp();
-                }
-            }
-        }
-        else if (obj instanceof StripsOperator) {
-            StripsOperator o = (StripsOperator)obj;
-            if (bIsPoping) { // this means If got here after check all preconditions - and we know it can be executed
-                pushPlan(o);
-                popStack();
-                repaintBoardNeeded = true;
-            }
-            else {
-                ArrayList<StripsPreCondition> pcList = new ArrayList<StripsPreCondition>();
-                Furniture f = o.getFurniture();
-                DiffPreCond dpc = null;
-                DiffLegalPreCond dlpc = null;
-                if (o instanceof RotateOperator) {
-                    RotateOperator ro = (RotateOperator) o;
-                    FurnitureLocation newLocation = null;
-                    if (ro.getDirection() == Constants.Directions.LEFT){
-                        newLocation = utils.getRotatedLocation(f.getVirtualLocation(), Constants.Directions.RIGHT);
-                    }
-                    else if (ro.getDirection() == Constants.Directions.RIGHT){
-                        newLocation = utils.getRotatedLocation(f.getVirtualLocation(), Constants.Directions.LEFT);
-                    }
-                    // new diff is relative to final location
-                    Diff diff = new Diff(f.getFinalLocation(), newLocation);
-                    dpc = new DiffPreCond(diff, f, heuristics);
-                    dlpc = new DiffLegalPreCond(ro.getFurniture(), diff);
-                    pcList.add(dpc);
-                    pcList.add(new CanRotatePreCond(f, ro.getDirection()));
-                    pcList.add(dlpc);
-                }
-                else if (o instanceof MoveOperator) {
-                    MoveOperator mo = (MoveOperator) o;
-                    int tlx = mo.getFurniture().getVirtualLocation().tl.x;
-                    int tly = mo.getFurniture().getVirtualLocation().tl.y;
-                    int brx = mo.getFurniture().getVirtualLocation().br.x;
-                    int bry = mo.getFurniture().getVirtualLocation().br.y;
-                    byte direction = mo.getDirection();
-//                    System.out.println("mo: " + mo.toString());
-                    switch (direction) {
-                        case Constants.Directions.UP:
-                            tly++;
-                            bry++;
-                            break;
-                        case Constants.Directions.LEFT:
-                            tlx++;
-                            brx++;
-                            break;
-                        case Constants.Directions.DOWN:
-                            tly--;
-                            bry--;
-                            break;
-                        case Constants.Directions.RIGHT:
-                            tlx--;
-                            brx--;
-                            break;
-                        default:
-                            break;
-                    }
-                    FurnitureLocation newLocation = new FurnitureLocation(new Pos(tlx, tly), new Pos(brx, bry));
-                    Diff diff = new Diff(f.getFinalLocation(), newLocation);
-                    dpc = new DiffPreCond(diff, f, heuristics);
-                    dlpc = new DiffLegalPreCond(mo.getFurniture(), diff);
-                    pcList.add(dpc);
-                    pcList.add(new NoFurniturePreCond(f, direction));
-                    pcList.add(new NoWallsPreCond(f, direction));
-                    pcList.add(dlpc);
-
-                }
-                if (dpc != null && notInLoop(dpc)) {
-                    pushStack(new PreConditionAnd(pcList));
-                }
-            }
-        }
-        return true;
+        return bRes;
     }
 
     private boolean notInLoop(DiffPreCond dpc) {
+        if (dpc.getDiff().equals(new Diff(0,0,0,0))) {      // This is single shot - only once will be true for each time
+            if( dpc.getFurniture().getIsDiversionMode()) {
+                return true;
+            }
+        }
         int numToPop = stack.search(dpc);
         if (numToPop != -1) { // this DiffPreCondition is already in the stack - we are in a loop
             // we'll need to pop till this diff is found and poped
@@ -290,10 +345,14 @@ public class StripsLogic {
                 StripsObject obj = popStack();
                 if (obj instanceof DiffPreCond) {
                     DiffPreCond dPc = (DiffPreCond)obj;
+//                    System.out.println("poping diff from NotInLop");
                     dPc.getFurniture().popDiff();
                 }
-            } // this is my problem~~~~ need to pop from furniture!!!!
-            popTillLastOp();
+            }
+            if (dpc.getDiff().getTly() != 0 ||  dpc.getDiff().getTlx() != 0
+                    || dpc.getDiff().getBry() != 0 || dpc.getDiff().getBrx() != 0) {
+                popTillLastOp(); // if diff is 0,0,0,0 -> no new operator exists
+            }
             return false;
         }
 
@@ -302,12 +361,18 @@ public class StripsLogic {
 
     private void popTillLastOp() {
         StripsObject obj = stack.peek();
-        while (stack.isEmpty() == false && (obj instanceof StripsOperator) == false) {
+        while (stack.size() > 0 && (obj instanceof StripsOperator) == false) {
             obj = popStack();
             if (obj instanceof DiffPreCond) {
                 DiffPreCond dPc = (DiffPreCond)obj;
-                dPc.getFurniture().popDiff();
+                if (dPc.getDiff().getTly() != 0 ||  dPc.getDiff().getTlx() != 0
+                        || dPc.getDiff().getBry() != 0 || dPc.getDiff().getBrx() != 0) {
+                    dPc.getFurniture().popDiff();
+                }
             }
+        }
+        if (stack.size() == 0) {
+            init();
         }
     }
 
@@ -315,17 +380,12 @@ public class StripsLogic {
         bIsPoping = false;
         stack.push(obj);
         guiStack.add(0,obj.toString());
-        if (obj instanceof DiffLegalPreCond) {
-            DiffLegalPreCond dlpc = (DiffLegalPreCond) obj;
-            dlpc.getFurniture().pushDiff(dlpc.getDiff());
-        }
     }
 
     private StripsObject popStack() {
         bIsPoping = true;
         guiStack.remove(0);
         StripsObject obj = stack.pop();
-
         return obj;
     }
 
@@ -335,17 +395,47 @@ public class StripsLogic {
 
     private void pushPlan(StripsOperator o) {
         plan.add(0,o);
-        guiPlan.add(0,o.toString());
+        guiPlan.add(o.toString());
         operate(o);
+        Furniture f = o.getFurniture();
+        if (f.getLocation().equals(f.getVirtualLocation()) == false) {
+//            System.out.println("poping diff from pushPlan");
+            f.popDiff();
+        }
     }
 
-    public void resetAll() {
+    public void resetAll(boolean bIsFullReset) {
         stack.clear();
         guiStack.clear();
-        plan.clear();
-        guiPlan.clear();
-        bIsFinished = false;
+        bIsReplayMode = !bIsFullReset;
         bIsPoping = false;
-        bSuccess = false;
+        replayMoveCount = plan.size() - 1;
+        if (bIsFullReset) {
+            totalWorkTime = 0;
+            plan.clear();
+            guiPlan.clear();
+            bSuccess = false;
+        }
+    }
+
+    public ArrayList<String> getCurrentStack() {
+        return guiStack;
+    }
+
+    public ArrayList<String> getCurrentPlan() {
+        return guiPlan;
+    }
+
+    public boolean isRepaintBoardNeeded() {
+        return repaintBoardNeeded;
+    }
+
+    public boolean isbSuccess() {
+        return bSuccess;
+    }
+
+
+    public long getTotalWorkTime() {
+        return totalWorkTime;
     }
 }

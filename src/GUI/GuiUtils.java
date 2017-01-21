@@ -14,7 +14,6 @@ import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 
 /**
  * Created by Adam on 09/01/2017.
@@ -131,11 +130,23 @@ public class GuiUtils {
 
     public void resetAll() {
         logicUtils.resetAll();
-        stripsLogic.resetAll();
+        stripsLogic.resetAll(true);
     }
 
-    public void restoreInitialState() {
+    public void restoreInitialState(boolean bIsFullReset) {
         logicUtils.restoreInitialState();
-        stripsLogic.resetAll();
+        stripsLogic.resetAll(bIsFullReset);
+    }
+
+    public boolean checkForSuccess() {
+        return stripsLogic.isbSuccess();
+    }
+
+    public long getTotalWorkTime() {
+        return stripsLogic.getTotalWorkTime();
+    }
+
+    public long getDelayTime() {
+        return globals.getDelayTime();
     }
 }

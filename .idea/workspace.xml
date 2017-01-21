@@ -2,9 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2130e707-0c94-40d7-a1f9-31362cbd64cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/DiffPreCond.java" afterPath="$PROJECT_DIR$/src/Strips/DiffPreCond.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Constants.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/Furniture.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/FurnitureLocation.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/FurnitureLocation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Constants/Globals.class" afterPath="$PROJECT_DIR$/out/production/Strips/Constants/Globals.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/GuiUtils.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/GuiUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/LogicUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$1.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$10.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$11.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$2.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$3.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$4.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$5.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$6.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$7.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$8.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$9.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui.class" afterPath="$PROJECT_DIR$/out/production/Strips/GUI/MainGui.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Logic/Pos.class" afterPath="$PROJECT_DIR$/out/production/Strips/Logic/Pos.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Strips/Strips/StripsLogic.class" afterPath="$PROJECT_DIR$/out/production/Strips/Strips/StripsLogic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Constants/Constants.java" afterPath="$PROJECT_DIR$/src/Constants/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/Furniture.java" afterPath="$PROJECT_DIR$/src/Logic/Furniture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/FurnitureLocation.java" afterPath="$PROJECT_DIR$/src/Logic/FurnitureLocation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Constants/Globals.java" afterPath="$PROJECT_DIR$/src/Constants/Globals.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/GuiUtils.java" afterPath="$PROJECT_DIR$/src/GUI/GuiUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/LogicUtils.java" afterPath="$PROJECT_DIR$/src/Logic/LogicUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainGui.form" afterPath="$PROJECT_DIR$/src/GUI/MainGui.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/MainGui.java" afterPath="$PROJECT_DIR$/src/GUI/MainGui.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/NoFurniturePreCond.java" afterPath="$PROJECT_DIR$/src/Strips/NoFurniturePreCond.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/Pos.java" afterPath="$PROJECT_DIR$/src/Logic/Pos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/PreConditionAnd.java" afterPath="$PROJECT_DIR$/src/Strips/PreConditionAnd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/StripsHeuristics.java" afterPath="$PROJECT_DIR$/src/Strips/StripsHeuristics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strips/StripsLogic.java" afterPath="$PROJECT_DIR$/src/Strips/StripsLogic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,19 +64,28 @@
       <file leaf-file-name="StripsLogic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strips/StripsLogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2856" max-vertical-offset="5202">
-              <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="4743">
+              <caret line="108" column="31" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
               <folding>
                 <element signature="docComment;class#StripsLogic#0" expanded="false" />
-                <element signature="method#StripsLogic#0;class#StripsLogic#0" expanded="false" />
-                <element signature="e#1149#1187#0" expanded="false" />
-                <element signature="method#getCurrentStack#0;class#StripsLogic#0" expanded="false" />
-                <element signature="e#4176#4234#0" expanded="false" />
-                <element signature="method#getCurrentPlan#0;class#StripsLogic#0" expanded="false" />
-                <element signature="e#6111#6137#0" expanded="false" />
-                <element signature="e#6698#6729#0" expanded="false" />
-                <element signature="e#11322#11389#0" expanded="false" />
-                <element signature="method#resetAll#0;class#StripsLogic#0" expanded="false" />
+                <element signature="method#init#0;class#StripsLogic#0" expanded="false" />
+                <element signature="e#1356#1394#0" expanded="false" />
+                <element signature="docComment;method#makeMove#0;class#StripsLogic#0" expanded="false" />
+                <element signature="e#5180#5206#0" expanded="false" />
+                <element signature="e#5807#5838#0" expanded="false" />
+                <element signature="e#6137#6210#0" expanded="false" />
+                <element signature="e#6430#6503#0" expanded="false" />
+                <element signature="e#6978#7027#0" expanded="false" />
+                <element signature="method#operate#0;class#StripsLogic#0" expanded="false" />
+                <element signature="method#isSatisfied#0;class#StripsLogic#0" expanded="false" />
+                <element signature="method#isSatisfied#1;class#StripsLogic#0" expanded="false" />
+                <element signature="method#checkForSuccees#0;class#StripsLogic#0" expanded="false" />
+                <element signature="method#notInLoop#0;class#StripsLogic#0" expanded="false" />
+                <element signature="e#14317#14384#0" expanded="false" />
+                <element signature="method#popTillLastOp#0;class#StripsLogic#0" expanded="false" />
+                <element signature="method#pushStack#0;class#StripsLogic#0" expanded="false" />
+                <element signature="method#popStack#0;class#StripsLogic#0" expanded="false" />
+                <element signature="method#pushPlan#0;class#StripsLogic#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -56,36 +94,33 @@
       <file leaf-file-name="LogicUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/LogicUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="4199">
-              <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="5151">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
               <folding>
                 <element signature="docComment;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#isLocationLegal#0;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#checkForLegalLocation#0;class#LogicUtils#0" expanded="false" />
-                <element signature="method#checkForLegalLocation#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#moveFurniture#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#rotateFurniture#0;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#inBounds#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#inBounds#0;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#hasWall#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#hasWall#0;class#LogicUtils#0" expanded="false" />
-                <element signature="method#checkForExistingFurniture#0;class#LogicUtils#0" expanded="false" />
-                <element signature="docComment;method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
-                <element signature="method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
-                <element signature="method#isLocationCovered#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#isPosCovered#0;class#LogicUtils#0" expanded="false" />
-                <element signature="docComment;method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
-                <element signature="method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
-                <element signature="method#checkForNewFurnitureSpace#0;class#LogicUtils#0" expanded="false" />
-                <element signature="method#inBounds#1;class#LogicUtils#0" expanded="false" />
                 <element signature="method#rotateFurniture#1;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
                 <element signature="docComment;method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#validateStateForSolve#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#saveInitialState#0;class#LogicUtils#0" expanded="false" />
+                <element signature="method#restoreInitialState#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#noOverLapingFinals#0;class#LogicUtils#0" expanded="false" />
                 <element signature="method#noMissingFinalLocations#0;class#LogicUtils#0" expanded="false" />
               </folding>
@@ -93,12 +128,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiffPreCond.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Strips/DiffPreCond.java">
+      <file leaf-file-name="StripsHeuristics.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Strips/StripsHeuristics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28242075" vertical-offset="93" max-vertical-offset="986">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-              <folding />
+            <state vertical-scroll-proportion="0.3888889" vertical-offset="2227" max-vertical-offset="5032">
+              <caret line="162" column="41" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
+              <folding>
+                <element signature="method#setOrder#0;class#StripsHeuristics#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,18 +143,8 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="748">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StripsHeuristics.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Strips/StripsHeuristics.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="989" max-vertical-offset="2227">
-              <caret line="66" column="94" selection-start-line="66" selection-start-column="94" selection-end-line="66" selection-end-column="94" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="867">
+              <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -126,31 +153,58 @@
       <file leaf-file-name="MainGui.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3978" max-vertical-offset="8211">
-              <caret line="248" column="39" selection-start-line="248" selection-start-column="39" selection-end-line="248" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="5236">
+              <caret line="220" column="22" selection-start-line="220" selection-start-column="22" selection-end-line="220" selection-end-column="22" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#MainGui#0" expanded="false" />
+                <element signature="method#restoreInitialState#0;class#MainGui#0" expanded="false" />
+                <element signature="method#resetBoard#0;class#MainGui#0" expanded="false" />
+                <element signature="method#repaintStacks#0;class#MainGui#0" expanded="false" />
+                <element signature="method#switchToSolveMode#0;class#MainGui#0" expanded="false" />
+                <element signature="method#setNavigationButtonsEnabled#0;class#MainGui#0" expanded="false" />
+                <element signature="method#unMarkLocation#0;class#MainGui#0" expanded="false" />
+                <element signature="method#markLocation#0;class#MainGui#0" expanded="false" />
+                <element signature="method#setSetFinalLocationMode#0;class#MainGui#0" expanded="false" />
+                <element signature="method#rotateCurrentFurniture#0;class#MainGui#0" expanded="false" />
+                <element signature="method#moveCurrentFurniture#0;class#MainGui#0" expanded="false" />
+                <element signature="method#unPaintFurniture#0;class#MainGui#0" expanded="false" />
+                <element signature="method#initBoard#0;class#MainGui#0" expanded="false" />
+                <element signature="method#createUIComponents#0;class#MainGui#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuiBoardItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/GuiBoardItem.java">
+      <file leaf-file-name="GuiUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="629">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="425">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1277" max-vertical-offset="2091">
+              <caret line="111" column="30" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#3332#3333#0" expanded="false" />
+                <element signature="e#3374#3375#0" expanded="false" />
+                <element signature="e#3435#3436#0" expanded="false" />
+                <element signature="e#3491#3492#0" expanded="false" />
+                <element signature="e#3540#3541#0" expanded="false" />
+                <element signature="e#3591#3592#0" expanded="false" />
+                <element signature="e#3639#3640#0" expanded="false" />
+                <element signature="e#3684#3685#0" expanded="false" />
+                <element signature="e#3894#3895#0" expanded="false" />
+                <element signature="e#3952#3953#0" expanded="false" />
+                <element signature="e#4385#4386#0" expanded="false" />
+                <element signature="e#4442#4443#0" expanded="false" />
+                <element signature="e#4496#4497#0" expanded="false" />
+                <element signature="e#4547#4548#0" expanded="false" />
+                <element signature="e#4597#4598#0" expanded="false" />
+                <element signature="e#4649#4650#0" expanded="false" />
+                <element signature="e#4698#4699#0" expanded="false" />
+                <element signature="e#4749#4750#0" expanded="false" />
+                <element signature="e#5045#5046#0" expanded="false" />
+                <element signature="e#5092#5093#0" expanded="false" />
+                <element signature="e#5130#5131#0" expanded="false" />
+                <element signature="e#5183#5184#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,13 +216,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="425">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Furniture.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1853">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1325" max-vertical-offset="2023">
+              <caret line="155" column="68" selection-start-line="155" selection-start-column="68" selection-end-line="155" selection-end-column="68" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Furniture#0" expanded="false" />
+                <element signature="method#moveRight#0;class#Furniture#0" expanded="false" />
+                <element signature="method#isSquare#0;class#Furniture#0" expanded="false" />
+                <element signature="docComment;method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
+                <element signature="method#toString#0;class#Furniture#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Globals.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Constants/Globals.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="1122">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -192,38 +274,38 @@
       <list>
         <option value="$PROJECT_DIR$/src/Pos.java" />
         <option value="$PROJECT_DIR$/src/Constants/ConstantsAndGlobals.java" />
-        <option value="$PROJECT_DIR$/src/Logic/Pos.java" />
-        <option value="$PROJECT_DIR$/src/Constants/Globals.java" />
         <option value="$PROJECT_DIR$/src/Logic/Wall.java" />
         <option value="$PROJECT_DIR$/src/GUI/NewFurnitureDlg.form" />
         <option value="$PROJECT_DIR$/src/GUI/NewFurnitureDlg.java" />
-        <option value="$PROJECT_DIR$/src/Constants/Constants.java" />
-        <option value="$PROJECT_DIR$/src/Logic/FurnitureLocation.java" />
         <option value="$PROJECT_DIR$/src/Strips/CanMovePre.java" />
         <option value="$PROJECT_DIR$/src/Strips/CanMovePreCond.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsStack.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsObject.java" />
         <option value="$PROJECT_DIR$/src/Strips/NoWallsPreCond.java" />
         <option value="$PROJECT_DIR$/src/Strips/MoveOperator.java" />
-        <option value="$PROJECT_DIR$/src/Strips/PreConditionAnd.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsPreCondition.java" />
         <option value="$PROJECT_DIR$/src/Strips/DiffLegalPreCOnd.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsOperator.java" />
         <option value="$PROJECT_DIR$/src/Strips/RotateOperator.java" />
         <option value="$PROJECT_DIR$/src/Strips/CanRotatePreCond.java" />
-        <option value="$PROJECT_DIR$/src/Strips/NoFurniturePreCond.java" />
         <option value="$PROJECT_DIR$/src/Strips/DiffLegalPreCond.java" />
         <option value="$PROJECT_DIR$/src/Logic/Diff.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiBoardItem.java" />
+        <option value="$PROJECT_DIR$/src/Strips/DiffPreCond.java" />
+        <option value="$PROJECT_DIR$/src/Strips/PreConditionAnd.java" />
+        <option value="$PROJECT_DIR$/src/Logic/LogicUtils.java" />
+        <option value="$PROJECT_DIR$/src/Logic/Pos.java" />
+        <option value="$PROJECT_DIR$/src/Logic/FurnitureLocation.java" />
+        <option value="$PROJECT_DIR$/src/Strips/NoFurniturePreCond.java" />
         <option value="$PROJECT_DIR$/src/GUI/GuiUtils.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/GUI/GuiBoardItem.java" />
-        <option value="$PROJECT_DIR$/src/GUI/MainGui.java" />
         <option value="$PROJECT_DIR$/src/GUI/MainGui.form" />
-        <option value="$PROJECT_DIR$/src/Strips/StripsHeuristics.java" />
+        <option value="$PROJECT_DIR$/src/Constants/Globals.java" />
+        <option value="$PROJECT_DIR$/src/GUI/MainGui.java" />
+        <option value="$PROJECT_DIR$/src/Constants/Constants.java" />
         <option value="$PROJECT_DIR$/src/Strips/StripsLogic.java" />
-        <option value="$PROJECT_DIR$/src/Logic/LogicUtils.java" />
+        <option value="$PROJECT_DIR$/src/Strips/StripsHeuristics.java" />
         <option value="$PROJECT_DIR$/src/Logic/Furniture.java" />
-        <option value="$PROJECT_DIR$/src/Strips/DiffPreCond.java" />
       </list>
     </option>
   </component>
@@ -687,11 +769,13 @@
       <workItem from="1484743751921" duration="21728000" />
       <workItem from="1484815338541" duration="27178000" />
       <workItem from="1484850082812" duration="1382000" />
+      <workItem from="1484905550738" duration="46671000" />
+      <workItem from="1484958380147" duration="2741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106295000" />
+    <option name="totallyTimeSpent" value="155707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -708,7 +792,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21606949" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30510315" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -744,7 +828,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Logic/LogicUtils.java</url>
+          <line>482</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Strips/StripsLogic.java</url>
+          <line>396</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -753,19 +851,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="e#4323#4324#0" expanded="true" />
-            <element signature="e#4368#4369#0" expanded="true" />
-            <element signature="e#4411#4412#0" expanded="true" />
-            <element signature="e#4468#4469#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/LogicUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -774,30 +859,27 @@
             <element signature="docComment;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#isLocationLegal#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#checkForLegalLocation#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkForLegalLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#moveFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#rotateFurniture#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#inBounds#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#inBounds#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#hasWall#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#hasWall#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkForExistingFurniture#0;class#LogicUtils#0" expanded="false" />
-            <element signature="docComment;method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#isLocationCovered#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#isPosCovered#0;class#LogicUtils#0" expanded="false" />
-            <element signature="docComment;method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkForNewFurnitureSpace#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#inBounds#1;class#LogicUtils#0" expanded="false" />
             <element signature="method#rotateFurniture#1;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#validateStateForSolve#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#saveInitialState#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#restoreInitialState#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#noOverLapingFinals#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#noMissingFinalLocations#0;class#LogicUtils#0" expanded="false" />
           </folding>
@@ -823,7 +905,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -832,7 +916,20 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#MainGui#0" expanded="false" />
+            <element signature="method#restoreInitialState#0;class#MainGui#0" expanded="false" />
+            <element signature="method#resetBoard#0;class#MainGui#0" expanded="false" />
+            <element signature="method#repaintStacks#0;class#MainGui#0" expanded="false" />
+            <element signature="method#switchToSolveMode#0;class#MainGui#0" expanded="false" />
+            <element signature="method#setNavigationButtonsEnabled#0;class#MainGui#0" expanded="false" />
+            <element signature="method#unMarkLocation#0;class#MainGui#0" expanded="false" />
+            <element signature="method#markLocation#0;class#MainGui#0" expanded="false" />
+            <element signature="method#setSetFinalLocationMode#0;class#MainGui#0" expanded="false" />
+            <element signature="method#rotateCurrentFurniture#0;class#MainGui#0" expanded="false" />
+            <element signature="method#moveCurrentFurniture#0;class#MainGui#0" expanded="false" />
+            <element signature="method#unPaintFurniture#0;class#MainGui#0" expanded="false" />
+            <element signature="method#initBoard#0;class#MainGui#0" expanded="false" />
+            <element signature="method#createUIComponents#0;class#MainGui#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -859,7 +956,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Furniture#0" expanded="false" />
+            <element signature="method#moveRight#0;class#Furniture#0" expanded="false" />
+            <element signature="method#isSquare#0;class#Furniture#0" expanded="false" />
+            <element signature="docComment;method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
+            <element signature="method#toString#0;class#Furniture#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,10 +970,29 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="e#4323#4324#0" expanded="true" />
-            <element signature="e#4368#4369#0" expanded="true" />
-            <element signature="e#4411#4412#0" expanded="true" />
-            <element signature="e#4468#4469#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3332#3333#0" expanded="false" />
+            <element signature="e#3374#3375#0" expanded="false" />
+            <element signature="e#3435#3436#0" expanded="false" />
+            <element signature="e#3491#3492#0" expanded="false" />
+            <element signature="e#3540#3541#0" expanded="false" />
+            <element signature="e#3591#3592#0" expanded="false" />
+            <element signature="e#3639#3640#0" expanded="false" />
+            <element signature="e#3684#3685#0" expanded="false" />
+            <element signature="e#3894#3895#0" expanded="false" />
+            <element signature="e#3952#3953#0" expanded="false" />
+            <element signature="e#4385#4386#0" expanded="false" />
+            <element signature="e#4442#4443#0" expanded="false" />
+            <element signature="e#4496#4497#0" expanded="false" />
+            <element signature="e#4547#4548#0" expanded="false" />
+            <element signature="e#4597#4598#0" expanded="false" />
+            <element signature="e#4649#4650#0" expanded="false" />
+            <element signature="e#4698#4699#0" expanded="false" />
+            <element signature="e#4749#4750#0" expanded="false" />
+            <element signature="e#5045#5046#0" expanded="false" />
+            <element signature="e#5092#5093#0" expanded="false" />
+            <element signature="e#5130#5131#0" expanded="false" />
+            <element signature="e#5183#5184#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -895,7 +1015,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -910,7 +1032,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -918,14 +1042,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Pos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -948,32 +1067,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/FurnitureLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/StripsStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="12" column="38" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/PreConditionAnd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#276#277#0" expanded="false" />
-            <element signature="e#343#344#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#483#484#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -988,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
           <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1011,43 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="935">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/MoveOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="901">
-          <caret line="47" column="9" selection-start-line="30" selection-start-column="8" selection-end-line="47" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/NoFurniturePreCond.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/NoWallsPreCond.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="901">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/CanRotatePreCond.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="32" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1158,30 +1217,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1227" max-vertical-offset="1989">
-          <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
-          <folding>
-            <element signature="e#4323#4324#0" expanded="true" />
-            <element signature="e#4368#4369#0" expanded="true" />
-            <element signature="e#4411#4412#0" expanded="true" />
-            <element signature="e#4468#4469#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constants/Globals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiBoardItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="629">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1082" max-vertical-offset="2074">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/PreConditionAnd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="697">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/FurnitureLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27567568" vertical-offset="0" max-vertical-offset="740">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;class#FurnitureLocation#0" expanded="false" />
+            <element signature="method#FurnitureLocation#0;class#FurnitureLocation#0" expanded="false" />
+            <element signature="method#moveUp#0;class#FurnitureLocation#0" expanded="false" />
+            <element signature="method#moveDown#0;class#FurnitureLocation#0" expanded="false" />
+            <element signature="method#moveLeft#0;class#FurnitureLocation#0" expanded="false" />
+            <element signature="method#moveRight#0;class#FurnitureLocation#0" expanded="false" />
+            <element signature="method#toString#0;class#FurnitureLocation#0" expanded="false" />
+            <element signature="method#equals#0;class#FurnitureLocation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/Pos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27567568" vertical-offset="0" max-vertical-offset="740">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;class#Pos#0" expanded="false" />
+            <element signature="method#Pos#0;class#Pos#0" expanded="false" />
+            <element signature="method#equals#0;class#Pos#0" expanded="false" />
+            <element signature="method#toString#0;class#Pos#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/MoveOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="884">
+          <caret line="47" column="9" selection-start-line="30" selection-start-column="8" selection-end-line="47" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/NoWallsPreCond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="884">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/CanRotatePreCond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="32" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/NoFurniturePreCond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="867">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#NoFurniturePreCond#0" expanded="false" />
+            <element signature="method#NoFurniturePreCond#0;class#NoFurniturePreCond#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/DiffPreCond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="263" max-vertical-offset="986">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1189,119 +1319,180 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding />
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
+    <entry file="file://$PROJECT_DIR$/src/Constants/Globals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2778" max-vertical-offset="7497">
-          <caret line="248" column="39" selection-start-line="248" selection-start-column="39" selection-end-line="248" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="1122">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MainGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2420" max-vertical-offset="4471">
+          <caret line="220" column="22" selection-start-line="220" selection-start-column="22" selection-end-line="220" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#MainGui#0" expanded="false" />
+            <element signature="method#restoreInitialState#0;class#MainGui#0" expanded="false" />
+            <element signature="method#resetBoard#0;class#MainGui#0" expanded="false" />
+            <element signature="method#repaintStacks#0;class#MainGui#0" expanded="false" />
+            <element signature="method#switchToSolveMode#0;class#MainGui#0" expanded="false" />
+            <element signature="method#setNavigationButtonsEnabled#0;class#MainGui#0" expanded="false" />
+            <element signature="method#unMarkLocation#0;class#MainGui#0" expanded="false" />
+            <element signature="method#markLocation#0;class#MainGui#0" expanded="false" />
+            <element signature="method#setSetFinalLocationMode#0;class#MainGui#0" expanded="false" />
+            <element signature="method#rotateCurrentFurniture#0;class#MainGui#0" expanded="false" />
+            <element signature="method#moveCurrentFurniture#0;class#MainGui#0" expanded="false" />
+            <element signature="method#unPaintFurniture#0;class#MainGui#0" expanded="false" />
+            <element signature="method#initBoard#0;class#MainGui#0" expanded="false" />
+            <element signature="method#createUIComponents#0;class#MainGui#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1277" max-vertical-offset="2091">
+          <caret line="111" column="30" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3332#3333#0" expanded="false" />
+            <element signature="e#3374#3375#0" expanded="false" />
+            <element signature="e#3435#3436#0" expanded="false" />
+            <element signature="e#3491#3492#0" expanded="false" />
+            <element signature="e#3540#3541#0" expanded="false" />
+            <element signature="e#3591#3592#0" expanded="false" />
+            <element signature="e#3639#3640#0" expanded="false" />
+            <element signature="e#3684#3685#0" expanded="false" />
+            <element signature="e#3894#3895#0" expanded="false" />
+            <element signature="e#3952#3953#0" expanded="false" />
+            <element signature="e#4385#4386#0" expanded="false" />
+            <element signature="e#4442#4443#0" expanded="false" />
+            <element signature="e#4496#4497#0" expanded="false" />
+            <element signature="e#4547#4548#0" expanded="false" />
+            <element signature="e#4597#4598#0" expanded="false" />
+            <element signature="e#4649#4650#0" expanded="false" />
+            <element signature="e#4698#4699#0" expanded="false" />
+            <element signature="e#4749#4750#0" expanded="false" />
+            <element signature="e#5045#5046#0" expanded="false" />
+            <element signature="e#5092#5093#0" expanded="false" />
+            <element signature="e#5130#5131#0" expanded="false" />
+            <element signature="e#5183#5184#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="748">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/StripsHeuristics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="989" max-vertical-offset="2227">
-          <caret line="66" column="94" selection-start-line="66" selection-start-column="94" selection-end-line="66" selection-end-column="94" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="867">
+          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/LogicUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="4199">
-          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5151">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
           <folding>
             <element signature="docComment;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#isLocationLegal#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#checkForLegalLocation#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkForLegalLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#moveFurniture#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#rotateFurniture#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#LogicUtils#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#inBounds#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#inBounds#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#hasWall#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#hasWall#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkForExistingFurniture#0;class#LogicUtils#0" expanded="false" />
-            <element signature="docComment;method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkNewFurnitureAreaForOtherFurniture#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#isLocationCovered#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#isPosCovered#0;class#LogicUtils#0" expanded="false" />
-            <element signature="docComment;method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkForWalls#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#checkNewFurnitureAreaForWalls#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#checkInnerWalls#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#checkForNewFurnitureSpace#0;class#LogicUtils#0" expanded="false" />
-            <element signature="method#inBounds#1;class#LogicUtils#0" expanded="false" />
             <element signature="method#rotateFurniture#1;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#getDeltaPos#0;class#LogicUtils#0" expanded="false" />
             <element signature="docComment;method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#getRotatedLocation#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#validateStateForSolve#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#saveInitialState#0;class#LogicUtils#0" expanded="false" />
+            <element signature="method#restoreInitialState#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#noOverLapingFinals#0;class#LogicUtils#0" expanded="false" />
             <element signature="method#noMissingFinalLocations#0;class#LogicUtils#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1853">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Strips/StripsLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="5202">
-          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="4743">
+          <caret line="108" column="31" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
           <folding>
             <element signature="docComment;class#StripsLogic#0" expanded="false" />
-            <element signature="method#StripsLogic#0;class#StripsLogic#0" expanded="false" />
-            <element signature="e#1149#1187#0" expanded="false" />
-            <element signature="method#getCurrentStack#0;class#StripsLogic#0" expanded="false" />
-            <element signature="e#4176#4234#0" expanded="false" />
-            <element signature="method#getCurrentPlan#0;class#StripsLogic#0" expanded="false" />
-            <element signature="e#6111#6137#0" expanded="false" />
-            <element signature="e#6698#6729#0" expanded="false" />
-            <element signature="e#11322#11389#0" expanded="false" />
-            <element signature="method#resetAll#0;class#StripsLogic#0" expanded="false" />
+            <element signature="method#init#0;class#StripsLogic#0" expanded="false" />
+            <element signature="e#1356#1394#0" expanded="false" />
+            <element signature="docComment;method#makeMove#0;class#StripsLogic#0" expanded="false" />
+            <element signature="e#5180#5206#0" expanded="false" />
+            <element signature="e#5807#5838#0" expanded="false" />
+            <element signature="e#6137#6210#0" expanded="false" />
+            <element signature="e#6430#6503#0" expanded="false" />
+            <element signature="e#6978#7027#0" expanded="false" />
+            <element signature="method#operate#0;class#StripsLogic#0" expanded="false" />
+            <element signature="method#isSatisfied#0;class#StripsLogic#0" expanded="false" />
+            <element signature="method#isSatisfied#1;class#StripsLogic#0" expanded="false" />
+            <element signature="method#checkForSuccees#0;class#StripsLogic#0" expanded="false" />
+            <element signature="method#notInLoop#0;class#StripsLogic#0" expanded="false" />
+            <element signature="e#14317#14384#0" expanded="false" />
+            <element signature="method#popTillLastOp#0;class#StripsLogic#0" expanded="false" />
+            <element signature="method#pushStack#0;class#StripsLogic#0" expanded="false" />
+            <element signature="method#popStack#0;class#StripsLogic#0" expanded="false" />
+            <element signature="method#pushPlan#0;class#StripsLogic#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strips/DiffPreCond.java">
+    <entry file="file://$PROJECT_DIR$/src/Logic/Furniture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28242075" vertical-offset="93" max-vertical-offset="986">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1325" max-vertical-offset="2023">
+          <caret line="155" column="68" selection-start-line="155" selection-start-column="68" selection-end-line="155" selection-end-column="68" />
+          <folding>
+            <element signature="docComment;class#Furniture#0" expanded="false" />
+            <element signature="method#moveRight#0;class#Furniture#0" expanded="false" />
+            <element signature="method#isSquare#0;class#Furniture#0" expanded="false" />
+            <element signature="docComment;method#getVirtualLocation#0;class#Furniture#0" expanded="false" />
+            <element signature="method#toString#0;class#Furniture#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strips/StripsHeuristics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3888889" vertical-offset="2227" max-vertical-offset="5032">
+          <caret line="162" column="41" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
+          <folding>
+            <element signature="method#setOrder#0;class#StripsHeuristics#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

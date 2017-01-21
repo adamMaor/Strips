@@ -13,8 +13,8 @@ public class Pos {
 
     @Override
     public boolean equals(Object obj) {
-        Pos other = (Pos) obj;
-        if (other != null) {
+        if (obj instanceof Pos) {
+            Pos other = (Pos) obj;
             return other.x == this.x && other.y == this.y;
         }
         return false;

@@ -57,4 +57,18 @@ public class FurnitureLocation {
                 ", br=" + br +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        FurnitureLocation that = (FurnitureLocation) o;
+
+        if (br != null ? !br.equals(that.br) : that.br != null) return false;
+        if (tl != null ? !tl.equals(that.tl) : that.tl != null) return false;
+
+        return true;
+    }
+
 }

@@ -12,8 +12,11 @@ public final class Globals {
 
     public static ArrayList<Wall> wallList;
     public int nextFurnitureIndex;
+    private int delayTime;
 
     public Globals() {
+
+        delayTime = 25;
         nextFurnitureIndex = 1;
 
         wallList = new ArrayList<Wall>();
@@ -48,5 +51,13 @@ public final class Globals {
         Pos w8p1 = new Pos(7,4);
         Pos w8p2 = new Pos(7,5);
         wallList.add(new Wall(w8p1,w8p2));
+    }
+
+    public int getDelayTime() {
+        return delayTime;
+    }
+
+    public void setDelayTime(int delayTime) {
+        this.delayTime = delayTime;
     }
 }

@@ -1,6 +1,7 @@
 package Logic;
 
 import java.awt.*;
+import java.util.HashMap;
 import java.util.Stack;
 
 /**
@@ -13,6 +14,8 @@ public class Furniture {
     private Color color;
     // keep the diff stack in order to calculate conditions in utils
     private Stack<Diff> diffStack;
+    private HashMap<String, Integer> encounterMap;
+    private boolean bIsDiversionMode;
 
     public Furniture(String ID, FurnitureLocation location, Color fColor) {
         this.ID = ID;
@@ -20,6 +23,8 @@ public class Furniture {
         this.finalLocation = null;
         this.color = fColor;
         diffStack = new Stack<>();
+        encounterMap = new HashMap<>();
+        bIsDiversionMode = false;
     }
 
     public FurnitureLocation getFinalLocation() {
@@ -48,27 +53,16 @@ public class Furniture {
 
     public void moveDown() {
         location.moveDown();
-
     }
 
     public void moveLeft() {
         location.moveLeft();
-
     }
 
     public void moveRight() {
         location.moveRight();
 
     }
-
-    public void rotateLeft() {
-
-    }
-
-    public void rotateRight() {
-
-    }
-
 
     public void setFinalLocation(FurnitureLocation fl) {
         this.finalLocation = fl;
@@ -83,13 +77,13 @@ public class Furniture {
     }
 
     public void pushDiff(Diff diff) {
-//        System.out.println("Pushing Diff: " + diff);
+        System.out.println(this.getID() + ".->Pushing Diff: " + diff);
         diffStack.push(diff);
     }
 
     public void popDiff() {
-//        System.out.println("POPING Diff: " + diffStack.pop());
-        diffStack.pop();
+        System.out.println(this.getID() + ".<-POPING Diff: " + diffStack.pop());
+//         diffStack.pop();
     }
 
     /** Gets the furniture virtual location in regards to the current diff fron the final location **/
@@ -116,4 +110,51 @@ public class Furniture {
                 ", diffStack=" + diffStack +
                 '}';
     }
+
+    public Diff peekDiff() {
+        return diffStack.peek();
+    }
+
+    public int addEncounter(Furniture resFurniture) {
+        int encNum = 1;
+        String id = resFurniture.getID();
+        if (encounterMap.containsKey(id)) {
+            encNum = encounterMap.get(id) + 1;
+        }
+        encounterMap.put(id, encNum);
+//        System.out.println("counter: " + encNum);
+        return encNum;
+    }
+
+
+    public void clearEncounter(Furniture encounteredFurniture) {
+        encounterMap.remove(encounteredFurniture.getID());
+    }
+
+    public boolean isAtFinalLocation() {
+        return getLocation().equals(getFinalLocation());
+    }
+
+    public int getWidth() {
+        return getLocation().br.x - getLocation().tl.x + 1;
+    }
+
+    public int getHeight() {
+        return getLocation().br.y - getLocation().tl.y + 1;
+    }
+
+    public boolean getIsDiversionMode() {
+        boolean bRes = bIsDiversionMode;
+        if (bRes) {
+            System.out.println("unseting diversion");
+            bIsDiversionMode = false;
+        }
+        return bRes;
+    }
+
+    public void setDiversionMode(boolean bIsDiversionMode) {
+        System.out.println("unseting diversion: " + bIsDiversionMode);
+        this.bIsDiversionMode = bIsDiversionMode;
+    }
+
 }

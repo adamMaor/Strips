@@ -4,6 +4,7 @@ import Constants.Constants;
 import Logic.Furniture;
 import Logic.FurnitureLocation;
 import Logic.Pos;
+import com.sun.javaws.Globals;
 
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
@@ -40,6 +41,7 @@ public class MainGui {
     private DefaultListModel<String> planModel;
     private JPanel solvePanel;
     private JButton clearBoardAndRestartButton;
+    private JButton stopAndRestoreInitialButton;
     private FurnitureLocation tempFurnitureLocation;
 
     private GuiUtils utils;
@@ -207,6 +209,12 @@ public class MainGui {
                 resetBoard();
             }
         });
+        stopAndRestoreInitialButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                restoreInitialState(true);
+            }
+        });
     }
 
     private void generateMove() {
@@ -224,16 +232,23 @@ public class MainGui {
         }
         else {
             // Done
-            Object[] options1 = { "Reset Board", "Move back To Initial State", "Quit" };
+            bIsAutoRun = false;
+            Object[] options1 = { "Replay the Plan (calculated)", "Move back To Initial State (Re-Calculate)", "Quit" };
             int input;
-            input = JOptionPane.showOptionDialog(null, "Success!!!", "Success!!!", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options1, null);
+            if (utils.checkForSuccess()) {
+                int planSize = utils.getCurrentPlan().size();
+                input = JOptionPane.showOptionDialog(null, "Success!!!\nA solution was found :)\nNumber of moves for solution: " + planSize + "\nOverAll Working time: " + utils.getTotalWorkTime(), "Success!!!", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options1, null);
+            }
+            else {
+                input = JOptionPane.showOptionDialog(null, "Failed!!!\nSomething went wrong and a solution was NOT found :)", "Failed...", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE, null, options1, null);
+            }
 
             if(input == JOptionPane.YES_OPTION)
             {
-                resetBoard();
+                restoreInitialState(false);
             }
             else if (input == JOptionPane.NO_OPTION) {
-                restoreInitialState();
+                restoreInitialState(true);
             }
             else if (input == JOptionPane.CANCEL_OPTION){
                 System.exit(0);
@@ -245,7 +260,7 @@ public class MainGui {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(25);
+                        Thread.sleep(utils.getDelayTime());
                         generateMove();
                     } catch (InterruptedException e1) {
                         e1.printStackTrace();
@@ -256,21 +271,20 @@ public class MainGui {
         }
     }
 
-    private void restoreInitialState() {
+    private void restoreInitialState(boolean bIsFullReset) {
         for (Furniture f : utils.getAllFurniture()) {
             unPaintFurniture(f);
             unMarkLocation(f.getFinalLocation());
         }
         initBoard();
-        utils.restoreInitialState();
+        utils.restoreInitialState(bIsFullReset);
         repaintBoard();
         repaintStacks();
         autoPlayRadioButton.setSelected(false);
         nextMoveButton.setEnabled(true);
         bIsAutoRun = false;
-        switchToSolveMode(false);
+        switchToSolveMode(!bIsFullReset);
     }
-
 
     private void resetBoard() {
         for (Furniture f : utils.getAllFurniture()) {
@@ -318,6 +332,7 @@ public class MainGui {
         LocationPanel.setVisible(!b);
         // show moves control , stack and plan
         solvePanel.setVisible(b);
+        stopAndRestoreInitialButton.setEnabled(b);
     }
 
     private void setNavigationButtonsEnabled(boolean b) {

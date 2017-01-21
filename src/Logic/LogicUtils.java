@@ -18,7 +18,7 @@ public class LogicUtils {
     /**** Strips Logic API ****/
 
     public boolean isLocationLegal(Furniture f, Diff diff) {
-        boolean bRes = checkForLegalLocation(f,f.getVirtualLocation());
+        boolean bRes = checkForLegalLocation(f,f.getVirtualLocation(), false);
         return bRes;
     }
 
@@ -26,23 +26,23 @@ public class LogicUtils {
         return checkForWalls(f.getVirtualLocation(), direction);
     }
 
-    public boolean noOtherFurniture(Furniture f, byte direction){
-        return checkForOtherFurniture(f.getVirtualLocation(), direction);
+    public Furniture noOtherFurniture(Furniture f, byte direction){
+        return checkForOtherFurniture(f, f.getVirtualLocation(), direction);
     }
 
     public boolean canMove(Furniture f, byte direction) {
         FurnitureLocation fLocation = f.getVirtualLocation();
-        return checkForWalls(fLocation, direction) && checkForOtherFurniture(fLocation, direction);
+        return checkForWalls(fLocation, direction) && checkForOtherFurniture(f, fLocation, direction) == null;
     }
 
     public boolean canRotate(Furniture f, byte direction) {
         FurnitureLocation fLocation = f.getVirtualLocation();
         FurnitureLocation newLocation = getRotatedLocation(fLocation, direction);
-        return checkForLegalLocation(f, newLocation);
+        return checkForLegalLocation(f, newLocation, true);
     }
 
     /** given a furniture and location , checks if legal **/
-    private boolean checkForLegalLocation(Furniture f, FurnitureLocation newLocation) {
+    private boolean checkForLegalLocation(Furniture f, FurnitureLocation newLocation, boolean bCheckForFurniture) {
         boolean bRes = true;
         if (inBounds(newLocation) == false) {
             // throw exception - can't rotate - out of bounds
@@ -54,13 +54,20 @@ public class LogicUtils {
             bRes = false;
         }
         // check for other furniture
-        deleteFurniture(f); // remove the furniture so to not check for other furniture with it - found other furniture but its the same one
-        if(checkForOtherFurniture(newLocation, NONE) == false) {
-            // throw exception - can't rotate - other furniture in new location
-            bRes = false;
+        if (bCheckForFurniture) {
+//            deleteFurniture(f); // remove the furniture so to not check for other furniture with it - found other furniture but its the same one
+            if(checkForOtherFurniture(f, newLocation, NONE) != null) {
+                // throw exception - can't rotate - other furniture in new location
+                bRes = false;
+            }
+//            addFurniture(f);
         }
-        addFurniture(f);
         return bRes;
+    }
+
+    public boolean moveFurniture(String fId, byte direction) {
+        Furniture f = furnitureMap.get(fId);
+        return moveFurniture(f, direction);
     }
 
     public boolean moveFurniture(Furniture f, byte direction) {
@@ -172,78 +179,90 @@ public class LogicUtils {
         furnitureMap.put(f.getID(), f);
     }
 
-    public boolean moveFurniture(String fId, byte direction) {
-        Furniture f = furnitureMap.get(fId);
-        return moveFurniture(f, direction);
-    }
-
-    private boolean checkForOtherFurniture(FurnitureLocation f, byte direction) {
+    private Furniture checkForOtherFurniture(Furniture f, FurnitureLocation fl, byte direction) {
         ArrayList<Pos> posList = new ArrayList<Pos>(); // a list of points to check
-        Pos tlPos = f.tl;
-        Pos brPos = f.br;
+        Pos tlPos = fl.tl;
+        Pos brPos = fl.br;
         switch (direction) {
             case NONE:
-                return checkNewFurnitureAreaForOtherFurniture(f);
+                return checkNewFurnitureAreaForOtherFurniture(f, fl);
             case UP:
                 if (tlPos.y > 0) {
-                    for (int x = tlPos.x; x <= brPos.x; x++) {
-                        posList.add(new Pos(x,tlPos.y - 1)); // add all the top pos
+                    for (int y = tlPos.y - 1; y <= brPos.y - 1; y++) {
+                        for (int x = tlPos.x; x <= brPos.x; x++) {
+                            posList.add(new Pos(x, y));
+                        }
                     }
                 }
                 break;
             case DOWN:
                 if (brPos.y < Constants.Sizes.boardHeight - 1) {
-                    for (int x = brPos.x; x >= tlPos.x; x--) {
-                        posList.add(new Pos(x,brPos.y + 1)); // add all the bottom pos
+                    for (int y = tlPos.y + 1; y <= brPos.y + 1; y++) {
+                        for (int x = brPos.x; x >= tlPos.x; x--) {
+                            posList.add(new Pos(x,y)); // add all the bottom pos
+                        }
                     }
                 }
                 break;
             case LEFT:
                 if (tlPos.x > 0) {
                     for (int y = tlPos.y; y <= brPos.y; y++) {
-                        posList.add(new Pos(tlPos.x - 1, y)); // add all the Left pos
+                        for (int x = brPos.x - 1 ; x >= tlPos.x - 1; x--) {
+                            posList.add(new Pos(x, y)); // add all the Left pos
+
+                        }
                     }
                 }
                 break;
             case RIGHT:
                 if (brPos.x < Constants.Sizes.boardWidth - 1) {
                     for (int y = brPos.y; y >= tlPos.y; y--) {
-                        posList.add(new Pos(brPos.x + 1,y)); // add all the Right pos
+                        for (int x = brPos.x + 1 ; x >= tlPos.x + 1; x--) {
+                            posList.add(new Pos(x, y)); // add all the Right pos
+                        }
                     }
                 }
                 break;
         }
         if (posList.size() == 0) { // mean that you cannot move because of a wall
-            return false;
+            return null;
         }
-        return checkForExistingFurniture(posList);
+        return checkForExistingFurniture(f, posList);
     }
 
-    private boolean checkForExistingFurniture(ArrayList<Pos> posList) {
+    private Furniture checkForExistingFurniture(Furniture f,ArrayList<Pos> posList) {
         for (Pos pos : posList) {
             for (Furniture furniture : furnitureMap.values()) {
-                if (isPosCovered(pos, furniture.getVirtualLocation())) {
-                    return false;
+                if (f != null && f.equals(furniture)) {
+                    continue;
                 }
+                FurnitureLocation fl = furniture.getLocation();
+                if (isPosCovered(pos, fl)) {
+                    return furniture;
+                }
+
             }
         }
-        return true;
+        return null;
     }
 
     /**
      * Checks for other furniture in initial positioning
+     *
      * @param f
+     * @param fl
      * @return true if passed the test, false otherwise
      */
-    private boolean checkNewFurnitureAreaForOtherFurniture(FurnitureLocation f) {
-        boolean bRes = true;
+    private Furniture checkNewFurnitureAreaForOtherFurniture(Furniture f, FurnitureLocation fl) {
         for (Furniture furniture : furnitureMap.values()) {
-            if (isLocationCovered(furniture.getLocation(), f)) {
-                bRes = false;
-                break;
+            if (f != null && f.equals(furniture)) {
+                continue;
+            }
+            if (isLocationCovered(furniture.getLocation(), fl)) {
+                return furniture;
             }
         }
-        return bRes;
+        return null;
     }
 
     private boolean isLocationCovered(FurnitureLocation f1, FurnitureLocation f2) {
@@ -369,7 +388,7 @@ public class LogicUtils {
     public boolean checkForNewFurnitureSpace(FurnitureLocation fLocation) {
         return (inBounds(fLocation)
                 && checkForWalls(fLocation, NONE)
-                && checkForOtherFurniture(fLocation, NONE));
+                && (checkForOtherFurniture(null, fLocation, NONE) == null) );
     }
 
     private boolean inBounds(FurnitureLocation fLocation) {
