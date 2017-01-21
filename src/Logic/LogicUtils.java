@@ -409,25 +409,6 @@ public class LogicUtils {
     }
 
     /**
-     * get all pos in new location that are not in old location
-     * @param oldLocation
-     * @param newLocation
-     * @return
-     */
-    private ArrayList<Pos> getDeltaPos(FurnitureLocation oldLocation, FurnitureLocation newLocation) {
-        ArrayList<Pos> deltaPos = new ArrayList<Pos>();
-        for (int y = newLocation.tl.y; y <= newLocation.br.y; y++ ) {
-            for (int x = newLocation.tl.x; x <= newLocation.br.x; x++ ) {
-                Pos currPos = new Pos(x,y);
-                if (isPosCovered(currPos, oldLocation) == false) {
-                    deltaPos.add(currPos);
-                }
-            }
-        }
-        return deltaPos;
-    }
-
-    /**
      * calculates new location after rotation
      * @param currLocation - old location before rotation
      * @param direction - which direction to rotate
@@ -523,10 +504,8 @@ public class LogicUtils {
         return furnitureMap.values();
     }
 
-
     public void resetAll() {
         furnitureMap.clear();
     }
-
 
 }
